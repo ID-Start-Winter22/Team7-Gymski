@@ -72,7 +72,7 @@ responses:
 
   utter_fruehstueck:
   - image: "https://imgur.com/xnCCJPa"
-    text: "Rezept für Shakshuka (Frühstück)
+    text: "Rezept für Shakshuka
 
           Zutaten (für zwei Portionen):
 
@@ -100,7 +100,7 @@ responses:
 
   utter_mittagessen:
   - image: "https://imgur.com/ock9QKw"
-    text: "Nudeln mit Zucchini und Lachs (Mittagessen)
+    text: "Nudeln mit Zucchini und Lachs
 
           Zutaten für 2 Personen\n
           250 g Vollkornnudeln
@@ -131,7 +131,7 @@ responses:
   
   utter_abendessen:
   - image: "https://imgur.com/upZKEHT"
-    text: "Reis mit Hähnchen und Gemüse (Abendessen)
+    text: "Reis mit Hähnchen und Gemüse
 
           Zutaten für 2 Personen\n
           250 g Hähnchenbrustfilet
