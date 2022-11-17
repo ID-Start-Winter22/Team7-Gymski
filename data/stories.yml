@@ -53,3 +53,10 @@ stories:
   steps:
   - intent: get_recipe
   - action: utter_recipe
+
+- story: easy challenge path
+  steps:
+  - intent: get_challenge
+  - action: utter_ask_for_challenge_difficulty
+  - intent: easy_challenge
+  - action: utter_easy_challenge

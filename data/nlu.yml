@@ -136,3 +136,15 @@ nlu:
     - gericht
     - essen
     - nahrung
+
+- intent: get_challenge
+  examples: |
+    - challenge
+
+- intent: easy_challenge
+  examples: |
+    - leicht
+    - easy
+    - nichts anspruchvolles
+    - simpel
+    - simple
