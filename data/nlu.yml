@@ -148,3 +148,7 @@ nlu:
     - nichts anspruchvolles
     - simpel
     - simple
+
+- intent: test
+  examples: |
+  - test
