@@ -70,8 +70,6 @@ responses:
   - text: "Hai Challenge: 5 mal in 30 Tagen joggen gehen."
   - text: "Gorilla Challenge: Für 30 Tage beim Auswärtsessen auf FastFood Ketten verzichten."
 
-  utter_test:
-  - text: "test"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
