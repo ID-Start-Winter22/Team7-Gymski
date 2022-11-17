@@ -1,6 +1,14 @@
 version: "3.0"
 
 nlu:
+- intent: get_recipe
+  examples: |
+    - rezept
+    - essen
+    - kochen
+    - food
+    - hunger
+
 - intent: greet
   examples: |
     - hey

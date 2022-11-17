@@ -28,3 +28,8 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: recipe path
+  steps:
+  - intent: get_recipe
+  - action: utter_recipe
