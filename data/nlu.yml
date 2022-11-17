@@ -136,3 +136,21 @@ nlu:
     - gericht
     - essen
     - nahrung
+
+- intent: get_fruehstueck
+  examples: |
+    - frühstück
+    - ich will frühstücken
+    - breakfast
+
+- intent: get_mittagessen
+  examples: |
+    - mittagessen
+    - ich will mittagessen
+    - lunch
+
+- intent: get_abendessen
+  examples: |
+    - abendessen
+    - ich will abendessen
+    - dinner
