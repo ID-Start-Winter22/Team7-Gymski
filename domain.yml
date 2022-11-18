@@ -17,6 +17,7 @@ intents:
   - medium_challenge
   - hard_challenge
   - test
+  - get_diaet
   
 actions:
   - action_store_name
@@ -79,6 +80,7 @@ responses:
     Pfeffer
     2 Eier
     1/2 Bund glatte Petersilie
+    
     So einfach geht’s:
 
     Die Zwiebel schälen, halbieren und in feine Stückchen schneiden. Paprika und Chili waschen, entkernen und ebenso in feine Stücke schneiden.
@@ -112,6 +114,9 @@ responses:
   - text: "T-Rex Challenge: Für einen Monat auf Tiefkühlprodukte verzichten."
   - text: "Habicht Challenge: Einen neuen Fitness Skill lernen."
   - text: "Nashorn Challenge: Für einen Monat nur Olivenöl zum kochen verwenden."
+
+  utter_diaet:
+  - text: "Hier könnte eine Diät stehen."
 
 session_config:
   session_expiration_time: 60
