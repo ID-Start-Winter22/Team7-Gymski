@@ -49,10 +49,10 @@ stories:
   - intent: bot_challenge_name
   - action: action_get_name
 
-- story: recipe path
-  steps:
-  - intent: get_recipe
-  - action: utter_recipe
+# - story: recipe path
+#   steps:
+#   - intent: get_recipe
+#   - action: utter_recipe
 
 - story: easy challenge path
   steps:
