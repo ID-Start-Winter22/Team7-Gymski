@@ -60,15 +60,14 @@ responses:
   utter_greet_with_name:
   - text: "Hey, {username}. Alles klar?"
 
-  utter_recipe:
-  - text: "Hier ist ein Rezept für dich. Viel Spaß beim ausprobieren."
-
   utter_ask_for_challenge_difficulty:
   - text: "Wie schwer soll die Challenge sein?"
 
   utter_easy_challenge:
   - text: "Hai Challenge: 5 mal in 30 Tagen joggen gehen."
   - text: "Gorilla Challenge: Für 30 Tage beim Auswärtsessen auf FastFood Ketten verzichten."
+
+  utter_test:
 
 session_config:
   session_expiration_time: 60
