@@ -160,3 +160,8 @@ nlu:
     - schwer
     - hard
     - hart
+
+- intent: get_diaet
+  examples: |
+    - diät
+    - diaet
