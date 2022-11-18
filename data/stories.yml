@@ -59,4 +59,18 @@ stories:
   - intent: get_challenge
   - action: utter_ask_for_challenge_difficulty
   - intent: easy_challenge
-  - action: utter_easy_challenge
+  - action: utter_challenge
+
+- story: medium challenge path
+  steps:
+  - intent: get_challenge
+  - action: utter_ask_for_challenge_difficulty
+  - intent: medium_challenge
+  - action: utter_challenge
+
+- story: hard challenge path
+  steps:
+  - intent: get_challenge
+  - action: utter_ask_for_challenge_difficulty
+  - intent: hard_challenge
+  - action: utter_challenge

@@ -14,6 +14,8 @@ intents:
   - get_recipe
   - get_challenge
   - easy_challenge
+  - medium_challenge
+  - hard_challenge
   - test
   
 actions:
@@ -62,13 +64,25 @@ responses:
 
   utter_ask_for_challenge_difficulty:
   - text: "Wie schwer soll die Challenge sein?"
+    buttons:
+    - title: "Einfach"
+      payload: "/easy_challenge"
+    - title: "Medium"
+      payload: "/medium_challenge"
+    - title: "Schwer"
+      payload: "/hard_challenge"
 
-  utter_easy_challenge:
+  utter_challenge:
   - text: "Hai Challenge: 5 mal in 30 Tagen joggen gehen."
   - text: "Gorilla Challenge: Für 30 Tage beim Auswärtsessen auf FastFood Ketten verzichten."
-
- utter_lol:
- - text: "lkadsjöflkjasdf"
+  - text: "Schlangen Challenge: Pro Tag 3 Dehnübungen machen für einen Monat."
+  - text: "Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
+  - text: "Leopard Challenge: Für eine Woche jeden Tag 2 Minuten sprinten."
+  - text: "Drachen Challenge: Für einen Monat jeden Tag 5 Minuten meditieren."
+  - text: "Känguru Challenge: Für einen Monat jeden Tag 10 Burpees machen."
+  - text: "T-Rex Challenge: Für einen Monat auf Tiefkühlprodukte verzichten."
+  - text: "Habicht Challenge: Einen neuen Fitness Skill lernen."
+  - text: "Nashorn Challenge: Für einen Monat nur Olivenöl zum kochen verwenden."
 
 session_config:
   session_expiration_time: 60

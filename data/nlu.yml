@@ -148,3 +148,15 @@ nlu:
     - nichts anspruchvolles
     - simpel
     - simple
+
+- intent: medium_challenge
+  examples: |
+    - medium
+    - mittel
+    - geht so
+
+- intent: hard_challenge
+  examples: |
+    - schwer
+    - hard
+    - hart
