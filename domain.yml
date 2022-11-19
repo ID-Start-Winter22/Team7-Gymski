@@ -106,17 +106,34 @@ responses:
     - title: "Schwer"
       payload: "/hard_challenge"
 
-  utter_challenge:
+  #utter_challenge:
+  #- text: "Hai Challenge: 3 mal in einer Woche joggen gehen."
+ # - text: "Gorilla Challenge: Für 30 Tage beim Auswärtsessen auf FastFood Ketten verzichten."
+ # - text: "Schlangen Challenge: Pro Tag 3 Dehnübungen machen für einen Monat."
+ # - text: "Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
+ # - text: "Leopard Challenge: Für eine Woche jeden Tag 2 Minuten sprinten."
+  #- text: "Drachen Challenge: Für einen Monat jeden Tag 5 Minuten meditieren."
+  #- text: "Känguru Challenge: Für einen Monat jeden Tag 10 Burpees machen."
+  #- text: "T-Rex Challenge: Für einen Monat auf Tiefkühlprodukte verzichten."
+ # - text: "Habicht Challenge: Einen neuen Fitness Skill lernen."
+ # - text: "Nashorn Challenge: Für einen Monat nur Olivenöl zum kochen verwenden."
+
+  utter_hard_challenge:
+  - text: "Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
+  - text: "Habicht Challenge: Einen neuen Fitness Skill lernen."
   - text: "Hai Challenge: 3 mal in einer Woche joggen gehen."
+  - text: "T-Rex Challenge: Für einen Monat auf Tiefkühlprodukte verzichten."
+
+  utter_medium_challenge:
+  - text: "Nashorn Challenge: Für einen Monat nur Olivenöl zum kochen verwenden."
   - text: "Gorilla Challenge: Für 30 Tage beim Auswärtsessen auf FastFood Ketten verzichten."
   - text: "Schlangen Challenge: Pro Tag 3 Dehnübungen machen für einen Monat."
-  - text: "Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
+
+  utter_einfach_challenge:
   - text: "Leopard Challenge: Für eine Woche jeden Tag 2 Minuten sprinten."
   - text: "Drachen Challenge: Für einen Monat jeden Tag 5 Minuten meditieren."
   - text: "Känguru Challenge: Für einen Monat jeden Tag 10 Burpees machen."
-  - text: "T-Rex Challenge: Für einen Monat auf Tiefkühlprodukte verzichten."
-  - text: "Habicht Challenge: Einen neuen Fitness Skill lernen."
-  - text: "Nashorn Challenge: Für einen Monat nur Olivenöl zum kochen verwenden."
+
 
   utter_tageszeit:
   - text: "Frühstück, Mittagessen oder Abendessen?"
@@ -129,7 +146,7 @@ responses:
       payload: "/get_abendessen"
     - title: "Snack"
       payload: "/get_snack"
-      
+
   utter_fruehstueck:
   - image: "https://user-images.githubusercontent.com/93930736/202023097-e321eead-de20-4ed1-92fa-f5d7ad030d13.png"
     text: "Rezept für Shakshuka
