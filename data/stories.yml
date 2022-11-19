@@ -52,7 +52,7 @@ stories:
 - story: recipe path
   steps:
   - intent: get_recipe
-  - action: utter_recipe
+  - action: utter_tageszeit
 
 - story: easy challenge path
   steps:
@@ -74,3 +74,18 @@ stories:
   - action: utter_ask_for_challenge_difficulty
   - intent: hard_challenge
   - action: utter_challenge
+
+- story: frühstück path
+  steps:
+  - intent: get_fruehstueck
+  - action: utter_fruehstueck
+
+- story: mittagessen path
+  steps:
+  - intent: get_mittagessen
+  - action: utter_mittagessen
+
+- story: abendessen path
+  steps:
+  - intent: get_abendessen
+  - action: utter_abendessen
