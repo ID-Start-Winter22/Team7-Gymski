@@ -59,7 +59,7 @@ stories:
   - intent: get_challenge
   - action: utter_ask_for_challenge_difficulty
   - intent: easy_challenge
-  - action: utter_easy_challenge
+  - action: utter_einfach_challenge
 
 - story: medium challenge path
   steps:
@@ -73,7 +73,7 @@ stories:
   - intent: get_challenge
   - action: utter_ask_for_challenge_difficulty
   - intent: hard_challenge
-  - action: utter_hard_challenge
+  - action: utter_schwer_challenge
 
 - story: frühstück path
   steps:

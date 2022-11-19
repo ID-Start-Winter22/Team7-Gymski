@@ -118,7 +118,7 @@ responses:
  # - text: "Habicht Challenge: Einen neuen Fitness Skill lernen."
  # - text: "Nashorn Challenge: Für einen Monat nur Olivenöl zum kochen verwenden."
 
-  utter_hard_challenge:
+  utter_schwer_challenge:
   - text: "Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
   - text: "Habicht Challenge: Einen neuen Fitness Skill lernen."
   - text: "Hai Challenge: 3 mal in einer Woche joggen gehen."
