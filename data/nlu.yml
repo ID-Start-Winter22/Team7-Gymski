@@ -178,3 +178,16 @@ nlu:
     - abendessen
     - ich will abendessen
     - dinner
+
+- intent: get_snack
+  examples: |
+    - snack
+
+- intent: get_help
+  examples: |
+    - ich brauche hilfe
+    - hilfe
+    - ich bin lost
+    - was kannst du machen?
+    - help
+    - tips

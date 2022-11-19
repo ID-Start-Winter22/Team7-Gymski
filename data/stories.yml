@@ -89,3 +89,13 @@ stories:
   steps:
   - intent: get_abendessen
   - action: utter_abendessen
+
+- story: snack path
+  steps:
+  - intent: get_snack
+  - action: utter_snack
+
+- story: help path
+  steps: 
+  - intent: get_help
+  - action: utter_help

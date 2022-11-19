@@ -20,6 +20,8 @@ intents:
   - get_fruehstueck
   - get_mittagessen
   - get_abendessen
+  - get_snack
+  - get_help
   
 actions:
   - action_store_name
@@ -125,9 +127,10 @@ responses:
       payload: "/get_mittagessen"
     - title: "Abendessen"
       payload: "/get_abendessen"
-
+    - title: "Snack"
+      payload: "/get_snack"
   utter_fruehstueck:
-  - image: "https://imgur.com/xnCCJPa"
+  - image: "https://user-images.githubusercontent.com/93930736/202023097-e321eead-de20-4ed1-92fa-f5d7ad030d13.png"
     text: "Rezept für Shakshuka
 
           Zutaten (für zwei Portionen):
@@ -155,7 +158,7 @@ responses:
           Rezept von https://www.tasteandsoul.de/blog/rezepte/shakshuka/"
 
   utter_mittagessen:
-  - image: "https://imgur.com/ock9QKw"
+  - image: "https://user-images.githubusercontent.com/93930736/202024281-f2899429-a024-487f-9b98-7ff8d49e0b6e.png"
     text: "Nudeln mit Zucchini und Lachs
 
           Zutaten für 2 Personen\n
@@ -186,7 +189,7 @@ responses:
           Rezept von https://www.familienkost.de/rezept_nudeln_mit_zucchini_und_lachs.html"
   
   utter_abendessen:
-  - image: "https://imgur.com/upZKEHT"
+  - image: "https://user-images.githubusercontent.com/93930736/202025388-5a411a89-6ce1-4a0f-9001-d89e9e02ea3e.png"
     text: "Reis mit Hähnchen und Gemüse
 
           Zutaten für 2 Personen\n
@@ -223,6 +226,37 @@ responses:
 
           Rezept von https://eatsmarter.de/rezepte/reis-mit-haehnchen-und-gemuese-1"
 
+  utter_snack:
+  - image: "https://user-images.githubusercontent.com/93930736/202041182-a37f18b1-42a0-4603-aad8-4e8adcc021cc.png"
+    text: "Low Carb Keto Müsliriegel
+          Zutaten für 8 Riegel
+          50g gehobelte Mandeln
+          50g gehackte Haselnüsse
+          25g braunes Erythrit
+          20g geschälte Hanfsamen
+          15g Sonnenblumenkerne
+          15g Kürbiskerne
+          15g Kokoschips
+          1 Eiklar
+          ½ TL Vanille Extrakt
+
+          So einfach geht´s
+          Backofen auf 200°C (Ober- und Unterhitze) vorheizen.
+
+          Das Eiweiß steif schlagen.
+
+          Die restlichen Zutaten für die Müsliriegel unter das geschlagene Eiweiß heben.
+
+          Anschließend die Mischung in eine Riegelform kneten.
+
+          Die Müsliriegel für ca. 12-15 Minuten im vorgeheizten Backofen backen.
+
+          Zum Schluss die Riegel komplett abkühlen lassen.
+
+          Rezept von https://kochketo.de/keto-muesliriegel/"
+
+  utter_help:
+  - text: "Ich kann dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
