@@ -256,7 +256,7 @@ responses:
           Rezept von https://kochketo.de/keto-muesliriegel/"
 
   utter_help:
-  - text: "Ich kann dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
+  - text: "Ich kann dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
