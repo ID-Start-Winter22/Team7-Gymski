@@ -22,14 +22,31 @@ intents:
   - get_abendessen
   - get_snack
   - get_help
-  
+  - kalorierechner
+  - get_user_weight
+  - get_user_height
+  - get_user_gender
+  - get_user_activity
+  - get_user_age
+  - get_user_goal
 actions:
   - action_store_name
   - action_get_name
-  - action_output_recipe
+  - action_calorie_calculator
+  - action_ask_user_age
+  - action_ask_user_gender
+  - action_ask_user_activity
+  - action_ask_user_height
+  - action_ask_user_weight
+  - action_ask_user_goal
 
 entities:
   - username
+  - user_weight
+  - user_height
+  - user_gender
+  - user_activity
+  - user_goal
 
 slots:
   username:
@@ -38,6 +55,43 @@ slots:
     mappings:
     - type: from_entity
       entity: username
+  user_weight:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: user_weight
+  user_height:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: user_height
+  user_gender:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: user_gender
+  user_activity:
+    type: text
+    influence_conversation: true
+    mappings: 
+      - type: from_entity
+        entity: user_activity
+  user_age:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: user_age
+  user_goal:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: user_goal
+
 
 responses:
   utter_greet:
@@ -70,31 +124,31 @@ responses:
   utter_recipe:
   - image: "https://user-images.githubusercontent.com/93930736/202023097-e321eead-de20-4ed1-92fa-f5d7ad030d13.png"
     text: "\n
-    Rezept für Shakshuka (Frühstück)
+          Rezept für Shakshuka (Frühstück)
 
-    Zutaten (für zwei Portionen):
+          Zutaten (für zwei Portionen):
 
-    1 rote Zwiebel
-    1 Dose stückige Tomaten
-    1 Paprika (rot, gelb oder grün)
-    1/2 rote Chili
-    1 EL Olivenöl
-    1 TL Paprika edelsüß
-    Salz
-    Pfeffer
-    2 Eier
-    1/2 Bund glatte Petersilie
-    So einfach geht’s:
+          1 rote Zwiebel
+          1 Dose stückige Tomaten
+          1 Paprika (rot, gelb oder grün)
+          1/2 rote Chili
+          1 EL Olivenöl
+          1 TL Paprika edelsüß
+          Salz
+          Pfeffer
+          2 Eier
+          1/2 Bund glatte Petersilie
+          So einfach geht’s:
 
-    Die Zwiebel schälen, halbieren und in feine Stückchen schneiden. Paprika und Chili waschen, entkernen und ebenso in feine Stücke schneiden.
+          Die Zwiebel schälen, halbieren und in feine Stückchen schneiden. Paprika und Chili waschen, entkernen und ebenso in feine Stücke schneiden.
 
-    In einer Pfanne das Olivenöl erhitzen und Zwiebeln, Paprika und Chili anbraten. Die stückigen Tomaten hinzugeben und das Ganze mit Salz, Pfeffer und Paprikapulver würzen. Für einige Minuten garen.
+          In einer Pfanne das Olivenöl erhitzen und Zwiebeln, Paprika und Chili anbraten. Die stückigen Tomaten hinzugeben und das Ganze mit Salz, Pfeffer und Paprikapulver würzen. Für einige Minuten garen.
 
-    In der Tomatensoße Platz für die zwei Eier frei machen und diese hinzugeben. Deckel drauf, und die Eier für 5 Minuten pochieren lassen.
+          In der Tomatensoße Platz für die zwei Eier frei machen und diese hinzugeben. Deckel drauf, und die Eier für 5 Minuten pochieren lassen.
 
-    Zuletzt die Petersilie waschen, fein hacken und über die Eier geben.
+          Zuletzt die Petersilie waschen, fein hacken und über die Eier geben.
 
-    Rezept von https://www.tasteandsoul.de/blog/rezepte/shakshuka/"
+          Rezept von https://www.tasteandsoul.de/blog/rezepte/shakshuka/"
 
   utter_ask_for_challenge_difficulty:
   - text: "Wie schwer soll die Challenge sein?"
@@ -276,6 +330,24 @@ responses:
   utter_help:
   - text: "Ich kann dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
           Hast du Lust auf eine Fitness Challenge. So gebe 'Challenge' ein"
+  
+  action_ask_user_age:
+  - text: "Wie alt bist du denn?"
+
+  action_ask_user_gender:
+  - text: "Welchem Geschlecht ordnest du dich zu? Männlich oder Weiblich"
+
+  action_ask_user_activity:
+  - text: "Wie viel Sport treibst du? wenig / moderat / viel"
+
+  action_ask_user_height:
+  - text: "Wie groß bist du in cm?"
+
+  action_ask_user_weight:
+  - text: "Was sagt die Wage?"
+
+  action_ask_user_goal:
+  - text: "Willst du abnehmen, halten oder zunehmen"
 
 
 session_config:

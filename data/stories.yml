@@ -99,3 +99,19 @@ stories:
   steps: 
   - intent: get_help
   - action: utter_help
+
+- story: kalorierechner path
+  steps:
+  - intent: kalorierechner
+  - action: action_ask_user_age
+  - intent: get_user_age
+  - action: action_ask_user_gender
+  - intent: get_user_gender
+  - action: action_ask_user_activity
+  - intent: get_user_activity
+  - action: action_ask_user_height
+  - intent: get_user_height
+  - action: action_ask_user_weight
+  - intent: get_user_weight
+  - action: action_ask_user_goal
+  - intent: get_user_goal
