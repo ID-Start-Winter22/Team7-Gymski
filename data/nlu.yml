@@ -198,7 +198,7 @@ nlu:
 
 - intent: get_user_height
   examples: |
-    - [140cm] (user_height)
+    - [140] (user_height)
     - [141cm] (user_height)
     - [142cm] (user_height)
     - [143cm] (user_height)

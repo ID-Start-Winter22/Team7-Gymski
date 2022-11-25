@@ -54,6 +54,7 @@ class CalorieCalculator(Action):
             height = tracker.get_slot("user_height") / 2.54
             age = tracker.get_slot("user_age")
             gender = tracker.get_slot("user_gender")
+            activity_level = tracker.get_slot("user_activity")
 
             if gender == 'männlich':
                 c1 = 66
@@ -71,7 +72,7 @@ class CalorieCalculator(Action):
                 return(int(bmr_result))
 
         def calculate_activity(bmr_result): 
-                activity_level = tracker.get_slot("user_activity")
+                
 
                 if activity_level == 'wenig':
                     activity_level = 1.2 * bmr_result
@@ -98,3 +99,4 @@ class CalorieCalculator(Action):
 
         gain_or_lose(calculate_activity(user_info()))
         
+        return []

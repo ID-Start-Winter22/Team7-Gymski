@@ -56,13 +56,13 @@ slots:
     - type: from_entity
       entity: username
   user_weight:
-    type: text
+    type: float
     influence_conversation: true
     mappings: 
     - type: from_entity
       entity: user_weight
   user_height:
-    type: text
+    type: float
     influence_conversation: true
     mappings: 
     - type: from_entity
@@ -80,7 +80,7 @@ slots:
       - type: from_entity
         entity: user_activity
   user_age:
-    type: text
+    type: float
     influence_conversation: true
     mappings: 
     - type: from_entity
@@ -190,7 +190,7 @@ responses:
 
 
   utter_tageszeit:
-  - text: "Frühstück, Mittagessen oder Abendessen?"
+  - text: "Frühstück, Mittagessen oder Abendessen oder Snack?"
     buttons:
     - title: "Frühstück"
       payload: "/get_fruehstueck"
