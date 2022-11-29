@@ -191,3 +191,11 @@ nlu:
     - was kannst du machen?
     - help
     - tips
+
+- intent: challenge_completed
+  examples: |
+    - ich bin fertig mit der Challenge
+    - challenge completed
+    - hab die Challenge geschafft
+    - Challenge geschafft
+    - Challenge done
