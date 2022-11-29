@@ -22,6 +22,7 @@ intents:
   - get_abendessen
   - get_snack
   - get_help
+  - challenge_completed
   
 actions:
   - action_store_name
@@ -134,7 +135,6 @@ responses:
   - text: "Drachen Challenge: Für einen Monat jeden Tag 5 Minuten meditieren."
   - text: "Känguru Challenge: Für einen Monat jeden Tag 10 Burpees machen."
 
-
   utter_tageszeit:
   - text: "Frühstück, Mittagessen oder Abendessen?"
     buttons:
@@ -153,16 +153,16 @@ responses:
 
           Zutaten (für zwei Portionen):
 
-          1 rote Zwiebel
-          1 Dose stückige Tomaten
-          1 Paprika (rot, gelb oder grün)
-          1/2 rote Chili
-          1 EL Olivenöl
-          1 TL Paprika edelsüß
-          Salz
-          Pfeffer
-          2 Eier
-          1/2 Bund glatte Petersilie
+          1 rote Zwiebel\n
+          1 Dose stückige Tomaten\n
+          1 Paprika (rot, gelb oder grün)\n
+          1/2 rote Chili\n
+          1 EL Olivenöl\n
+          1 TL Paprika edelsüß\n
+          Salz\n
+          Pfeffer\n
+          2 Eier\n
+          1/2 Bund glatte Petersilie\n
 
           So einfach geht’s:\n
           Die Zwiebel schälen, halbieren und in feine Stückchen schneiden. Paprika und Chili waschen, entkernen und ebenso in feine Stücke schneiden.
@@ -180,14 +180,13 @@ responses:
     text: "Nudeln mit Zucchini und Lachs
 
           Zutaten für 2 Personen\n
-          250 g Vollkornnudeln
-          2 kleine Zucchini
-          1-2 Lachsfilet (ich nehme meist TK)
-          1 Knoblauchzehe
-          100-150 ml Kokosmilch
-          1 TL Gemüsebrühe
-
-          So einfach geht´s\n
+          250 g Vollkornnudeln\n
+          2 kleine Zucchini\n
+          1-2 Lachsfilet (ich nehme meist TK)\n
+          1 Knoblauchzehe\n
+          100-150 ml Kokosmilch\n
+          1 TL Gemüsebrühe\n
+          So einfach geht´s
           Als erstes setzt du einen Topf mit Wasser auf und gibst die Nudeln hinein, sobald das Wasser kocht. Füge etwas Salz hinzu, es sei denn du kochst für ganz kleine Kinder.
 
           In der Zwischenzeit wäschst du die Zucchini und schneidest sie in halbe oder viertel Scheiben. Je nach Saison und Herkunft deiner Zucchini kannst du die Schale mit verwenden.
@@ -211,22 +210,22 @@ responses:
     text: "Reis mit Hähnchen und Gemüse
 
           Zutaten für 2 Personen\n
-          250 g Hähnchenbrustfilet
-          ½ Zwiebel
-          1 Knoblauchzehen
-          1 ½ Frühlingszwiebeln
-          1rote Paprikaschoten
-          ½ Stange Staudensellerie
-          1 Chilischoten
-          1 ½ EL Olivenöl
-          125 g Natur-Langkornreis
-          250 ml Hühnerbrüh
-          ½ Lorbeerblatt
-          Salz
-          Pfeffer
-          2 Tomaten
-          2 Stiele Koriander
-          ¼ TL gemahlener Kreuzkümmel
+          250 g Hähnchenbrustfilet\n
+          ½ Zwiebel\n
+          1 Knoblauchzehen\n
+          1 ½ Frühlingszwiebeln\n
+          1rote Paprikaschoten\n
+          ½ Stange Staudensellerie\n
+          1 Chilischoten\n
+          1 ½ EL Olivenöl\n
+          125 g Natur-Langkornreis\n
+          250 ml Hühnerbrüh\n
+          ½ Lorbeerblatt\n
+          Salz\n
+          Pfeffer\n
+          2 Tomaten\n
+          2 Stiele Koriander\n
+          ¼ TL gemahlener Kreuzkümmel\n
 
 
 
@@ -247,16 +246,16 @@ responses:
   utter_snack:
   - image: "https://user-images.githubusercontent.com/93930736/202041182-a37f18b1-42a0-4603-aad8-4e8adcc021cc.png"
     text: "Low Carb Keto Müsliriegel
-          Zutaten für 8 Riegel
-          50g gehobelte Mandeln
-          50g gehackte Haselnüsse
-          25g braunes Erythrit
-          20g geschälte Hanfsamen
-          15g Sonnenblumenkerne
-          15g Kürbiskerne
-          15g Kokoschips
-          1 Eiklar
-          ½ TL Vanille Extrakt
+          Zutaten für 8 Riegel\n
+          50g gehobelte Mandeln\n
+          50g gehackte Haselnüsse\n
+          25g braunes Erythrit\n
+          20g geschälte Hanfsamen\n
+          15g Sonnenblumenkerne\n
+          15g Kürbiskerne\n
+          15g Kokoschips\n
+          1 Eiklar\n
+          ½ TL Vanille Extrakt\n
 
           So einfach geht´s
           Backofen auf 200°C (Ober- und Unterhitze) vorheizen.
@@ -274,8 +273,62 @@ responses:
           Rezept von https://kochketo.de/keto-muesliriegel/"
 
   utter_help:
-  - text: "Ich kann dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
-          Hast du Lust auf eine Fitness Challenge. So gebe 'Challenge' ein"
+  - text: "Ich kann Dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
+          Hast Du Lust auf eine Fitness Challenge. So gebe 'Challenge' ein
+          Hoffe das ist was für Dich dabei!"
+
+  utter_challenge_completed:
+  - image: "https://github.com/ID-Start-Winter22/chat-team-7/issues/24#issuecomment-1322226641"
+    text: "Dubbelldore ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
+  - image: "https://github.com/ID-Start-Winter22/chat-team-7/issues/24#issuecomment-1322237144"
+    text: "Qui Gon Gym ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
+
+
+  utter_readyForMore: 
+  - text: "Okay. Falls noch was ist sag Bescheid!"
+
+  # utter_kalorien_aktivitaet:
+  # - text: "Was ist Deine tägliche körperliche Betätigung (ohne Sport)?"
+  #   buttons:
+  #   - title: "Kaum aktiv (nur sitzend)"
+  #     payload: "/kaum_aktiv"
+  #   - title: "Bisschen aktiv (meistens sitzend)"
+  #     payload: "/bisschen_aktiv"
+  #   - title: "Aktiv (viel laufen, rennen)"
+  #     payload: "/aktiv"
+  #   - title: "Sehr aktiv (harte körperliche Arbeit)"
+  #     payload: "/sehr_aktiv"
+
+#   utter_kalorien_ziel:
+#   - text: "Was ist dein Ziel?"
+#     buttons:
+#     - title: "Abnehmen"
+#       payload: "/abnehmen"
+#     - title: "Gewicht halten"
+#       payload: "/gewicht_halten"
+#     - title: "Masse aufbauen"
+#       payload: "/masse_aufbauen"
+
+#   utter_kalorien_koerpergroesse:
+#   - text: "Wie groß bist Du?"
+
+#   utter_kalorien_alter:
+#   - text: "Wie alt bist Du?"
+
+#   utter_kalorien_geschlecht:
+#   - text: "Bist du männlich oder weiblich?"
+
+#  utter_kalorien_start:
+#   - text: "Alles klar, dafür brauche ich paar Infos von dir: Wie viel wiegst Du?"
+
+
+utter_entschuldigung:
+- text: "Meine Wenigkeit entschuldigt sich von ganzem Herzen für die Unvollständigkeit meiner Funktionalität und bittet um Verzeihung und Verständnis. Mit Hochdruck wird an einer Verbesserung gearbeitet"
+
+utter_error_message:
+- text: "🥹 \n
+        👉👈 \n
+        Ich bin voller Trauer angesichts meiner Unfähigkeit auf Wünsche und Bedürfnis im vollen Umfang einzugehen."
 
 
 session_config:
