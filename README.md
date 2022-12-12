@@ -24,7 +24,7 @@ And especially on day where you are not that motivated to push through with your
 Overall Gymski is a useful bot but he cannot actually go to the gym with you can assist in real life. He also doesn't cook for you. This all means that in the end YOU need to be a disciplined individual and take action. Gymski can only assist you in your fitness journey and give you some useful input. 
 
 ## 👨‍👨‍👧‍👧 Team 
-| Name             | e-mail                  |
+| Name             | Contact                |
 |------------------|-------------------------|
 | Max Arnold       | arnold0@hm.edu          |
 | Oliver Schlieper | oliver.schlieper@hm.edu |
