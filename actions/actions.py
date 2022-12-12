@@ -45,7 +45,7 @@ class ActionUserName(Action):
 class CalorieCalculator(Action):
     
     def name(self) -> Text:
-        return "calorie_calculator"
+        return "action_calorie_calculator"
     
     def run(self, dispatcher, tracker, domain):
 
@@ -54,7 +54,7 @@ class CalorieCalculator(Action):
             height = tracker.get_slot("user_height") / 2.54
             age = tracker.get_slot("user_age")
             gender = tracker.get_slot("user_gender")
-            activity_level = tracker.get_slot("user_activity")
+            
 
             if gender == 'männlich':
                 c1 = 66
@@ -76,8 +76,6 @@ class CalorieCalculator(Action):
 
                 if activity_level == 'wenig':
                     activity_level = 1.2 * bmr_result
-                elif activity_level == 'light':
-                    activity_level = 1.375 * bmr_result
                 elif activity_level == 'moderat':
                     activity_level = 1.55 * bmr_result
                 elif activity_level == 'viel':
@@ -87,6 +85,7 @@ class CalorieCalculator(Action):
 
         def gain_or_lose(activity_level):
                 goals = tracker.get_slot("user_goal")
+                activity_level = tracker.get_slot("user_activity")
 
                 if goals == 'abnehmen':
                     calories = activity_level - 500

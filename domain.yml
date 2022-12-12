@@ -29,16 +29,19 @@ intents:
   - get_user_activity
   - get_user_age
   - get_user_goal
+  - get_video
+  - challenge_completed
 actions:
   - action_store_name
   - action_get_name
   - action_calorie_calculator
-  - action_ask_user_age
-  - action_ask_user_gender
-  - action_ask_user_activity
-  - action_ask_user_height
-  - action_ask_user_weight
-  - action_ask_user_goal
+  - action_test
+  # - action_ask_user_age
+  # - action_ask_user_gender
+  # - action_ask_user_activity
+  # - action_ask_user_height
+  # - action_ask_user_weight
+  # - action_ask_user_goal
 
 entities:
   - username
@@ -331,23 +334,37 @@ responses:
   - text: "Ich kann dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
           Hast du Lust auf eine Fitness Challenge. So gebe 'Challenge' ein"
   
-  action_ask_user_age:
+  utter_ask_user_age:
   - text: "Wie alt bist du denn?"
 
-  action_ask_user_gender:
+  utter_ask_user_gender:
   - text: "Welchem Geschlecht ordnest du dich zu? Männlich oder Weiblich"
 
-  action_ask_user_activity:
+  utter_ask_user_activity:
   - text: "Wie viel Sport treibst du? wenig / moderat / viel"
 
-  action_ask_user_height:
+  utter_ask_user_height:
   - text: "Wie groß bist du in cm?"
 
-  action_ask_user_weight:
+  utter_ask_user_weight:
   - text: "Was sagt die Wage?"
 
-  action_ask_user_goal:
+  utter_ask_user_goal:
   - text: "Willst du abnehmen, halten oder zunehmen"
+
+  utter_video:
+  - text: "Hier kommst du zu unserem tollen Werbevideo"
+    attachment: { "type":"video", "payload":{ "title": "MVG Werbung", "src": "https://www.youtube.com/embed/_STSNK69ViE" } }
+
+  utter_challenge_completed:
+  - image: "https://user-images.githubusercontent.com/96564527/203092048-4e1d5fad-c05e-4158-81d4-1e0d46a85a14.jpg"
+    text: "Dubbelldore ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
+  - image: "https://user-images.githubusercontent.com/96564527/203093745-6662d5a2-0602-4d84-8e50-77e6d35d065d.jpg"
+    text: "Qui Gon Gym ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
+
+
+  utter_readyForMore: 
+  - text: "Okay. Falls noch was ist sag Bescheid!"
 
 
 session_config:
