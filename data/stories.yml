@@ -99,3 +99,73 @@ stories:
   steps: 
   - intent: get_help
   - action: utter_help
+
+- story: kalorierechner path
+  steps:
+  - intent: kalorierechner
+  - action: utter_ask_user_age
+  - intent: get_user_age
+  - action: utter_ask_user_gender
+  - intent: get_user_gender
+  - action: utter_ask_user_activity
+  - intent: get_user_activity
+  - action: utter_ask_user_height
+  - intent: get_user_height
+  - action: utter_ask_user_weight
+  - intent: get_user_weight
+  - action: utter_ask_user_goal
+  - intent: get_user_goal
+  - action: action_calorie_calculator
+  # - intent: caloriecalulator
+
+
+- story: challenge done
+  steps: 
+  - intent: challenge_completed
+  - action: utter_challenge_completed
+  - intent: deny
+  - action: utter_readyForMore
+
+- story: give another challenge when user requests 1
+  steps:
+  - intent: challenge_completed
+  - action: utter_challenge_completed
+  - intent: affirm
+  - action: utter_ask_for_challenge_difficulty
+  - intent: easy_challenge
+  - action: utter_einfach_challenge
+
+- story: give another challenge when user requests 2
+  steps:
+  - intent: challenge_completed
+  - action: utter_challenge_completed
+  - intent: affirm
+  - action: utter_ask_for_challenge_difficulty
+  - intent: medium_challenge
+  - action: utter_medium_challenge
+
+- story: give another challenge when user requests 3
+  steps:
+  - intent: challenge_completed
+  - action: utter_challenge_completed
+  - intent: affirm
+  - action: utter_ask_for_challenge_difficulty
+  - intent: hard_challenge
+  - action: utter_schwer_challenge
+
+
+- story: video path
+  steps: 
+  - intent: get_video
+  - action: utter_video
+
+
+- story: ask for chest exercise
+  steps:
+  - intent: get_chest_exercise
+  - action: utter_chest_exercise
+
+- story: ask for shoulder exercise
+  steps:
+  - intent: get_shoulder_exercise
+  - action: utter_shoulder_exercise

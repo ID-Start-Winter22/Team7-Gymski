@@ -22,14 +22,42 @@ intents:
   - get_abendessen
   - get_snack
   - get_help
-  
+  - kalorierechner
+  - get_user_weight
+  - get_user_height
+  - get_user_gender
+  - get_user_activity
+  - get_user_age
+  - get_user_goal
+  - get_video
+  - challenge_completed
+  - get_chest_exercise
+  - get_shoulder_exercise
+  - get_back_exercise
+  - get_bicep_exercise
+  - get_tricep_exercise
+  - get_ab_exercise
+  - get_leg_exercise
+
 actions:
   - action_store_name
   - action_get_name
-  - action_output_recipe
+  - action_calorie_calculator
+  - action_test
+  # - action_ask_user_age
+  # - action_ask_user_gender
+  # - action_ask_user_activity
+  # - action_ask_user_height
+  # - action_ask_user_weight
+  # - action_ask_user_goal
 
 entities:
   - username
+  - user_weight
+  - user_height
+  - user_gender
+  - user_activity
+  - user_goal
 
 slots:
   username:
@@ -38,6 +66,43 @@ slots:
     mappings:
     - type: from_entity
       entity: username
+  user_weight:
+    type: float
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: user_weight
+  user_height:
+    type: float
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: user_height
+  user_gender:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: user_gender
+  user_activity:
+    type: text
+    influence_conversation: true
+    mappings: 
+      - type: from_entity
+        entity: user_activity
+  user_age:
+    type: float
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: user_age
+  user_goal:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: user_goal
+
 
 responses:
   utter_greet:
@@ -70,31 +135,31 @@ responses:
   utter_recipe:
   - image: "https://user-images.githubusercontent.com/93930736/202023097-e321eead-de20-4ed1-92fa-f5d7ad030d13.png"
     text: "\n
-    Rezept für Shakshuka (Frühstück)
+          Rezept für Shakshuka (Frühstück)
 
-    Zutaten (für zwei Portionen):
+          Zutaten (für zwei Portionen):
 
-    1 rote Zwiebel
-    1 Dose stückige Tomaten
-    1 Paprika (rot, gelb oder grün)
-    1/2 rote Chili
-    1 EL Olivenöl
-    1 TL Paprika edelsüß
-    Salz
-    Pfeffer
-    2 Eier
-    1/2 Bund glatte Petersilie
-    So einfach geht’s:
+          1 rote Zwiebel
+          1 Dose stückige Tomaten
+          1 Paprika (rot, gelb oder grün)
+          1/2 rote Chili
+          1 EL Olivenöl
+          1 TL Paprika edelsüß
+          Salz
+          Pfeffer
+          2 Eier
+          1/2 Bund glatte Petersilie
+          So einfach geht’s:
 
-    Die Zwiebel schälen, halbieren und in feine Stückchen schneiden. Paprika und Chili waschen, entkernen und ebenso in feine Stücke schneiden.
+          Die Zwiebel schälen, halbieren und in feine Stückchen schneiden. Paprika und Chili waschen, entkernen und ebenso in feine Stücke schneiden.
 
-    In einer Pfanne das Olivenöl erhitzen und Zwiebeln, Paprika und Chili anbraten. Die stückigen Tomaten hinzugeben und das Ganze mit Salz, Pfeffer und Paprikapulver würzen. Für einige Minuten garen.
+          In einer Pfanne das Olivenöl erhitzen und Zwiebeln, Paprika und Chili anbraten. Die stückigen Tomaten hinzugeben und das Ganze mit Salz, Pfeffer und Paprikapulver würzen. Für einige Minuten garen.
 
-    In der Tomatensoße Platz für die zwei Eier frei machen und diese hinzugeben. Deckel drauf, und die Eier für 5 Minuten pochieren lassen.
+          In der Tomatensoße Platz für die zwei Eier frei machen und diese hinzugeben. Deckel drauf, und die Eier für 5 Minuten pochieren lassen.
 
-    Zuletzt die Petersilie waschen, fein hacken und über die Eier geben.
+          Zuletzt die Petersilie waschen, fein hacken und über die Eier geben.
 
-    Rezept von https://www.tasteandsoul.de/blog/rezepte/shakshuka/"
+          Rezept von https://www.tasteandsoul.de/blog/rezepte/shakshuka/"
 
   utter_ask_for_challenge_difficulty:
   - text: "Wie schwer soll die Challenge sein?"
@@ -136,7 +201,7 @@ responses:
 
 
   utter_tageszeit:
-  - text: "Frühstück, Mittagessen oder Abendessen?"
+  - text: "Frühstück, Mittagessen oder Abendessen oder Snack?"
     buttons:
     - title: "Frühstück"
       payload: "/get_fruehstueck"
@@ -276,6 +341,115 @@ responses:
   utter_help:
   - text: "Ich kann dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
           Hast du Lust auf eine Fitness Challenge. So gebe 'Challenge' ein"
+  
+  utter_ask_user_age:
+  - text: "Wie alt bist du denn?"
+
+  utter_ask_user_gender:
+  - text: "Welchem Geschlecht ordnest du dich zu? Männlich oder Weiblich"
+
+  utter_ask_user_activity:
+  - text: "Wie viel Sport treibst du? wenig / moderat / viel"
+
+  utter_ask_user_height:
+  - text: "Wie groß bist du in cm?"
+
+  utter_ask_user_weight:
+  - text: "Was sagt die Wage?"
+
+  utter_ask_user_goal:
+  - text: "Willst du abnehmen, halten oder zunehmen"
+
+  utter_video:
+  - text: "Hier kommst du zu unserem tollen Werbevideo"
+    attachment: { "type":"video", "payload":{ "title": "MVG Werbung", "src": "https://www.youtube.com/embed/_STSNK69ViE" } }
+
+  utter_challenge_completed:
+  - image: "https://user-images.githubusercontent.com/96564527/203092048-4e1d5fad-c05e-4158-81d4-1e0d46a85a14.jpg"
+    text: "Dubbelldore ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
+  - image: "https://user-images.githubusercontent.com/96564527/203093745-6662d5a2-0602-4d84-8e50-77e6d35d065d.jpg"
+    text: "Qui Gon Gym ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
+
+
+  utter_readyForMore: 
+  - text: "Okay. Falls noch was ist sag Bescheid!"
+
+  utter_chest_exercise:
+  - image: "https://www.inspireusafoundation.org/wp-content/uploads/2022/05/barbell-pause-bench.gif"
+    text: "Barbell Bench Press
+          
+      1. Lege dich auf eine Flachbank. Die Schultern werden beim Bankdrücken zurückgezogen und du kommst gleichzeitig in ein leichtes Hohlkreuz. Die verlängerte Linie zwischen Schultern und Beginn der Lendenwirbelsäule sollte dabei auf der Bank aufliegen. Unter dem unteren Rückenstrecker sollte noch ein Arm durchgestreckt werden können. Der Kopf liegt auf der Bank flach auf, die Augen fixieren die Stange. Die Beine befinden sich dabei im 90° Winkel fest aufgestellt auf dem Boden.
+      2. Für die richtige Griffstellung beim Bankdrücken umfasse die Stange in etwa schulterweit. Die Handgelenke werden gerade gehalten und die Langhantelstange mit einem sehr festen Griff umschlossen.
+      3. Nun folgt die Einleitung der Bewegung. Atme dafür tief ein und spanne gleichzeitig den Rücken, Po und die fixierten Schulterblätter an. Durch das tiefe Einatmen stabilisierst du die gesamte Körpermitte und nimmst den Druck von deinen Bandscheiben und der Wirbelsäule.
+      4. Die Stange wird nun langsam und kontrolliert auf der Brust abgesetzt. Die Brust bleibt dabei permanent unter Spannung. Der kurze Zwischenstopp auf der Brust sollte nicht dazu genutzt werden, die Spannung zu verlieren. Als Fixpunkt für das Absetzen dient hier das untere Ende des Brustbeins (unter den Brustwarzen).
+      5. Für die positive Bewegung wird die Stange anschließend explosiv nach oben geführt. Wichtig ist, gleichzeitig die Schulterblätter zu fixieren und die gesamte Körpermitte fest und stabil zu halten. Die Kraft wird durch das Ausatmen aus dem Bauchraum und den stabilen Stand der Füße unterstützt."
+    
+  - image: "https://www.fitundattraktiv.de/wp-content/uploads/2018/02/bankdruecken_schraeg_mit_langhantel.gif"
+    text: "Incline Barbell Bench Press
+
+      1. Lege dich auf die Schrägbank (optimaler Winkel: 30 Grad) unter die in der Halterung liegende Langhantelstange und positioniere deine Füße fest am Boden. Dein Po berührt mit dem Steißbein das Rückenpolster, auf welchem zudem dein Rücken und dein Kopf abgelegt wird. Du umgreifst die Langhantelstange mehr als schulterbreit im Obergriff und achtest darauf, dass sich deine Handgelenke direkt unter der Stange befinden. Spanne deine Bauchmuskeln an und hebe die Stange aus der Halterung nach oben und ein paar cm nach vorne. Jetzt sollten deine senkrecht nach oben ausgestreckten Arme die Stange direkt über deinen Schlüsselbeinen halten. Achte darauf, dass deine Arme nicht ganz durchgestreckt sind, sondern dass sie leicht gebeugt bleiben. Dies schont deine Ellenbogengelenke.
+      2. Jetzt startest du die erste Bewegungsphase der Übung indem du die Langhantelstange langsam durch Herablassen der Ellenbogen nach unten bis kurz über die Schlüsselbeinfasern der Brustmuskulatur absenkst. Während dieser Phase atmest du ein.
+      3. Danach drückst du die Stange auf gleichem Weg wieder nach oben und atmest währenddessen aus. Vergiss nicht das Ellenbogengelenk am Ende der Drückbewegung leicht gebeugt zu lassen."
+
+  - image: "https://www.fitundattraktiv.de/wp-content/uploads/2017/12/brust_dips_am_geraet.gif"
+    text: "Chest Dips
+
+      1. Stütze dich auf dem Barren ab
+      2. Ellbogen zeigen nach hinten (nicht zur Seite)
+      3. Ziehe deine Schulterblätter zusammen bzw. deine Schultern nach hinten
+      4. Spanne deinen Po an und versuche Ihn leicht nach hinten/oben zu ziehen
+      5. Lasse dich mit deiner Brust in Richtung Barren ab
+      6. Versuche dich soweit wie möglich abzulassen (maximal bis zum Barren)
+      7. Drücke dich kontrolliert nach oben"
+
+  - image: "https://modusx.de/wp-content/uploads/2021/01/cable-fly-obere-brust.gif"
+    text: "Lower Chest Cable Fly
+
+      1. Stelle zunächst den Kabzug so ein, dass die Griffe von ganz oben zu greifen sind.
+      2. Umfasse nun die Griffe auf beiden Seiten und positioniere dich in der Mitte des Kabelzugs. Mach mit einem Bein einen Ausfallschritt nach vorne.
+      3. Bring nun beide Arme so zusammen, dass sich die Hände ungefähr auf Bauchhöhe treffen.
+      4. Führe die Griffe nun wieder kontrolliert an die Startposition zurück."
+
+  utter_shoulder_exercise:
+  - image: "https://homeworkouts.org/wp-content/uploads/anim-dumbbell-lateral-raise.gif"
+    text: "Lateral Raises
+
+      1. Positioniere dich in einem stabilen schulterweiten Stand
+      2. Schulterblätter nach hinten ziehen
+      3. Arme hängen leicht angewinkelt seitlich am Körper runter
+      4. Arme seitlich (leicht angewinkelt) nach oben heben. Die Ellbogen sind immer in der höchsten Position, nicht die Hände.
+      5. In der obersten Position haben die Oberarme einen 90° Winkel zum Oberkörper. Nicht höher als 90°
+      6. Bewege die Hanteln langsam & kontrolliert wieder in die Ausgangsposition zurück"
+
+  - image: "https://www.inspireusafoundation.org/wp-content/uploads/2022/10/cable-one-arm-lateral-raise.gif"
+    text: "Cable Lateral Raise
+
+      1. Der Kabelzug sollte auf der niedrigsten Stufe eingestellt werden.
+      2. Wähle das Gewicht so, dass du es mit einer Schulter heben kannst und stell dich Schulterbreit seitlich zum Kabelzug.
+      3. Um eine gute Haltung zu bewahren, strecke deine Brust nach vorne und ziehe deine Schulter nach hinten, deine Knie sollten leicht gebeugt sein. Zur unterstützung kannst du deine freie Hand an der Schiene des Kabelzugs platzieren.
+      4. Beugen Sie den Ellbogen leicht in einem Winkel von 10 bis 30 Grad und heben Sie den Arm seitlich an, bis er sich auf Höhe der Schulter befindet, wobei Sie beim Anheben ausatmen.
+      5. Vermeiden Sie es, den Arm beim Anheben des Bügels zu drehen, und konzentrieren Sie sich auf den Bereich, den Sie trainieren möchten - Ihre mittlere Schulter.
+      6. Halten Sie die Position 1-5 Sekunden lang, und atmen Sie dann ein, während Sie das Gewicht langsam wieder absenken. Lassen Sie das Kabel vollständig zum Stillstand kommen, bevor Sie die nächste Wiederholung beginnen."
+
+  - image: "https://modusx.de/wp-content/uploads/2021/04/military-press-weiter-griff.gif"
+    text: "Military Press
+    
+      1. Füße schulterweit unter der Stange positionieren
+      2. Langhantelstange etwas breiter als schulterweit greifen (etwa eine Handbreite weiter). Die Unterarme müssen bei der späteren Drückbewegung senkrecht nach oben stehen
+      3. Nachem du die Langhantelstange fest umgriffen hast machst du folgendes: Ziehe deine Schultern nach hinten und deine Ellbogen direkt unter die Stange. Diese Bewegung sorgt dafür, dass sowohl deine Rotatoren und dein Schultergelenk in der optimalen Position ist.
+      4. Bauchmuskeln anspannen, Po anspannen und Hüfte leicht nach vorne schieben. Das macht es später einfacher die Stange am Gesicht vorbei zu drücken ohne stark ins Hohlkreuz zu gehen
+      5. Stange aus der Ablage heben und einen Schritt zurück gehen"
+
+  - image: "https://modusx.de/wp-content/uploads/2020/11/butterfly-reverse.gif"
+    text: "Butterfly Reverse
+
+      1. Stelle das Gerät zunächst auf Deine Körpergröße ein, indem Du den Sitz in der Höhe so ausrichtest, dass Deine Unterarme während der Ausführung exakt parallel zum Boden verlaufen. Deine Hände müssen zudem in Höhe deiner Schultergelenke liegen.
+      2. Setze Dich mit dem Gesicht Richtung Polster auf die Butterfly Reverse-Maschine und drücke Deine Brust gegen das vertikal aufgerichtete Polster. Sorge anschließend für Stabilität, indem Du deine Beine leicht seitlich neben dem Gerät aufstellst. Achte auf einen 90-Grad-Winkel zwischen Ober- und Unterschenkel.
+      3. Greife nach den Griffstücken und fasse diese so, dass Deine Arme nicht ganz gestreckt sind, sondern sich zwischen Ober- und Unterarm ein leichter Winkel befindet.
+      4. Führe die Griffe nun so weit nach hinten, wie es Dein Schultergelenk zulässt und halte die Position im Anschluss für 1-2 Sekunden.
+      5. Dann lässt Du das Gewicht langsam wieder ab, bevor Du mit der nächsten Wiederholung beginnst."
+      
+
 
 
 session_config:
