@@ -23,11 +23,13 @@ intents:
   - get_snack
   - get_help
   - challenge_completed
+  - videopls
   
 actions:
   - action_store_name
   - action_get_name
   - action_output_recipe
+
 
 entities:
   - username
@@ -283,6 +285,10 @@ responses:
   - image: "https://github.com/ID-Start-Winter22/chat-team-7/issues/24#issuecomment-1322237144"
     text: "Qui Gon Gym ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
 
+  utter_video:
+  - text: "Hier kommst du zu unserem tollen Werbevideo"
+    attachment: { "type":"video", "payload":{ "title": "MVG Werbung", "src": "https://www.youtube.com/embed/_STSNK69ViE" } }
+
 
   utter_readyForMore: 
   - text: "Okay. Falls noch was ist sag Bescheid!"
@@ -330,6 +336,82 @@ utter_error_message:
         👉👈 \n
         Ich bin voller Trauer angesichts meiner Unfähigkeit auf Wünsche und Bedürfnis im vollen Umfang einzugehen."
 
+
+utter_ask_for_genre:
+- text: "Was für ein Genre willst du?"
+  buttons:
+  - title: "hiphop"
+    payload: "/hiphop_playlist"
+  - title: "techno"
+    payload: "/techno_playlist"
+  - title: "pop"
+    payload: "/pop_playlist"
+  - title: "jazz"
+    payload: "/jazz_playlist"
+  - title: "k-Pop"
+    payload: "/k-pop_playlist"
+  - title: "überraschung"
+    payload: "/überraschung_playlist"
+    
+utter_gymPlaylist_techno:
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=Yy4i6Dzyx3k" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=Ncu0A9dtieU" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=ssXzkCMdcDQ" } }
+
+utter_gymPlaylist_pop:
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=d8OL6m0ZblA" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=5u-tYqRQSsE" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=72JOJZLMrU0" } }
+
+utter_gymPlaylist_hiphop:
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=7BdAKfsjZ6U" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=RJPNjYVnJnk" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=kf0Af6A5wW8" } }
+
+utter_gymPlaylist_jazz:
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=NKDI-60H-5s" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=neV3EPgvZ3g" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=Ys_tRskDiDg" } }
+
+utter_gymPlaylist_kpop:
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=GuEJ6QzXS4A" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=WZPLefjiAZw" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=4T9DJNe7ZPU" } }
+
+utter_gymPlaylist_überraschung:
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=W05LPtVm5hY" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=0DeU8uKC3LQ" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=ZJebIJFRuIY" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=QJucFT8gATM" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=YNvCK7jkUEk" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=SN5awaBMkuY" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=v7_ED23ah-s" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=2XlYZPfPwzc" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=-ladG8O1t7A" } }
 
 session_config:
   session_expiration_time: 60
