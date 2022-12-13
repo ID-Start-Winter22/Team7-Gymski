@@ -2,15 +2,10 @@ version: "3.0"
 
 intents:
   - greet
-  - greet_formal
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
-  - my_name_is
-  - bot_challenge_name
   - get_recipe
   - get_challenge
   - easy_challenge
@@ -31,20 +26,11 @@ intents:
   - get_user_goal
   - get_video
   - challenge_completed
+  - hype me up
 actions:
-  - action_store_name
-  - action_get_name
   - action_calorie_calculator
-  - action_test
-  # - action_ask_user_age
-  # - action_ask_user_gender
-  # - action_ask_user_activity
-  # - action_ask_user_height
-  # - action_ask_user_weight
-  # - action_ask_user_goal
 
 entities:
-  - username
   - user_weight
   - user_height
   - user_gender
@@ -118,12 +104,6 @@ responses:
   utter_iamabot:
   - text: "Ich bin ein Chatbot, powered by Rasa."
 
-  utter_greet_ask_name:
-  - text: "Hallo, wie heißt Du?"
-
-  utter_greet_with_name:
-  - text: "Hey, {username}. Alles klar?"
-
   utter_recipe:
   - image: "https://user-images.githubusercontent.com/93930736/202023097-e321eead-de20-4ed1-92fa-f5d7ad030d13.png"
     text: "\n
@@ -162,18 +142,6 @@ responses:
       payload: "/medium_challenge"
     - title: "Schwer"
       payload: "/hard_challenge"
-
-  #utter_challenge:
-  #- text: "Hai Challenge: 3 mal in einer Woche joggen gehen."
- # - text: "Gorilla Challenge: Für 30 Tage beim Auswärtsessen auf FastFood Ketten verzichten."
- # - text: "Schlangen Challenge: Pro Tag 3 Dehnübungen machen für einen Monat."
- # - text: "Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
- # - text: "Leopard Challenge: Für eine Woche jeden Tag 2 Minuten sprinten."
-  #- text: "Drachen Challenge: Für einen Monat jeden Tag 5 Minuten meditieren."
-  #- text: "Känguru Challenge: Für einen Monat jeden Tag 10 Burpees machen."
-  #- text: "T-Rex Challenge: Für einen Monat auf Tiefkühlprodukte verzichten."
- # - text: "Habicht Challenge: Einen neuen Fitness Skill lernen."
- # - text: "Nashorn Challenge: Für einen Monat nur Olivenöl zum kochen verwenden."
 
   utter_schwer_challenge:
   - text: "Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
@@ -362,9 +330,14 @@ responses:
   - image: "https://user-images.githubusercontent.com/96564527/203093745-6662d5a2-0602-4d84-8e50-77e6d35d065d.jpg"
     text: "Qui Gon Gym ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
 
-
   utter_readyForMore: 
   - text: "Okay. Falls noch was ist sag Bescheid!"
+
+  utter_hype:
+  - text: "LETS GOOOOOOOOOOOO"
+    attachment: { "type":"video", "payload":{ "title": "ZYZZ", "src": "https://www.youtube.com/watch?v=tkBUpJtYFTw" } }
+  - text: "YEAAAAHHHH BUDDDY>"
+  attachment: { "type":"video", "payload":{ "title": "ROnnie", "src": "https://www.youtube.com/watch?v=QYs1rDpM0Ek" } }
 
 
 session_config:

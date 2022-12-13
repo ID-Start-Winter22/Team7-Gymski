@@ -18,30 +18,6 @@ from rasa_sdk.executor import CollectingDispatcher
 #                the TrackerStore (in memory database) or a persitent DB
 #                such as MySQL. But we need to store a key-value pair 
 #                to identify the user by id eg. (user_id, slotvalue)
-class ActionStoreUserName(Action):
-
-     def name(self) -> Text:
-         return "action_store_name"
-         
-     def run(self, dispatcher, tracker, domain):
-        username = tracker.get_slot("username")
-        print("Sender ID: ", tracker.sender_id)
-
-        return []
-
-
-class ActionUserName(Action):
-
-     def name(self) -> Text:
-         return "action_get_name"
-
-     def run(self, dispatcher, tracker, domain):
-        username = tracker.get_slot("username")
-        if not username :
-            dispatcher.utter_message(" Du hast mir Deinen Namen nicht gesagt.")
-        else:
-            dispatcher.utter_message(' Du bist {}'.format(username))
-
 class CalorieCalculator(Action):
     
     def name(self) -> Text:

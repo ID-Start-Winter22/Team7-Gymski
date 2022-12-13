@@ -67,43 +67,6 @@ nlu:
     - nein
     - ne
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-    - super
-    - gut
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-    - schlecht
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -113,15 +76,6 @@ nlu:
     - wer bist du?
     - bist du ein Mensch?
     - spreche ich mit einem Chatbot?
-
-- intent: my_name_is
-  examples: |
-    - Ich heiße [Gudrun](username)
-    - Ich bin [Tina](username)
-    - [Thomas](username)
-    - Mein Name ist [Anna](username)
-    - Ich bin der [Horst](username)
-    - [Hans](username)
 
 - intent: get_user_weight
   examples: |
@@ -250,3 +204,10 @@ nlu:
     - hab die Challenge geschafft
     - Challenge geschafft
     - Challenge done
+
+- intent: hype me up
+  examples: |
+    - hype me up
+    - need hyped up
+    - hype mich auf
+    - mach mir gute laune
