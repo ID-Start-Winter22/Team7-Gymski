@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> Frontend-Implementation
 /* module for importing other js files */
 function include(file) {
   const script = document.createElement('script');

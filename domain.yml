@@ -17,6 +17,8 @@ intents:
   - get_abendessen
   - get_snack
   - get_help
+  - challenge_completed
+  - videopls
   - kalorierechner
   - get_user_weight
   - get_user_height
@@ -29,6 +31,8 @@ intents:
   - hype me up
 actions:
   - action_calorie_calculator
+  - action_output_recipe
+
 
 entities:
   - user_weight
@@ -159,7 +163,6 @@ responses:
   - text: "Drachen Challenge: Für einen Monat jeden Tag 5 Minuten meditieren."
   - text: "Känguru Challenge: Für einen Monat jeden Tag 10 Burpees machen."
 
-
   utter_tageszeit:
   - text: "Frühstück, Mittagessen oder Abendessen oder Snack?"
     buttons:
@@ -178,16 +181,16 @@ responses:
 
           Zutaten (für zwei Portionen):
 
-          1 rote Zwiebel
-          1 Dose stückige Tomaten
-          1 Paprika (rot, gelb oder grün)
-          1/2 rote Chili
-          1 EL Olivenöl
-          1 TL Paprika edelsüß
-          Salz
-          Pfeffer
-          2 Eier
-          1/2 Bund glatte Petersilie
+          1 rote Zwiebel\n
+          1 Dose stückige Tomaten\n
+          1 Paprika (rot, gelb oder grün)\n
+          1/2 rote Chili\n
+          1 EL Olivenöl\n
+          1 TL Paprika edelsüß\n
+          Salz\n
+          Pfeffer\n
+          2 Eier\n
+          1/2 Bund glatte Petersilie\n
 
           So einfach geht’s:\n
           Die Zwiebel schälen, halbieren und in feine Stückchen schneiden. Paprika und Chili waschen, entkernen und ebenso in feine Stücke schneiden.
@@ -205,14 +208,13 @@ responses:
     text: "Nudeln mit Zucchini und Lachs
 
           Zutaten für 2 Personen\n
-          250 g Vollkornnudeln
-          2 kleine Zucchini
-          1-2 Lachsfilet (ich nehme meist TK)
-          1 Knoblauchzehe
-          100-150 ml Kokosmilch
-          1 TL Gemüsebrühe
-
-          So einfach geht´s\n
+          250 g Vollkornnudeln\n
+          2 kleine Zucchini\n
+          1-2 Lachsfilet (ich nehme meist TK)\n
+          1 Knoblauchzehe\n
+          100-150 ml Kokosmilch\n
+          1 TL Gemüsebrühe\n
+          So einfach geht´s
           Als erstes setzt du einen Topf mit Wasser auf und gibst die Nudeln hinein, sobald das Wasser kocht. Füge etwas Salz hinzu, es sei denn du kochst für ganz kleine Kinder.
 
           In der Zwischenzeit wäschst du die Zucchini und schneidest sie in halbe oder viertel Scheiben. Je nach Saison und Herkunft deiner Zucchini kannst du die Schale mit verwenden.
@@ -236,22 +238,22 @@ responses:
     text: "Reis mit Hähnchen und Gemüse
 
           Zutaten für 2 Personen\n
-          250 g Hähnchenbrustfilet
-          ½ Zwiebel
-          1 Knoblauchzehen
-          1 ½ Frühlingszwiebeln
-          1rote Paprikaschoten
-          ½ Stange Staudensellerie
-          1 Chilischoten
-          1 ½ EL Olivenöl
-          125 g Natur-Langkornreis
-          250 ml Hühnerbrüh
-          ½ Lorbeerblatt
-          Salz
-          Pfeffer
-          2 Tomaten
-          2 Stiele Koriander
-          ¼ TL gemahlener Kreuzkümmel
+          250 g Hähnchenbrustfilet\n
+          ½ Zwiebel\n
+          1 Knoblauchzehen\n
+          1 ½ Frühlingszwiebeln\n
+          1rote Paprikaschoten\n
+          ½ Stange Staudensellerie\n
+          1 Chilischoten\n
+          1 ½ EL Olivenöl\n
+          125 g Natur-Langkornreis\n
+          250 ml Hühnerbrüh\n
+          ½ Lorbeerblatt\n
+          Salz\n
+          Pfeffer\n
+          2 Tomaten\n
+          2 Stiele Koriander\n
+          ¼ TL gemahlener Kreuzkümmel\n
 
 
 
@@ -272,16 +274,16 @@ responses:
   utter_snack:
   - image: "https://user-images.githubusercontent.com/93930736/202041182-a37f18b1-42a0-4603-aad8-4e8adcc021cc.png"
     text: "Low Carb Keto Müsliriegel
-          Zutaten für 8 Riegel
-          50g gehobelte Mandeln
-          50g gehackte Haselnüsse
-          25g braunes Erythrit
-          20g geschälte Hanfsamen
-          15g Sonnenblumenkerne
-          15g Kürbiskerne
-          15g Kokoschips
-          1 Eiklar
-          ½ TL Vanille Extrakt
+          Zutaten für 8 Riegel\n
+          50g gehobelte Mandeln\n
+          50g gehackte Haselnüsse\n
+          25g braunes Erythrit\n
+          20g geschälte Hanfsamen\n
+          15g Sonnenblumenkerne\n
+          15g Kürbiskerne\n
+          15g Kokoschips\n
+          1 Eiklar\n
+          ½ TL Vanille Extrakt\n
 
           So einfach geht´s
           Backofen auf 200°C (Ober- und Unterhitze) vorheizen.
@@ -299,46 +301,143 @@ responses:
           Rezept von https://kochketo.de/keto-muesliriegel/"
 
   utter_help:
-  - text: "Ich kann dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
-          Hast du Lust auf eine Fitness Challenge. So gebe 'Challenge' ein"
-  
-  utter_ask_user_age:
-  - text: "Wie alt bist du denn?"
+  - text: "Ich kann Dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
+          Hast Du Lust auf eine Fitness Challenge. So gebe 'Challenge' ein
+          Hoffe das ist was für Dich dabei!"
 
-  utter_ask_user_gender:
-  - text: "Welchem Geschlecht ordnest du dich zu? Männlich oder Weiblich"
-
-  utter_ask_user_activity:
-  - text: "Wie viel Sport treibst du? wenig / moderat / viel"
-
-  utter_ask_user_height:
-  - text: "Wie groß bist du in cm?"
-
-  utter_ask_user_weight:
-  - text: "Was sagt die Wage?"
-
-  utter_ask_user_goal:
-  - text: "Willst du abnehmen, halten oder zunehmen"
+  utter_challenge_completed:
+  - image: "https://github.com/ID-Start-Winter22/chat-team-7/issues/24#issuecomment-1322226641"
+    text: "Dubbelldore ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
+  - image: "https://github.com/ID-Start-Winter22/chat-team-7/issues/24#issuecomment-1322237144"
+    text: "Qui Gon Gym ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
 
   utter_video:
   - text: "Hier kommst du zu unserem tollen Werbevideo"
     attachment: { "type":"video", "payload":{ "title": "MVG Werbung", "src": "https://www.youtube.com/embed/_STSNK69ViE" } }
 
-  utter_challenge_completed:
-  - image: "https://user-images.githubusercontent.com/96564527/203092048-4e1d5fad-c05e-4158-81d4-1e0d46a85a14.jpg"
-    text: "Dubbelldore ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
-  - image: "https://user-images.githubusercontent.com/96564527/203093745-6662d5a2-0602-4d84-8e50-77e6d35d065d.jpg"
-    text: "Qui Gon Gym ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
 
   utter_readyForMore: 
   - text: "Okay. Falls noch was ist sag Bescheid!"
 
-  utter_hype:
-  - text: "LETS GOOOOOOOOOOOO"
-    attachment: { "type":"video", "payload":{ "title": "ZYZZ", "src": "https://www.youtube.com/watch?v=tkBUpJtYFTw" } }
-  - text: "YEAAAAHHHH BUDDDY>"
-  attachment: { "type":"video", "payload":{ "title": "ROnnie", "src": "https://www.youtube.com/watch?v=QYs1rDpM0Ek" } }
+  # utter_kalorien_aktivitaet:
+  # - text: "Was ist Deine tägliche körperliche Betätigung (ohne Sport)?"
+  #   buttons:
+  #   - title: "Kaum aktiv (nur sitzend)"
+  #     payload: "/kaum_aktiv"
+  #   - title: "Bisschen aktiv (meistens sitzend)"
+  #     payload: "/bisschen_aktiv"
+  #   - title: "Aktiv (viel laufen, rennen)"
+  #     payload: "/aktiv"
+  #   - title: "Sehr aktiv (harte körperliche Arbeit)"
+  #     payload: "/sehr_aktiv"
 
+#   utter_kalorien_ziel:
+#   - text: "Was ist dein Ziel?"
+#     buttons:
+#     - title: "Abnehmen"
+#       payload: "/abnehmen"
+#     - title: "Gewicht halten"
+#       payload: "/gewicht_halten"
+#     - title: "Masse aufbauen"
+#       payload: "/masse_aufbauen"
+
+#   utter_kalorien_koerpergroesse:
+#   - text: "Wie groß bist Du?"
+
+#   utter_kalorien_alter:
+#   - text: "Wie alt bist Du?"
+
+#   utter_kalorien_geschlecht:
+#   - text: "Bist du männlich oder weiblich?"
+
+#  utter_kalorien_start:
+#   - text: "Alles klar, dafür brauche ich paar Infos von dir: Wie viel wiegst Du?"
+
+
+utter_entschuldigung:
+- text: "Meine Wenigkeit entschuldigt sich von ganzem Herzen für die Unvollständigkeit meiner Funktionalität und bittet um Verzeihung und Verständnis. Mit Hochdruck wird an einer Verbesserung gearbeitet"
+
+utter_error_message:
+- text: "🥹 \n
+        👉👈 \n
+        Ich bin voller Trauer angesichts meiner Unfähigkeit auf Wünsche und Bedürfnis im vollen Umfang einzugehen."
+
+
+utter_ask_for_genre:
+- text: "Was für ein Genre willst du?"
+  buttons:
+  - title: "hiphop"
+    payload: "/hiphop_playlist"
+  - title: "techno"
+    payload: "/techno_playlist"
+  - title: "pop"
+    payload: "/pop_playlist"
+  - title: "jazz"
+    payload: "/jazz_playlist"
+  - title: "k-Pop"
+    payload: "/k-pop_playlist"
+  - title: "überraschung"
+    payload: "/überraschung_playlist"
+    
+utter_gymPlaylist_techno:
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=Yy4i6Dzyx3k" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=Ncu0A9dtieU" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=ssXzkCMdcDQ" } }
+
+utter_gymPlaylist_pop:
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=d8OL6m0ZblA" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=5u-tYqRQSsE" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=72JOJZLMrU0" } }
+
+utter_gymPlaylist_hiphop:
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=7BdAKfsjZ6U" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=RJPNjYVnJnk" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=kf0Af6A5wW8" } }
+
+utter_gymPlaylist_jazz:
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=NKDI-60H-5s" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=neV3EPgvZ3g" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=Ys_tRskDiDg" } }
+
+utter_gymPlaylist_kpop:
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=GuEJ6QzXS4A" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=WZPLefjiAZw" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=4T9DJNe7ZPU" } }
+
+utter_gymPlaylist_überraschung:
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=W05LPtVm5hY" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=0DeU8uKC3LQ" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=ZJebIJFRuIY" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=QJucFT8gATM" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=YNvCK7jkUEk" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=SN5awaBMkuY" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=v7_ED23ah-s" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=2XlYZPfPwzc" } }
+- text: Hier ist nice Gym Mucke für dich
+  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=-ladG8O1t7A" } }
 
 session_config:
   session_expiration_time: 60

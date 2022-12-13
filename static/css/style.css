@@ -921,7 +921,8 @@ button:hover{
   height: 100px;
   padding: 10px 90px;
   box-sizing: border-box;
-  color: black;
+  color: rgb(255, 255, 255);
+  background-color: #5383ED;
   background: transparent
 }
 
@@ -954,7 +955,7 @@ button:hover{
 }
 
 .navbar ul li a:hover{
-  background:#5383ED;
+  background-color:#5383ED;
 }
 
 .mockup {

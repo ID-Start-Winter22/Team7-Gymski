@@ -1,11 +1,5 @@
 version: "3.0"
 
-stories:
-- story: greet path
-  steps:
-  - intent: greet
-  - action: utter_greet
-
 - story: recipe path
   steps:
   - intent: get_recipe
