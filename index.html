@@ -52,9 +52,74 @@
       <!--Main css-->
       <link rel="stylesheet" type="text/css" href="static/css/style.css" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <!--Font Awesome icons import-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
   
     <body>
+        <section class="banner">
+          <div class="navbar">
+            <div class="logo">Gymski</div>
+              <ul>
+              <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/ID-Start-Winter22/Team7-Gymski">GitHub</a></li>
+              <li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCc6RN6wpBR3AF0rBwsB5G7g">YouTube</a></li>
+              <li><a target="_blank" rel="noopener noreferrer" href="#">Support us</a></li>
+            </ul>
+          </div>
+            <div class="row">
+              <div class="text-box">
+                <h1>Dein Bester Fitness Freund</h1>
+                <p>Top Infos zu Fitness und Ernährung. Mit ❤️ gemacht von Studenten.</p>
+                <button type="button">Try now!<img src="static/img/arrow.png"></button>
+              </div>
+              <div class="mockup">
+                <img src="static/img/mockup.png" class="mockupImage">
+              </div>
+            </div>
+        </section>
+        <section class="section2">
+          <div class="container2">  
+            <img class>
+            <div> 
+              <div class="section-text" >Schnell. Zuverlässig. Bereichernd</div>
+            </div>
+          </div>
+        
+        </section>
+        <section class="section3">
+          <h3 style="text-align:center">Meet the Team</h3>
+          <div class="row2">
+            <div class="column">
+              <h5 style="text-align:center">Nils Tesch</h5>
+            </div>
+            <div class="column">
+              <h5 style="text-align:center">Oliver Schlieper</h5>
+            </div>
+            <div class="column">
+              <h5 style="text-align:center">Aliha Ragab</h5>
+            </div>
+            <div class="column">
+              <h5 style="text-align:center">Max Arnold</h5>
+            </div>
+          </div>
+        </section>
+       
+      <!--Header-->
+      <!-- <div class="header">
+        <div class="header-right">
+          <div class="container">
+            <div>
+              <span id="icon" class="fa fa-github" style="font-size:35px;color:white;"></span>
+              <span target="_blank" rel="noopener noreferrer" class="active" href="https://github.com/ID-Start-Winter22/Team7-Gymski">Github</span>
+            </div>
+            <span id="icon" class="fa fa-youtube-play" style="font-size:35px;color:white;"></span> 
+            <span target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCc6RN6wpBR3AF0rBwsB5G7g">YouTube</span>
+            <span id="icon" class="fa fa-paypal" style="font-size:30px;color:white;"></span>
+            <span target="_blank" rel="noopener noreferrer" href="#about">Support us</span>
+          </div>
+        </div>
+      </div> -->
+
       <div class="container">
         <!-- Modal for rendering the charts, declare this if you want to render charts, 
            else you remove the modal -->
@@ -66,7 +131,7 @@
         <div class="widget">
           <div class="chat_header">
             <!--Add the name of the bot here -->
-            <span class="chat_header_title">Sara</span>
+            <span class="chat_header_title">Gymski</span>
             <span class="dropdown-trigger" href="#" data-target="dropdown1">
               <i class="material-icons"> more_vert </i>
             </span>
@@ -88,7 +153,7 @@
           <div class="keypad">
             <textarea
               id="userInput"
-              placeholder="Type a message..."
+              placeholder="Schreibe eine Nachricht..."
               class="usrInput"
             ></textarea>
             <div id="sendButton">
@@ -99,16 +164,15 @@
   
         <!--bot profile-->
         <div class="profile_div" id="profile_div">
-          <img class="imgProfile" src="static/img/botAvatar.png" />
+          <img class="imgProfile" src="chatbot.png" />
         </div>
   
         <!-- Bot pop-up intro -->
         <div class="tap-target" data-target="profile_div">
           <div class="tap-target-content">
-            <h5 class="white-text">Hey there 👋</h5>
+            <h5 class="white-text">Moin Meister 👋</h5>
             <p class="white-text">
-              I can help you get started with Rasa and answer your technical
-              questions.
+              Ich kann Dir bei allem rund um Fitness und Ernährung helfen 🫡
             </p>
           </div>
         </div>
