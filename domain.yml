@@ -38,12 +38,13 @@ intents:
   - get_tricep_exercise
   - get_ab_exercise
   - get_leg_exercise
+  - get_workout_schedule_for_day
 
 actions:
   - action_store_name
   - action_get_name
   - action_calorie_calculator
-  - action_test
+  - action_get_workout_schedule_for_day
   # - action_ask_user_age
   # - action_ask_user_gender
   # - action_ask_user_activity
@@ -58,8 +59,15 @@ entities:
   - user_gender
   - user_activity
   - user_goal
+  - day
 
 slots:
+  day:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: day
   username:
     type: text
     influence_conversation: true
@@ -449,6 +457,60 @@ responses:
       4. Führe die Griffe nun so weit nach hinten, wie es Dein Schultergelenk zulässt und halte die Position im Anschluss für 1-2 Sekunden.
       5. Dann lässt Du das Gewicht langsam wieder ab, bevor Du mit der nächsten Wiederholung beginnst."
       
+   utter_get_workout_schedule_montag:
+  - text: "Hier ist dein perfekter Trainingsplan, um in die Woche zu STARTEN"
+    attachment: { "type":"video", "payload":{ "title": "Fun Full Body", "src": "https://www.youtube.com/watch?v=2-RGYM6ojJ4" } }
+    # attachment: { "type":"video", "payload":{ "title": "Killer Sixpack", "src": "https://www.youtube.com/watch?v=vOiP3kfFlrE" } }
+    # attachment: { "type":"video", "payload":{ "title": "Energy Boost", "src": "https://www.youtube.com/watch?v=fLQjj1DrJz8" } }
+    # attachment: { "type":"video", "payload":{ "title": "Medium HIIT", "src": "https://www.youtube.com/watch?v=7537-yAhASA" } }
+    # attachment: { "type":"video", "payload":{ "title": "Oldies Dance", "src": "https://www.youtube.com/watch?v=lQ3WCE2zQQU" } }
+    # attachment: { "type":"video", "payload":{ "title": "Boxing Cardio", "src": "https://www.youtube.com/watch?v=1bjKpgrbm6o" } }
+  
+  # utter_get_workout_schedule_dienstag:
+  # - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+  #   attachment: { "type":"video", "payload":{ "title": "Bombastic Booty", "src": "https://www.youtube.com/watch?v=AFxHeJP--j4" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Booty", "src": "https://www.youtube.com/watch?v=ZsthLQrpY6g" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Inner and Outer Thighs", "src": "https://www.youtube.com/watch?v=_sl7q03-0Mw" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Booty Pump", "src": "https://www.youtube.com/watch?v=lRFxt8BHxT0" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Legs and Fat Burn", "src": "https://www.youtube.com/watch?v=R1EKAgFRe" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Watching Dance", "src": "https://www.youtube.com/watch?v=XNf6WHXtNCs" } }
+
+  # utter_get_workout_schedule_mittwoch:
+  # - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+  #   attachment: { "type":"video", "payload":{ "title": "Lower Abs", "src": "https://www.youtube.com/watch?v=54x6yjnzLms" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Old But Gold", "src": "https://www.youtube.com/watch?v=CtTqaVWYRTA" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Best of HIIT", "src": "https://www.youtube.com/watch?v=k7nV8Gyn56o" } }
+  #   attachment: { "type":"video", "payload":{ "title": "HIIT Workout", "src": "https://www.youtube.com/watch?v=zr08J6wB53Y" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Ab Workout", "src": "https://www.youtube.com/watch?v=ft6MgeTvfYs" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Basic HIIT", "src": "https://www.youtube.com/watch?v=wGZYbAZrDxw" } }
+
+
+  # utter_get_workout_schedule_donnerstag:
+  # - text: "Rest Day"
+  #   image: "https://media.tenor.com/RtY6of3HthsAAAAM/it-is-my-day-off-i-am-feeling.gif"
+
+  # utter_get_workout_schedule_freitag:
+  # - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+  #   attachment: { "type":"video", "payload":{ "title": "Full Body", "src": "https://www.youtube.com/watch?v=DkLISiTHRjU" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Ab Workout", "src": "https://www.youtube.com/watch?v=z2ggDhOqLsk" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Boob Lift", "src": "https://www.youtube.com/watch?v=saX32Yy9vEI" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Fun Full Body", "src": "https://www.youtube.com/watch?v=2-RGYM6ojJ4" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Calorie Killer", "src": "https://www.youtube.com/watch?v=NmCXy7oMsOs" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Stressful Day", "src": "https://www.youtube.com/watch?v=APbAoww8_gE" } }
+
+  # utter_get_workout_schedule_samstag:
+  # - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+  #   attachment: { "type":"video", "payload":{ "title": "Grow your Booty", "src": "https://www.youtube.com/watch?v=mcs6XLX8H_0" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Old but Gold", "src": "https://www.youtube.com/watch?v=CtTqaVWYRTA" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Inner Thigh", "src": "https://www.youtube.com/watch?v=h9uZVP_qLVo" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Bubble Butt", "src": "https://www.youtube.com/watch?v=vtD5nGoNMu8" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Happy Sweat", "src": "https://www.youtube.com/watch?v=06cwQlikBEA&t=60s" } }
+  #   attachment: { "type":"video", "payload":{ "title": "Medium HIIT", "src": "https://www.youtube.com/watch?v=7537-yAhASA" } }
+
+  #   utter_get_workout_schedule_sonntag:
+  #   - text: "Rest Day"
+  #   image: "https://media.tenor.com/fWoV97ft9vwAAAAM/sleepy-at.gif"
+
 
 
 

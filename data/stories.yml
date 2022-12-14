@@ -169,3 +169,8 @@ stories:
   steps:
   - intent: get_shoulder_exercise
   - action: utter_shoulder_exercise
+
+- story: ask for workout schedule for specific day
+  steps: 
+  - intent: get_workout_schedule_for_day
+  - action: action_get_workout_schedule_for_day
