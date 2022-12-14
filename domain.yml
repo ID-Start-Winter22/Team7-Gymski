@@ -6,17 +6,12 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
-  - my_name_is
-  - bot_challenge_name
   - get_recipe
   - get_challenge
   - easy_challenge
   - medium_challenge
   - hard_challenge
-  - test
   - get_fruehstueck
   - get_mittagessen
   - get_abendessen
@@ -38,21 +33,19 @@ intents:
   - get_tricep_exercise
   - get_ab_exercise
   - get_leg_exercise
+  - hype me up
+  - gym_playlist
+  - techno_playlist
+  - jazz_playlist
+  - k-pop_playlist
+  - hiphop_playlist
+  - pop_playlist
+  - überraschung_playlist
 
 actions:
-  - action_store_name
-  - action_get_name
   - action_calorie_calculator
-  - action_test
-  # - action_ask_user_age
-  # - action_ask_user_gender
-  # - action_ask_user_activity
-  # - action_ask_user_height
-  # - action_ask_user_weight
-  # - action_ask_user_goal
 
 entities:
-  - username
   - user_weight
   - user_height
   - user_gender
@@ -60,12 +53,6 @@ entities:
   - user_goal
 
 slots:
-  username:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: username
   user_weight:
     type: float
     influence_conversation: true
@@ -126,12 +113,6 @@ responses:
   utter_iamabot:
   - text: "Ich bin ein Chatbot, powered by Rasa."
 
-  utter_greet_ask_name:
-  - text: "Hallo, wie heißt Du?"
-
-  utter_greet_with_name:
-  - text: "Hey, {username}. Alles klar?"
-
   utter_recipe:
   - image: "https://user-images.githubusercontent.com/93930736/202023097-e321eead-de20-4ed1-92fa-f5d7ad030d13.png"
     text: "\n
@@ -170,18 +151,6 @@ responses:
       payload: "/medium_challenge"
     - title: "Schwer"
       payload: "/hard_challenge"
-
-  #utter_challenge:
-  #- text: "Hai Challenge: 3 mal in einer Woche joggen gehen."
- # - text: "Gorilla Challenge: Für 30 Tage beim Auswärtsessen auf FastFood Ketten verzichten."
- # - text: "Schlangen Challenge: Pro Tag 3 Dehnübungen machen für einen Monat."
- # - text: "Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
- # - text: "Leopard Challenge: Für eine Woche jeden Tag 2 Minuten sprinten."
-  #- text: "Drachen Challenge: Für einen Monat jeden Tag 5 Minuten meditieren."
-  #- text: "Känguru Challenge: Für einen Monat jeden Tag 10 Burpees machen."
-  #- text: "T-Rex Challenge: Für einen Monat auf Tiefkühlprodukte verzichten."
- # - text: "Habicht Challenge: Einen neuen Fitness Skill lernen."
- # - text: "Nashorn Challenge: Für einen Monat nur Olivenöl zum kochen verwenden."
 
   utter_schwer_challenge:
   - text: "Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
@@ -449,6 +418,94 @@ responses:
       4. Führe die Griffe nun so weit nach hinten, wie es Dein Schultergelenk zulässt und halte die Position im Anschluss für 1-2 Sekunden.
       5. Dann lässt Du das Gewicht langsam wieder ab, bevor Du mit der nächsten Wiederholung beginnst."
       
+  utter_entschuldigung:
+  - text: "Meine Wenigkeit entschuldigt sich von ganzem Herzen für die Unvollständigkeit meiner Funktionalität und bittet um Verzeihung und Verständnis. Mit Hochdruck wird an einer Verbesserung gearbeitet"
+
+  utter_error_message:
+  - text: "🥹 \n
+          👉👈 \n
+          Ich bin voller Trauer angesichts meiner Unfähigkeit auf Wünsche und Bedürfnis im vollen Umfang einzugehen."
+
+
+  utter_ask_for_genre:
+  - text: "Was für ein Genre willst du?"
+    buttons:
+    - title: "hiphop"
+      payload: "/hiphop_playlist"
+    - title: "techno"
+      payload: "/techno_playlist"
+    - title: "pop"
+      payload: "/pop_playlist"
+    - title: "jazz"
+      payload: "/jazz_playlist"
+    - title: "k-Pop"
+      payload: "/k-pop_playlist"
+    - title: "überraschung"
+      payload: "/überraschung_playlist"
+      
+  utter_gymPlaylist_techno:
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/Yy4i6Dzyx3k" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/Ncu0A9dtieU" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/ssXzkCMdcDQ" } }
+
+  utter_gymPlaylist_pop:
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{"title": "pop1", "src": "https://www.youtube.com/embed/d8OL6m0ZblA" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{"title": "pop2", "src": "https://www.youtube.com/embed/5u-tYqRQSsE" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{"title": "pop3", "src": "https://www.youtube.com/embed/72JOJZLMrU0" } }
+
+  utter_gymPlaylist_hiphop:
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/7BdAKfsjZ6U" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/RJPNjYVnJnk" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/kf0Af6A5wW8" } }
+
+  utter_gymPlaylist_jazz:
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/NKDI-60H-5s" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/neV3EPgvZ3g" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/Ys_tRskDiDg" } }
+
+  utter_gymPlaylist_kpop:
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/GuEJ6QzXS4A" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/WZPLefjiAZw" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/4T9DJNe7ZPU" } }
+
+  utter_gymPlaylist_überraschung:
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/W05LPtVm5hY" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/0DeU8uKC3LQ" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/ZJebIJFRuIY" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/QJucFT8gATM" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/YNvCK7jkUEk" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/SN5awaBMkuY" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/v7_ED23ah-s" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/2XlYZPfPwzc" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/-ladG8O1t7A" } }
+
+  utter_hype:
+  - text: "YEAHHH BUDDDYY"
+    attachment: { "type":"video", "payload":{ "src": "https://youtube.com/embed/tkBUpJtYFTw" } }
 
 
 

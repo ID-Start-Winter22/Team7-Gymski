@@ -21,7 +21,7 @@ With Gymski you will get quick and percise information about fitness, nutrition 
 And especially on day where you are not that motivated to push through with your fitness or health program, Gymski can find motivating words to accelerate your progress. 
 
 ## ❌ Limitations
-Overall Gymski is a useful bot but he cannot actually go to the gym with you and assist in real life. He also doesn't cook for you. This all means that in the end YOU need to be a disciplined individual and take action. Gymski can only assist you in your fitness journey and give you some useful input. 
+Overall Gymski is a useful bot but he cannot actually go to the gym with you can assist in real life. He also doesn't cook for you. This all means that in the end YOU need to be a disciplined individual and take action. Gymski can only assist you in your fitness journey and give you some useful input. 
 
 ## 👨‍👨‍👧‍👧 Team 
 | Name             | Contact                |
