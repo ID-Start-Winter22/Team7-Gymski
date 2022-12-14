@@ -190,7 +190,7 @@ blockquote {
 .imgProfile {
   position: center;
   box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 #00000096;
-  border-radius: 100px;
+  border-radius: 200px;
   width: 50%;
 }
 
@@ -867,6 +867,7 @@ video:focus {
   background-image: radial-gradient(circle, rgba(91,91,91,1) 0%, rgba(0,0,0,1) 96%);
   background-size: cover;
   background-position: center;
+  z-index: -2;
 }
 
 .text-box{
@@ -923,7 +924,9 @@ button:hover{
   box-sizing: border-box;
   color: rgb(255, 255, 255);
   background-color: #5383ED;
-  background: transparent
+  background: transparent;
+  z-index: 3;
+  position: absolute;
 }
 
 .navbar .logo{
@@ -942,6 +945,7 @@ button:hover{
   margin: 0;
   padding: 0;
   display: flex;
+  z-index: 255;
 }
 
 .navbar ul li a{
@@ -952,6 +956,7 @@ button:hover{
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
+  z-index: 255;
 }
 
 .navbar ul li a:hover{
@@ -960,17 +965,17 @@ button:hover{
 
 .mockup {
   position: relative;
-  width: 1000px;
+  width: 200px;
   flex-basis: 80%;
   display: flex;
   align-items: right;
-  
+  z-index: 0;
 }
 
 .mockupImage {
   height: 50%;
   width: 50%;
-  margin-top: 28%;
+  margin-top: 45%;
 }
 
 .row{

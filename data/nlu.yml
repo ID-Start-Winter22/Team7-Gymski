@@ -21,6 +21,12 @@ nlu:
     - Hallo
     - hallo
 
+- intent: greet_formal
+  examples: |
+    - guten Tag
+    - guten Abend
+
+
 - intent: goodbye
   examples: |
     - cu
@@ -61,23 +67,15 @@ nlu:
     - nein
     - ne
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-    - wer bist du?
-    - bist du ein Mensch?
-    - spreche ich mit einem Chatbot?
-
 - intent: get_user_weight
   examples: |
     - [40] (user_weight) kg
+    - [41] (user_weight) kg
 
 - intent: get_user_height
   examples: |
     - [140] (user_height)cm
+    - [180] (user_height)cm
     
 
 - intent: get_user_gender
@@ -95,7 +93,8 @@ nlu:
 
 - intent: get_user_age
   examples: |
-    - [20](user_age) 
+    - [20](user_age)
+    - [21](user_age) 
 
 - intent: get_user_goal
   examples: |
@@ -165,6 +164,7 @@ nlu:
 - intent: get_snack
   examples: |
     - snack
+    - snacken
 
 - intent: get_help
   examples: |
@@ -199,6 +199,128 @@ nlu:
     - Challenge geschafft
     - Challenge done
 
+- intent: get_chest_exercise
+  examples: |
+    - brust
+    - chest
+    - ich will meine brust trainieren
+    - brust workout
+    - brust übungen
+    - schulter übung
+    - chest workout
+    - wie kann ich meine brust trainieren
+    - gib mir eine übung für meine brust
+
+- intent: get_shoulder_exercise
+  examples: |
+    - schulter
+    - shoulder
+    - ich will meine schulter trainieren
+    - ich will meine schultern trainieren
+    - schulter workout
+    - schulter übungen
+    - schulter übung
+    - shoulder workout
+    - shoulder exercise
+    - wie kann ich meine schulter trainieren
+    - wie kann ich meine schultern trainieren
+    - gib mir eine übung für meine schulter
+    - gib mir eine übung für meine schultern
+
+- intent: get_back_exercise
+  examples: |
+    - rücken
+    - back
+    - ich will meinen rücken trainieren
+    - rücken workout
+    - back workout
+    - rücken übungen
+    - rücken übung
+    - back exercise
+    - wie kann ich meinen rücken trainieren
+    - gib mir eine übung für meinen rücken
+
+- intent: get_bicep_exercise
+  examples: |
+    - bizeps
+    - bizep
+    - biceps
+    - bicep
+    - ich will meinen bizeps trainieren
+    - bizeps workout
+    - bizep workout
+    - bicep workout
+    - biceps workout
+    - bizeps übungen
+    - bizeps übung
+    - bicep exercise
+    - biceps exercise
+    - wie kann ich meinen bizeps trainieren
+    - wie kann ich meinen bizep trainieren
+    - gib mir eine übung für meinen bizeps
+    - gib mir eine übung für meinen bizep
+
+- intent: get_tricep_exercise
+  examples: |
+    - trizeps
+    - trizep
+    - triceps
+    - tricep
+    - ich will meinen trizeps trainieren
+    - trizeps workout
+    - trizep workout
+    - triceps workout
+    - tricep workout
+    - trizeps übung
+    - trizep übung
+    - triceps exercise
+    - tricep exercise
+    - wie kann ich meinen trizeps trainieren
+    - wie kann ich meinen trizep trainieren
+    - gib mir eine übung für meinen trizeps
+    - gib mir eine übung für meinen trizep
+
+- intent: get_ab_exercise
+  examples: |
+    - bauchmuskel
+    - bauchmuskeln
+    - ab
+    - abs
+    - ich will meinen bauch trainieren
+    - ich will meine bauchmuskeln trainieren
+    - ab workout
+    - abs workout
+    - bauch workout
+    - bauchmuskel workout
+    - bauchmuskel übung
+    - ab exercise
+    - abs exercise
+    - wie kann ich meinen bauch trainieren
+    - wie kann ich meine bauchmuskeln trainieren
+    - gib mir eine übung für meinen bauch
+    - gib mir eine übung für meine bauchmuskeln
+
+- intent: get_leg_exercise
+  examples: |
+    - beine
+    - leg
+    - legs
+    - ich will meine beine trainieren
+    - bein workout
+    - leg workout
+    - legs workout
+    - beinmuskel workout
+    - beinmuskel übung
+    - bein übung
+    - bein übungen
+    - leg exercise
+    - bein exercise
+    - beine trainieren
+    - wie kann ich meine beine trainieren
+    - wie kann ich meine beinmuskeln trainieren
+    - gib mir eine übung für meine beine
+    - gib mir eine übung für meine beinmuskeln
+  
 - intent: hype me up
   examples: |
     - hype me up
@@ -245,6 +367,3 @@ nlu:
     - überraschung
     - surprise me 
     
-  
-
-

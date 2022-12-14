@@ -11,14 +11,3 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
-
-
-- rule: kalorierechner path
-  steps:
-  - intent: kalorierechner
-  - action: utter_ask_user_age
-  - action: utter_ask_user_gender
-  - action: utter_ask_user_height
-  - action: utter_ask_user_weight
-  - action: utter_ask_user_goal
-  - action: action_calorie_calculator

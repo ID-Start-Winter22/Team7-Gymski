@@ -2,6 +2,7 @@ version: "3.0"
 
 intents:
   - greet
+  - greet_formal
   - goodbye
   - affirm
   - deny
@@ -11,22 +12,38 @@ intents:
   - easy_challenge
   - medium_challenge
   - hard_challenge
-  - test
   - get_fruehstueck
   - get_mittagessen
   - get_abendessen
   - get_snack
   - get_help
-  - challenge_completed
-  - videopls
   - kalorierechner
+  - get_user_weight
+  - get_user_height
+  - get_user_gender
+  - get_user_activity
+  - get_user_age
+  - get_user_goal
   - get_video
   - challenge_completed
+  - get_chest_exercise
+  - get_shoulder_exercise
+  - get_back_exercise
+  - get_bicep_exercise
+  - get_tricep_exercise
+  - get_ab_exercise
+  - get_leg_exercise
   - hype me up
+  - gym_playlist
+  - techno_playlist
+  - jazz_playlist
+  - k-pop_playlist
+  - hiphop_playlist
+  - pop_playlist
+  - überraschung_playlist
+
 actions:
   - action_calorie_calculator
-  - action_output_recipe
-
 
 entities:
   - user_weight
@@ -36,12 +53,6 @@ entities:
   - user_goal
 
 slots:
-  username:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: username
   user_weight:
     type: float
     influence_conversation: true
@@ -157,6 +168,7 @@ responses:
   - text: "Drachen Challenge: Für einen Monat jeden Tag 5 Minuten meditieren."
   - text: "Känguru Challenge: Für einen Monat jeden Tag 10 Burpees machen."
 
+
   utter_tageszeit:
   - text: "Frühstück, Mittagessen oder Abendessen oder Snack?"
     buttons:
@@ -175,16 +187,16 @@ responses:
 
           Zutaten (für zwei Portionen):
 
-          1 rote Zwiebel\n
-          1 Dose stückige Tomaten\n
-          1 Paprika (rot, gelb oder grün)\n
-          1/2 rote Chili\n
-          1 EL Olivenöl\n
-          1 TL Paprika edelsüß\n
-          Salz\n
-          Pfeffer\n
-          2 Eier\n
-          1/2 Bund glatte Petersilie\n
+          1 rote Zwiebel
+          1 Dose stückige Tomaten
+          1 Paprika (rot, gelb oder grün)
+          1/2 rote Chili
+          1 EL Olivenöl
+          1 TL Paprika edelsüß
+          Salz
+          Pfeffer
+          2 Eier
+          1/2 Bund glatte Petersilie
 
           So einfach geht’s:\n
           Die Zwiebel schälen, halbieren und in feine Stückchen schneiden. Paprika und Chili waschen, entkernen und ebenso in feine Stücke schneiden.
@@ -202,13 +214,14 @@ responses:
     text: "Nudeln mit Zucchini und Lachs
 
           Zutaten für 2 Personen\n
-          250 g Vollkornnudeln\n
-          2 kleine Zucchini\n
-          1-2 Lachsfilet (ich nehme meist TK)\n
-          1 Knoblauchzehe\n
-          100-150 ml Kokosmilch\n
-          1 TL Gemüsebrühe\n
-          So einfach geht´s
+          250 g Vollkornnudeln
+          2 kleine Zucchini
+          1-2 Lachsfilet (ich nehme meist TK)
+          1 Knoblauchzehe
+          100-150 ml Kokosmilch
+          1 TL Gemüsebrühe
+
+          So einfach geht´s\n
           Als erstes setzt du einen Topf mit Wasser auf und gibst die Nudeln hinein, sobald das Wasser kocht. Füge etwas Salz hinzu, es sei denn du kochst für ganz kleine Kinder.
 
           In der Zwischenzeit wäschst du die Zucchini und schneidest sie in halbe oder viertel Scheiben. Je nach Saison und Herkunft deiner Zucchini kannst du die Schale mit verwenden.
@@ -232,22 +245,22 @@ responses:
     text: "Reis mit Hähnchen und Gemüse
 
           Zutaten für 2 Personen\n
-          250 g Hähnchenbrustfilet\n
-          ½ Zwiebel\n
-          1 Knoblauchzehen\n
-          1 ½ Frühlingszwiebeln\n
-          1rote Paprikaschoten\n
-          ½ Stange Staudensellerie\n
-          1 Chilischoten\n
-          1 ½ EL Olivenöl\n
-          125 g Natur-Langkornreis\n
-          250 ml Hühnerbrüh\n
-          ½ Lorbeerblatt\n
-          Salz\n
-          Pfeffer\n
-          2 Tomaten\n
-          2 Stiele Koriander\n
-          ¼ TL gemahlener Kreuzkümmel\n
+          250 g Hähnchenbrustfilet
+          ½ Zwiebel
+          1 Knoblauchzehen
+          1 ½ Frühlingszwiebeln
+          1rote Paprikaschoten
+          ½ Stange Staudensellerie
+          1 Chilischoten
+          1 ½ EL Olivenöl
+          125 g Natur-Langkornreis
+          250 ml Hühnerbrüh
+          ½ Lorbeerblatt
+          Salz
+          Pfeffer
+          2 Tomaten
+          2 Stiele Koriander
+          ¼ TL gemahlener Kreuzkümmel
 
 
 
@@ -268,16 +281,16 @@ responses:
   utter_snack:
   - image: "https://user-images.githubusercontent.com/93930736/202041182-a37f18b1-42a0-4603-aad8-4e8adcc021cc.png"
     text: "Low Carb Keto Müsliriegel
-          Zutaten für 8 Riegel\n
-          50g gehobelte Mandeln\n
-          50g gehackte Haselnüsse\n
-          25g braunes Erythrit\n
-          20g geschälte Hanfsamen\n
-          15g Sonnenblumenkerne\n
-          15g Kürbiskerne\n
-          15g Kokoschips\n
-          1 Eiklar\n
-          ½ TL Vanille Extrakt\n
+          Zutaten für 8 Riegel
+          50g gehobelte Mandeln
+          50g gehackte Haselnüsse
+          25g braunes Erythrit
+          20g geschälte Hanfsamen
+          15g Sonnenblumenkerne
+          15g Kürbiskerne
+          15g Kokoschips
+          1 Eiklar
+          ½ TL Vanille Extrakt
 
           So einfach geht´s
           Backofen auf 200°C (Ober- und Unterhitze) vorheizen.
@@ -295,143 +308,206 @@ responses:
           Rezept von https://kochketo.de/keto-muesliriegel/"
 
   utter_help:
-  - text: "Ich kann Dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
-          Hast Du Lust auf eine Fitness Challenge. So gebe 'Challenge' ein
-          Hoffe das ist was für Dich dabei!"
+  - text: "Ich kann dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
+          Hast du Lust auf eine Fitness Challenge. So gebe 'Challenge' ein"
+  
+  utter_ask_user_age:
+  - text: "Wie alt bist du denn?"
 
-  utter_challenge_completed:
-  - image: "https://github.com/ID-Start-Winter22/chat-team-7/issues/24#issuecomment-1322226641"
-    text: "Dubbelldore ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
-  - image: "https://github.com/ID-Start-Winter22/chat-team-7/issues/24#issuecomment-1322237144"
-    text: "Qui Gon Gym ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
+  utter_ask_user_gender:
+  - text: "Welchem Geschlecht ordnest du dich zu? Männlich oder Weiblich"
+
+  utter_ask_user_activity:
+  - text: "Wie viel Sport treibst du? wenig / moderat / viel"
+
+  utter_ask_user_height:
+  - text: "Wie groß bist du in cm?"
+
+  utter_ask_user_weight:
+  - text: "Was sagt die Wage?"
+
+  utter_ask_user_goal:
+  - text: "Willst du abnehmen, halten oder zunehmen"
 
   utter_video:
   - text: "Hier kommst du zu unserem tollen Werbevideo"
     attachment: { "type":"video", "payload":{ "title": "MVG Werbung", "src": "https://www.youtube.com/embed/_STSNK69ViE" } }
 
+  utter_challenge_completed:
+  - image: "https://user-images.githubusercontent.com/96564527/203092048-4e1d5fad-c05e-4158-81d4-1e0d46a85a14.jpg"
+    text: "Dubbelldore ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
+  - image: "https://user-images.githubusercontent.com/96564527/203093745-6662d5a2-0602-4d84-8e50-77e6d35d065d.jpg"
+    text: "Qui Gon Gym ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
+
 
   utter_readyForMore: 
   - text: "Okay. Falls noch was ist sag Bescheid!"
 
-  # utter_kalorien_aktivitaet:
-  # - text: "Was ist Deine tägliche körperliche Betätigung (ohne Sport)?"
-  #   buttons:
-  #   - title: "Kaum aktiv (nur sitzend)"
-  #     payload: "/kaum_aktiv"
-  #   - title: "Bisschen aktiv (meistens sitzend)"
-  #     payload: "/bisschen_aktiv"
-  #   - title: "Aktiv (viel laufen, rennen)"
-  #     payload: "/aktiv"
-  #   - title: "Sehr aktiv (harte körperliche Arbeit)"
-  #     payload: "/sehr_aktiv"
-
-#   utter_kalorien_ziel:
-#   - text: "Was ist dein Ziel?"
-#     buttons:
-#     - title: "Abnehmen"
-#       payload: "/abnehmen"
-#     - title: "Gewicht halten"
-#       payload: "/gewicht_halten"
-#     - title: "Masse aufbauen"
-#       payload: "/masse_aufbauen"
-
-#   utter_kalorien_koerpergroesse:
-#   - text: "Wie groß bist Du?"
-
-#   utter_kalorien_alter:
-#   - text: "Wie alt bist Du?"
-
-#   utter_kalorien_geschlecht:
-#   - text: "Bist du männlich oder weiblich?"
-
-#  utter_kalorien_start:
-#   - text: "Alles klar, dafür brauche ich paar Infos von dir: Wie viel wiegst Du?"
-
-
-utter_entschuldigung:
-- text: "Meine Wenigkeit entschuldigt sich von ganzem Herzen für die Unvollständigkeit meiner Funktionalität und bittet um Verzeihung und Verständnis. Mit Hochdruck wird an einer Verbesserung gearbeitet"
-
-utter_error_message:
-- text: "🥹 \n
-        👉👈 \n
-        Ich bin voller Trauer angesichts meiner Unfähigkeit auf Wünsche und Bedürfnis im vollen Umfang einzugehen."
-
-
-utter_ask_for_genre:
-- text: "Was für ein Genre willst du?"
-  buttons:
-  - title: "hiphop"
-    payload: "/hiphop_playlist"
-  - title: "techno"
-    payload: "/techno_playlist"
-  - title: "pop"
-    payload: "/pop_playlist"
-  - title: "jazz"
-    payload: "/jazz_playlist"
-  - title: "k-Pop"
-    payload: "/k-pop_playlist"
-  - title: "überraschung"
-    payload: "/überraschung_playlist"
+  utter_chest_exercise:
+  - image: "https://www.inspireusafoundation.org/wp-content/uploads/2022/05/barbell-pause-bench.gif"
+    text: "Barbell Bench Press
+          
+      1. Lege dich auf eine Flachbank. Die Schultern werden beim Bankdrücken zurückgezogen und du kommst gleichzeitig in ein leichtes Hohlkreuz. Die verlängerte Linie zwischen Schultern und Beginn der Lendenwirbelsäule sollte dabei auf der Bank aufliegen. Unter dem unteren Rückenstrecker sollte noch ein Arm durchgestreckt werden können. Der Kopf liegt auf der Bank flach auf, die Augen fixieren die Stange. Die Beine befinden sich dabei im 90° Winkel fest aufgestellt auf dem Boden.
+      2. Für die richtige Griffstellung beim Bankdrücken umfasse die Stange in etwa schulterweit. Die Handgelenke werden gerade gehalten und die Langhantelstange mit einem sehr festen Griff umschlossen.
+      3. Nun folgt die Einleitung der Bewegung. Atme dafür tief ein und spanne gleichzeitig den Rücken, Po und die fixierten Schulterblätter an. Durch das tiefe Einatmen stabilisierst du die gesamte Körpermitte und nimmst den Druck von deinen Bandscheiben und der Wirbelsäule.
+      4. Die Stange wird nun langsam und kontrolliert auf der Brust abgesetzt. Die Brust bleibt dabei permanent unter Spannung. Der kurze Zwischenstopp auf der Brust sollte nicht dazu genutzt werden, die Spannung zu verlieren. Als Fixpunkt für das Absetzen dient hier das untere Ende des Brustbeins (unter den Brustwarzen).
+      5. Für die positive Bewegung wird die Stange anschließend explosiv nach oben geführt. Wichtig ist, gleichzeitig die Schulterblätter zu fixieren und die gesamte Körpermitte fest und stabil zu halten. Die Kraft wird durch das Ausatmen aus dem Bauchraum und den stabilen Stand der Füße unterstützt."
     
-utter_gymPlaylist_techno:
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=Yy4i6Dzyx3k" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=Ncu0A9dtieU" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=ssXzkCMdcDQ" } }
+  - image: "https://www.fitundattraktiv.de/wp-content/uploads/2018/02/bankdruecken_schraeg_mit_langhantel.gif"
+    text: "Incline Barbell Bench Press
 
-utter_gymPlaylist_pop:
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=d8OL6m0ZblA" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=5u-tYqRQSsE" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=72JOJZLMrU0" } }
+      1. Lege dich auf die Schrägbank (optimaler Winkel: 30 Grad) unter die in der Halterung liegende Langhantelstange und positioniere deine Füße fest am Boden. Dein Po berührt mit dem Steißbein das Rückenpolster, auf welchem zudem dein Rücken und dein Kopf abgelegt wird. Du umgreifst die Langhantelstange mehr als schulterbreit im Obergriff und achtest darauf, dass sich deine Handgelenke direkt unter der Stange befinden. Spanne deine Bauchmuskeln an und hebe die Stange aus der Halterung nach oben und ein paar cm nach vorne. Jetzt sollten deine senkrecht nach oben ausgestreckten Arme die Stange direkt über deinen Schlüsselbeinen halten. Achte darauf, dass deine Arme nicht ganz durchgestreckt sind, sondern dass sie leicht gebeugt bleiben. Dies schont deine Ellenbogengelenke.
+      2. Jetzt startest du die erste Bewegungsphase der Übung indem du die Langhantelstange langsam durch Herablassen der Ellenbogen nach unten bis kurz über die Schlüsselbeinfasern der Brustmuskulatur absenkst. Während dieser Phase atmest du ein.
+      3. Danach drückst du die Stange auf gleichem Weg wieder nach oben und atmest währenddessen aus. Vergiss nicht das Ellenbogengelenk am Ende der Drückbewegung leicht gebeugt zu lassen."
 
-utter_gymPlaylist_hiphop:
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=7BdAKfsjZ6U" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=RJPNjYVnJnk" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=kf0Af6A5wW8" } }
+  - image: "https://www.fitundattraktiv.de/wp-content/uploads/2017/12/brust_dips_am_geraet.gif"
+    text: "Chest Dips
 
-utter_gymPlaylist_jazz:
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=NKDI-60H-5s" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=neV3EPgvZ3g" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=Ys_tRskDiDg" } }
+      1. Stütze dich auf dem Barren ab
+      2. Ellbogen zeigen nach hinten (nicht zur Seite)
+      3. Ziehe deine Schulterblätter zusammen bzw. deine Schultern nach hinten
+      4. Spanne deinen Po an und versuche Ihn leicht nach hinten/oben zu ziehen
+      5. Lasse dich mit deiner Brust in Richtung Barren ab
+      6. Versuche dich soweit wie möglich abzulassen (maximal bis zum Barren)
+      7. Drücke dich kontrolliert nach oben"
 
-utter_gymPlaylist_kpop:
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=GuEJ6QzXS4A" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=WZPLefjiAZw" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=4T9DJNe7ZPU" } }
+  - image: "https://modusx.de/wp-content/uploads/2021/01/cable-fly-obere-brust.gif"
+    text: "Lower Chest Cable Fly
 
-utter_gymPlaylist_überraschung:
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=W05LPtVm5hY" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=0DeU8uKC3LQ" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=ZJebIJFRuIY" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=QJucFT8gATM" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=YNvCK7jkUEk" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=SN5awaBMkuY" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=v7_ED23ah-s" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=2XlYZPfPwzc" } }
-- text: Hier ist nice Gym Mucke für dich
-  attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=-ladG8O1t7A" } }
+      1. Stelle zunächst den Kabzug so ein, dass die Griffe von ganz oben zu greifen sind.
+      2. Umfasse nun die Griffe auf beiden Seiten und positioniere dich in der Mitte des Kabelzugs. Mach mit einem Bein einen Ausfallschritt nach vorne.
+      3. Bring nun beide Arme so zusammen, dass sich die Hände ungefähr auf Bauchhöhe treffen.
+      4. Führe die Griffe nun wieder kontrolliert an die Startposition zurück."
+
+  utter_shoulder_exercise:
+  - image: "https://homeworkouts.org/wp-content/uploads/anim-dumbbell-lateral-raise.gif"
+    text: "Lateral Raises
+
+      1. Positioniere dich in einem stabilen schulterweiten Stand
+      2. Schulterblätter nach hinten ziehen
+      3. Arme hängen leicht angewinkelt seitlich am Körper runter
+      4. Arme seitlich (leicht angewinkelt) nach oben heben. Die Ellbogen sind immer in der höchsten Position, nicht die Hände.
+      5. In der obersten Position haben die Oberarme einen 90° Winkel zum Oberkörper. Nicht höher als 90°
+      6. Bewege die Hanteln langsam & kontrolliert wieder in die Ausgangsposition zurück"
+
+  - image: "https://www.inspireusafoundation.org/wp-content/uploads/2022/10/cable-one-arm-lateral-raise.gif"
+    text: "Cable Lateral Raise
+
+      1. Der Kabelzug sollte auf der niedrigsten Stufe eingestellt werden.
+      2. Wähle das Gewicht so, dass du es mit einer Schulter heben kannst und stell dich Schulterbreit seitlich zum Kabelzug.
+      3. Um eine gute Haltung zu bewahren, strecke deine Brust nach vorne und ziehe deine Schulter nach hinten, deine Knie sollten leicht gebeugt sein. Zur unterstützung kannst du deine freie Hand an der Schiene des Kabelzugs platzieren.
+      4. Beugen Sie den Ellbogen leicht in einem Winkel von 10 bis 30 Grad und heben Sie den Arm seitlich an, bis er sich auf Höhe der Schulter befindet, wobei Sie beim Anheben ausatmen.
+      5. Vermeiden Sie es, den Arm beim Anheben des Bügels zu drehen, und konzentrieren Sie sich auf den Bereich, den Sie trainieren möchten - Ihre mittlere Schulter.
+      6. Halten Sie die Position 1-5 Sekunden lang, und atmen Sie dann ein, während Sie das Gewicht langsam wieder absenken. Lassen Sie das Kabel vollständig zum Stillstand kommen, bevor Sie die nächste Wiederholung beginnen."
+
+  - image: "https://modusx.de/wp-content/uploads/2021/04/military-press-weiter-griff.gif"
+    text: "Military Press
+    
+      1. Füße schulterweit unter der Stange positionieren
+      2. Langhantelstange etwas breiter als schulterweit greifen (etwa eine Handbreite weiter). Die Unterarme müssen bei der späteren Drückbewegung senkrecht nach oben stehen
+      3. Nachem du die Langhantelstange fest umgriffen hast machst du folgendes: Ziehe deine Schultern nach hinten und deine Ellbogen direkt unter die Stange. Diese Bewegung sorgt dafür, dass sowohl deine Rotatoren und dein Schultergelenk in der optimalen Position ist.
+      4. Bauchmuskeln anspannen, Po anspannen und Hüfte leicht nach vorne schieben. Das macht es später einfacher die Stange am Gesicht vorbei zu drücken ohne stark ins Hohlkreuz zu gehen
+      5. Stange aus der Ablage heben und einen Schritt zurück gehen"
+
+  - image: "https://modusx.de/wp-content/uploads/2020/11/butterfly-reverse.gif"
+    text: "Butterfly Reverse
+
+      1. Stelle das Gerät zunächst auf Deine Körpergröße ein, indem Du den Sitz in der Höhe so ausrichtest, dass Deine Unterarme während der Ausführung exakt parallel zum Boden verlaufen. Deine Hände müssen zudem in Höhe deiner Schultergelenke liegen.
+      2. Setze Dich mit dem Gesicht Richtung Polster auf die Butterfly Reverse-Maschine und drücke Deine Brust gegen das vertikal aufgerichtete Polster. Sorge anschließend für Stabilität, indem Du deine Beine leicht seitlich neben dem Gerät aufstellst. Achte auf einen 90-Grad-Winkel zwischen Ober- und Unterschenkel.
+      3. Greife nach den Griffstücken und fasse diese so, dass Deine Arme nicht ganz gestreckt sind, sondern sich zwischen Ober- und Unterarm ein leichter Winkel befindet.
+      4. Führe die Griffe nun so weit nach hinten, wie es Dein Schultergelenk zulässt und halte die Position im Anschluss für 1-2 Sekunden.
+      5. Dann lässt Du das Gewicht langsam wieder ab, bevor Du mit der nächsten Wiederholung beginnst."
+      
+  utter_entschuldigung:
+  - text: "Meine Wenigkeit entschuldigt sich von ganzem Herzen für die Unvollständigkeit meiner Funktionalität und bittet um Verzeihung und Verständnis. Mit Hochdruck wird an einer Verbesserung gearbeitet"
+
+  utter_error_message:
+  - text: "🥹 \n
+          👉👈 \n
+          Ich bin voller Trauer angesichts meiner Unfähigkeit auf Wünsche und Bedürfnis im vollen Umfang einzugehen."
+
+
+  utter_ask_for_genre:
+  - text: "Was für ein Genre willst du?"
+    buttons:
+    - title: "hiphop"
+      payload: "/hiphop_playlist"
+    - title: "techno"
+      payload: "/techno_playlist"
+    - title: "pop"
+      payload: "/pop_playlist"
+    - title: "jazz"
+      payload: "/jazz_playlist"
+    - title: "k-Pop"
+      payload: "/k-pop_playlist"
+    - title: "überraschung"
+      payload: "/überraschung_playlist"
+      
+  utter_gymPlaylist_techno:
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/Yy4i6Dzyx3k" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/Ncu0A9dtieU" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/ssXzkCMdcDQ" } }
+
+  utter_gymPlaylist_pop:
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{"title": "pop1", "src": "https://www.youtube.com/embed/d8OL6m0ZblA" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{"title": "pop2", "src": "https://www.youtube.com/embed/5u-tYqRQSsE" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{"title": "pop3", "src": "https://www.youtube.com/embed/72JOJZLMrU0" } }
+
+  utter_gymPlaylist_hiphop:
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/7BdAKfsjZ6U" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/RJPNjYVnJnk" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/kf0Af6A5wW8" } }
+
+  utter_gymPlaylist_jazz:
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/NKDI-60H-5s" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/neV3EPgvZ3g" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/Ys_tRskDiDg" } }
+
+  utter_gymPlaylist_kpop:
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/GuEJ6QzXS4A" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/WZPLefjiAZw" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/4T9DJNe7ZPU" } }
+
+  utter_gymPlaylist_überraschung:
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/W05LPtVm5hY" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/0DeU8uKC3LQ" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/ZJebIJFRuIY" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/QJucFT8gATM" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/YNvCK7jkUEk" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/SN5awaBMkuY" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/v7_ED23ah-s" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/2XlYZPfPwzc" } }
+  - text: Hier ist nice Gym Mucke für dich
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/-ladG8O1t7A" } }
+
+  utter_hype:
+  - text: "YEAHHH BUDDDYY"
+    attachment: { "type":"video", "payload":{ "src": "https://youtube.com/embed/tkBUpJtYFTw" } }
+
+
 
 session_config:
   session_expiration_time: 60

@@ -1,5 +1,11 @@
 version: "3.0"
 
+stories:
+- story: greet path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
 - story: recipe path
   steps:
   - intent: get_recipe
@@ -51,6 +57,24 @@ version: "3.0"
   - intent: get_help
   - action: utter_help
 
+- story: kalorierechner path
+  steps:
+  - intent: kalorierechner
+  - action: utter_ask_user_age
+  - intent: get_user_age
+  - action: utter_ask_user_gender
+  - intent: get_user_gender
+  - action: utter_ask_user_activity
+  - intent: get_user_activity
+  - action: utter_ask_user_height
+  - intent: get_user_height
+  - action: utter_ask_user_weight
+  - intent: get_user_weight
+  - action: utter_ask_user_goal
+  - intent: get_user_goal
+  - action: action_calorie_calculator
+
+
 - story: challenge done
   steps: 
   - intent: challenge_completed
@@ -85,10 +109,22 @@ version: "3.0"
   - intent: hard_challenge
   - action: utter_schwer_challenge
 
+
 - story: video path
   steps: 
   - intent: get_video
   - action: utter_video
+
+
+- story: ask for chest exercise
+  steps:
+  - intent: get_chest_exercise
+  - action: utter_chest_exercise
+
+- story: ask for shoulder exercise
+  steps:
+  - intent: get_shoulder_exercise
+  - action: utter_shoulder_exercise
 
 - story: hype path
   steps:
