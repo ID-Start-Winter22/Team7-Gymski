@@ -54,5 +54,5 @@ class ActionGetWorkoutScheduleForSpecificDay(Action):
             dispatcher.utter_message(" Beim Holen des Workoutplans ist ein Fehler aufgetreten.")
         elif (day == "montag"):
             # attachment objekt geht irgendwie nicht
-            attachment_monday = { "type":"video", "payload":{ "title": "Fun Full Body", "src": "https://www.youtube.com/watch?v=2-RGYM6ojJ4" } }
-            dispatcher.utter_message(attachment=attachment_monday)
+            attachment_monday = { "type":"video", "payload":{ "title": "Fun Full Body", "src": "https://www.youtube.com/embeded/=2-RGYM6ojJ4" } }
+            dispatcher.utter_message(text="Workout Monday", attachment=attachment_monday)
