@@ -1,53 +1,10 @@
 version: "3.0"
 
 stories:
-- story: happy path
+- story: greet path
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
-
-- story: greet_with_name
-  steps:
-  - intent: greet_formal
-  - action: utter_greet_ask_name
-  - intent: my_name_is
-  - action: action_store_name
-  - action: utter_greet_with_name
-
-- story: greet_with_name2
-  steps:
-  - intent: greet
-  - action: action_store_name
-  - action: utter_greet_ask_name
-  - intent: my_name_is
-  - action: utter_greet_with_name
-
-- story: Ask the bot if it remembers user's name
-  steps:
-  - intent: bot_challenge_name
-  - action: action_get_name
 
 - story: recipe path
   steps:
@@ -116,7 +73,6 @@ stories:
   - action: utter_ask_user_goal
   - intent: get_user_goal
   - action: action_calorie_calculator
-  # - intent: caloriecalulator
 
 
 - story: challenge done
@@ -169,6 +125,53 @@ stories:
   steps:
   - intent: get_shoulder_exercise
   - action: utter_shoulder_exercise
+
+- story: hype path
+  steps:
+  - intent: hype me up
+  - action: utter_hype
+
+- story: give playlist techno
+  steps:
+  - intent: gym_playlist
+  - action: utter_ask_for_genre
+  - intent: techno_playlist
+  - action: utter_gymPlaylist_techno
+
+- story: give playlist hiphop
+  steps:
+  - intent: gym_playlist
+  - action: utter_ask_for_genre
+  - intent: hiphop_playlist
+  - action: utter_gymPlaylist_hiphop
+
+- story: give playlist pop
+  steps:
+  - intent: gym_playlist
+  - action: utter_ask_for_genre
+  - intent: pop_playlist
+  - action: utter_gymPlaylist_pop
+
+- story: give playlist jazz
+  steps:
+  - intent: gym_playlist
+  - action: utter_ask_for_genre
+  - intent: jazz_playlist
+  - action: utter_gymPlaylist_jazz
+
+- story: give playlist kpop
+  steps:
+  - intent: gym_playlist
+  - action: utter_ask_for_genre
+  - intent: k-pop_playlist
+  - action: utter_gymPlaylist_kpop
+
+- story: give playlist überraschung
+  steps:
+  - intent: gym_playlist
+  - action: utter_ask_for_genre
+  - intent: überraschung_playlist
+  - action: utter_gymPlaylist_überraschung
 
 - story: ask for workout schedule for specific day
   steps: 
