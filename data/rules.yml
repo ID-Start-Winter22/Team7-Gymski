@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: wenn der user sich bedankt
+  steps:
+  - intent: bedanken
+  - action: utter_auf_danke_antworten

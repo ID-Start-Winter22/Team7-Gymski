@@ -41,3 +41,16 @@ class ActionUserName(Action):
             dispatcher.utter_message(" Du hast mir Deinen Namen nicht gesagt.")
         else:
             dispatcher.utter_message(' Du bist {}'.format(username))
+
+class ActionGetWorkoutScheduleForSpecificDay(Action):
+
+     def name(self) -> Text:
+         return "action_get_workout_schedule_for_day"
+
+     def run(self, dispatcher, tracker, domain):
+        day = tracker.get_slot("day")
+        if not day :
+            attachment_monday = { "type":"video", "payload":{ "title": "Fun Full Body", "src": "https://www.youtube.com/embed/2-RGYM6ojJ4" } }
+            dispatcher.utter_message(text="Workout Freitag", attachment=attachment_monday)
+        elif ():
+            dispatcher.utter_message(" Beim Holen des Workoutplans ist ein Fehler aufgetreten.")

@@ -1,50 +1,54 @@
 version: "3.0"
 
 intents:
-  - greet
-  - greet_formal
-  - goodbye
-  - affirm
-  - deny
-  - bot_challenge
-  - get_recipe
-  - get_challenge
-  - easy_challenge
-  - medium_challenge
-  - hard_challenge
-  - get_fruehstueck
-  - get_mittagessen
-  - get_abendessen
-  - get_snack
-  - get_help
-  - kalorierechner
-  - get_user_weight
-  - get_user_height
-  - get_user_gender
-  - get_user_activity
-  - get_user_age
-  - get_user_goal
-  - get_video
-  - challenge_completed
-  - get_chest_exercise
-  - get_shoulder_exercise
-  - get_back_exercise
-  - get_bicep_exercise
-  - get_tricep_exercise
-  - get_ab_exercise
-  - get_leg_exercise
-  - hype me up
-  - gym_playlist
-  - techno_playlist
-  - jazz_playlist
-  - k-pop_playlist
-  - hiphop_playlist
-  - pop_playlist
-  - überraschung_playlist
+- greet
+- greet_formal
+- goodbye
+- mood_great
+- mood_unhappy
+- affirm
+- deny
+- bot_challenge
+- get_recipe
+- get_challenge
+- easy_challenge
+- medium_challenge
+- hard_challenge
+- get_fruehstueck
+- get_mittagessen
+- get_abendessen
+- get_snack
+- get_help
+- kalorierechner
+- get_user_weight
+- get_user_height
+- get_user_gender
+- get_user_activity
+- get_user_age
+- get_user_goal
+- get_video
+- challenge_completed
+- get_chest_exercise
+- get_shoulder_exercise
+- get_back_exercise
+- get_bicep_exercise
+- get_tricep_exercise
+- get_ab_exercise
+- get_leg_exercise
+- hype me up
+- gym_playlist
+- techno_playlist
+- jazz_playlist
+- k-pop_playlist
+- hiphop_playlist
+- pop_playlist
+- überraschung_playlist
+- bedanken
+- get_workout_schedule_for_day
 
 actions:
   - action_calorie_calculator
-
+  - action_get_workout_schedule_for_day
 entities:
   - user_weight
   - user_height
@@ -86,23 +90,33 @@ slots:
   user_goal:
     type: text
     influence_conversation: true
-    mappings: 
+    mappings:
     - type: from_entity
       entity: user_goal
+  day:
+    type: text  
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: get_workout_schedule_for_day
 
 
 responses:
+  utter_cheer_up:
+  - text: "Lass den Kopf nicht hängen. Schau mal:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
   utter_greet:
   - text: "Hallo wie geht es Dir?"
   - text: "Servus, wie isses?"
   - text: "Hello there, wie geht's?"
 
-  utter_cheer_up:
-  - text: "Lass den Kopf nicht hängen. Schau mal:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
   utter_did_that_help:
   - text: "Hilft das?"
+
+  utter_pain:
+  - text: "Hoffentlich gehts dir nach dem Training besser"
+    image: "https://i.kym-cdn.com/photos/images/original/001/821/885/587.jpg"
 
   utter_happy:
   - text: "Toll weiter so."
@@ -120,16 +134,16 @@ responses:
 
           Zutaten (für zwei Portionen):
 
-          1 rote Zwiebel
-          1 Dose stückige Tomaten
-          1 Paprika (rot, gelb oder grün)
-          1/2 rote Chili
-          1 EL Olivenöl
-          1 TL Paprika edelsüß
-          Salz
-          Pfeffer
-          2 Eier
-          1/2 Bund glatte Petersilie
+          1 rote Zwiebel\n
+          1 Dose stückige Tomaten\n
+          1 Paprika (rot, gelb oder grün)\n
+          1/2 rote Chili\n
+          1 EL Olivenöl\n
+          1 TL Paprika edelsüß\n
+          Salz\n
+          Pfeffer\n
+          2 Eier\n
+          1/2 Bund glatte Petersilie\n
           So einfach geht’s:
 
           Die Zwiebel schälen, halbieren und in feine Stückchen schneiden. Paprika und Chili waschen, entkernen und ebenso in feine Stücke schneiden.
@@ -153,20 +167,26 @@ responses:
       payload: "/hard_challenge"
 
   utter_schwer_challenge:
-  - text: "Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
-  - text: "Habicht Challenge: Einen neuen Fitness Skill lernen."
-  - text: "Hai Challenge: 3 mal in einer Woche joggen gehen."
-  - text: "T-Rex Challenge: Für einen Monat auf Tiefkühlprodukte verzichten."
+  - text: "🐊 Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
+  - text: "🦅 Adler Challenge: Einen neuen Fitness Skill lernen."
+  - text: "🦈 Hai Challenge: 3 mal in einer Woche joggen gehen."
+  - text: "🦖 T-Rex Challenge: Für einen Monat auf Tiefkühlprodukte verzichten."
 
   utter_medium_challenge:
-  - text: "Nashorn Challenge: Für einen Monat nur Olivenöl zum kochen verwenden."
-  - text: "Gorilla Challenge: Für 30 Tage beim Auswärtsessen auf FastFood Ketten verzichten."
-  - text: "Schlangen Challenge: Pro Tag 3 Dehnübungen machen für einen Monat."
+  - text: "🦏 Nashorn Challenge: Für einen Monat als Öl nur Olivenöl zum kochen verwenden."
+  - text: "🦍 Gorilla Challenge: Für 30 Tage beim Auswärtsessen auf FastFood Ketten verzichten."
+  - text: "🐍 Schlangen Challenge: Pro Tag 3 Dehnübungen machen für einen Monat."
+  - text: "🦘 Känguru Challenge: 5 Minuten pro Tag Seilspringen und das für eine Woche"
+  - text: "🐺 Wolf Challenge: Laufe 10.000 Schritte pro Tag und das eine Woche lang"
 
   utter_einfach_challenge:
-  - text: "Leopard Challenge: Für eine Woche jeden Tag 2 Minuten sprinten."
-  - text: "Drachen Challenge: Für einen Monat jeden Tag 5 Minuten meditieren."
-  - text: "Känguru Challenge: Für einen Monat jeden Tag 10 Burpees machen."
+  - text: "🐆 Leopard Challenge: Für eine Woche jeden Tag 2 Minuten sprinten."
+  - text: "🐉 Drachen Challenge: Für einen Monat jeden Tag 5 Minuten meditieren."
+  - text: "🐐 Ziegen Challenge: Für einen Monat jeden Tag 10 Burpees machen."
+  - text: "🐳 Walfisch Challenge: Mindestens 2,5 Liter Wasser pro Tag trinken."
+
+  utter_auf_danke_antworten:
+  - text: "Kein Ding"
 
 
   utter_tageszeit:
@@ -187,16 +207,16 @@ responses:
 
           Zutaten (für zwei Portionen):
 
-          1 rote Zwiebel
-          1 Dose stückige Tomaten
-          1 Paprika (rot, gelb oder grün)
-          1/2 rote Chili
-          1 EL Olivenöl
-          1 TL Paprika edelsüß
-          Salz
-          Pfeffer
-          2 Eier
-          1/2 Bund glatte Petersilie
+          1 rote Zwiebel\n
+          1 Dose stückige Tomaten\n
+          1 Paprika (rot, gelb oder grün)\n
+          1/2 rote Chili\n
+          1 EL Olivenöl\n
+          1 TL Paprika edelsüß\n
+          Salz\n
+          Pfeffer\n
+          2 Eier\n
+          1/2 Bund glatte Petersilie\n
 
           So einfach geht’s:\n
           Die Zwiebel schälen, halbieren und in feine Stückchen schneiden. Paprika und Chili waschen, entkernen und ebenso in feine Stücke schneiden.
@@ -214,12 +234,12 @@ responses:
     text: "Nudeln mit Zucchini und Lachs
 
           Zutaten für 2 Personen\n
-          250 g Vollkornnudeln
-          2 kleine Zucchini
-          1-2 Lachsfilet (ich nehme meist TK)
-          1 Knoblauchzehe
-          100-150 ml Kokosmilch
-          1 TL Gemüsebrühe
+          250 g Vollkornnudeln\n
+          2 kleine Zucchini\n
+          1-2 Lachsfilet (ich nehme meist TK)\n
+          1 Knoblauchzehe\n
+          100-150 ml Kokosmilch\n
+          1 TL Gemüsebrühe\n
 
           So einfach geht´s\n
           Als erstes setzt du einen Topf mit Wasser auf und gibst die Nudeln hinein, sobald das Wasser kocht. Füge etwas Salz hinzu, es sei denn du kochst für ganz kleine Kinder.
@@ -245,22 +265,22 @@ responses:
     text: "Reis mit Hähnchen und Gemüse
 
           Zutaten für 2 Personen\n
-          250 g Hähnchenbrustfilet
-          ½ Zwiebel
-          1 Knoblauchzehen
-          1 ½ Frühlingszwiebeln
-          1rote Paprikaschoten
-          ½ Stange Staudensellerie
-          1 Chilischoten
-          1 ½ EL Olivenöl
-          125 g Natur-Langkornreis
-          250 ml Hühnerbrüh
-          ½ Lorbeerblatt
-          Salz
-          Pfeffer
-          2 Tomaten
-          2 Stiele Koriander
-          ¼ TL gemahlener Kreuzkümmel
+          250 g Hähnchenbrustfilet\n
+          ½ Zwiebel\n
+          1 Knoblauchzehen\n
+          1 ½ Frühlingszwiebeln\n
+          1rote Paprikaschoten\n
+          ½ Stange Staudensellerie\n
+          1 Chilischoten\n
+          1 ½ EL Olivenöl\n
+          125 g Natur-Langkornreis\n
+          250 ml Hühnerbrüh\n
+          ½ Lorbeerblatt\n
+          Salz\n
+          Pfeffer\n
+          2 Tomaten\n
+          2 Stiele Koriander\n
+          ¼ TL gemahlener Kreuzkümmel\n
 
 
 
@@ -280,19 +300,19 @@ responses:
 
   utter_snack:
   - image: "https://user-images.githubusercontent.com/93930736/202041182-a37f18b1-42a0-4603-aad8-4e8adcc021cc.png"
-    text: "Low Carb Keto Müsliriegel
-          Zutaten für 8 Riegel
-          50g gehobelte Mandeln
-          50g gehackte Haselnüsse
-          25g braunes Erythrit
-          20g geschälte Hanfsamen
-          15g Sonnenblumenkerne
-          15g Kürbiskerne
-          15g Kokoschips
-          1 Eiklar
-          ½ TL Vanille Extrakt
+    text: "Low Carb Keto Müsliriegel\n
+          Zutaten für 8 Riegel\n
+          50g gehobelte Mandeln\n
+          50g gehackte Haselnüsse\n
+          25g braunes Erythrit\n
+          20g geschälte Hanfsamen\n
+          15g Sonnenblumenkerne\n
+          15g Kürbiskerne\n
+          15g Kokoschips\n
+          1 Eiklar\n
+          ½ TL Vanille Extrakt\n
 
-          So einfach geht´s
+          So einfach geht´s\n
           Backofen auf 200°C (Ober- und Unterhitze) vorheizen.
 
           Das Eiweiß steif schlagen.
@@ -347,75 +367,75 @@ responses:
   - image: "https://www.inspireusafoundation.org/wp-content/uploads/2022/05/barbell-pause-bench.gif"
     text: "Barbell Bench Press
           
-      1. Lege dich auf eine Flachbank. Die Schultern werden beim Bankdrücken zurückgezogen und du kommst gleichzeitig in ein leichtes Hohlkreuz. Die verlängerte Linie zwischen Schultern und Beginn der Lendenwirbelsäule sollte dabei auf der Bank aufliegen. Unter dem unteren Rückenstrecker sollte noch ein Arm durchgestreckt werden können. Der Kopf liegt auf der Bank flach auf, die Augen fixieren die Stange. Die Beine befinden sich dabei im 90° Winkel fest aufgestellt auf dem Boden.
-      2. Für die richtige Griffstellung beim Bankdrücken umfasse die Stange in etwa schulterweit. Die Handgelenke werden gerade gehalten und die Langhantelstange mit einem sehr festen Griff umschlossen.
-      3. Nun folgt die Einleitung der Bewegung. Atme dafür tief ein und spanne gleichzeitig den Rücken, Po und die fixierten Schulterblätter an. Durch das tiefe Einatmen stabilisierst du die gesamte Körpermitte und nimmst den Druck von deinen Bandscheiben und der Wirbelsäule.
-      4. Die Stange wird nun langsam und kontrolliert auf der Brust abgesetzt. Die Brust bleibt dabei permanent unter Spannung. Der kurze Zwischenstopp auf der Brust sollte nicht dazu genutzt werden, die Spannung zu verlieren. Als Fixpunkt für das Absetzen dient hier das untere Ende des Brustbeins (unter den Brustwarzen).
+      1. Lege dich auf eine Flachbank. Die Schultern werden beim Bankdrücken zurückgezogen und du kommst gleichzeitig in ein leichtes Hohlkreuz. Die verlängerte Linie zwischen Schultern und Beginn der Lendenwirbelsäule sollte dabei auf der Bank aufliegen. Unter dem unteren Rückenstrecker sollte noch ein Arm durchgestreckt werden können. Der Kopf liegt auf der Bank flach auf, die Augen fixieren die Stange. Die Beine befinden sich dabei im 90° Winkel fest aufgestellt auf dem Boden.\n
+      2. Für die richtige Griffstellung beim Bankdrücken umfasse die Stange in etwa schulterweit. Die Handgelenke werden gerade gehalten und die Langhantelstange mit einem sehr festen Griff umschlossen.\n
+      3. Nun folgt die Einleitung der Bewegung. Atme dafür tief ein und spanne gleichzeitig den Rücken, Po und die fixierten Schulterblätter an. Durch das tiefe Einatmen stabilisierst du die gesamte Körpermitte und nimmst den Druck von deinen Bandscheiben und der Wirbelsäule.\n
+      4. Die Stange wird nun langsam und kontrolliert auf der Brust abgesetzt. Die Brust bleibt dabei permanent unter Spannung. Der kurze Zwischenstopp auf der Brust sollte nicht dazu genutzt werden, die Spannung zu verlieren. Als Fixpunkt für das Absetzen dient hier das untere Ende des Brustbeins (unter den Brustwarzen).\n
       5. Für die positive Bewegung wird die Stange anschließend explosiv nach oben geführt. Wichtig ist, gleichzeitig die Schulterblätter zu fixieren und die gesamte Körpermitte fest und stabil zu halten. Die Kraft wird durch das Ausatmen aus dem Bauchraum und den stabilen Stand der Füße unterstützt."
     
   - image: "https://www.fitundattraktiv.de/wp-content/uploads/2018/02/bankdruecken_schraeg_mit_langhantel.gif"
     text: "Incline Barbell Bench Press
 
-      1. Lege dich auf die Schrägbank (optimaler Winkel: 30 Grad) unter die in der Halterung liegende Langhantelstange und positioniere deine Füße fest am Boden. Dein Po berührt mit dem Steißbein das Rückenpolster, auf welchem zudem dein Rücken und dein Kopf abgelegt wird. Du umgreifst die Langhantelstange mehr als schulterbreit im Obergriff und achtest darauf, dass sich deine Handgelenke direkt unter der Stange befinden. Spanne deine Bauchmuskeln an und hebe die Stange aus der Halterung nach oben und ein paar cm nach vorne. Jetzt sollten deine senkrecht nach oben ausgestreckten Arme die Stange direkt über deinen Schlüsselbeinen halten. Achte darauf, dass deine Arme nicht ganz durchgestreckt sind, sondern dass sie leicht gebeugt bleiben. Dies schont deine Ellenbogengelenke.
-      2. Jetzt startest du die erste Bewegungsphase der Übung indem du die Langhantelstange langsam durch Herablassen der Ellenbogen nach unten bis kurz über die Schlüsselbeinfasern der Brustmuskulatur absenkst. Während dieser Phase atmest du ein.
+      1. Lege dich auf die Schrägbank (optimaler Winkel: 30 Grad) unter die in der Halterung liegende Langhantelstange und positioniere deine Füße fest am Boden. Dein Po berührt mit dem Steißbein das Rückenpolster, auf welchem zudem dein Rücken und dein Kopf abgelegt wird. Du umgreifst die Langhantelstange mehr als schulterbreit im Obergriff und achtest darauf, dass sich deine Handgelenke direkt unter der Stange befinden. Spanne deine Bauchmuskeln an und hebe die Stange aus der Halterung nach oben und ein paar cm nach vorne. Jetzt sollten deine senkrecht nach oben ausgestreckten Arme die Stange direkt über deinen Schlüsselbeinen halten. Achte darauf, dass deine Arme nicht ganz durchgestreckt sind, sondern dass sie leicht gebeugt bleiben. Dies schont deine Ellenbogengelenke.\n
+      2. Jetzt startest du die erste Bewegungsphase der Übung indem du die Langhantelstange langsam durch Herablassen der Ellenbogen nach unten bis kurz über die Schlüsselbeinfasern der Brustmuskulatur absenkst. Während dieser Phase atmest du ein.\n
       3. Danach drückst du die Stange auf gleichem Weg wieder nach oben und atmest währenddessen aus. Vergiss nicht das Ellenbogengelenk am Ende der Drückbewegung leicht gebeugt zu lassen."
 
   - image: "https://www.fitundattraktiv.de/wp-content/uploads/2017/12/brust_dips_am_geraet.gif"
     text: "Chest Dips
 
-      1. Stütze dich auf dem Barren ab
-      2. Ellbogen zeigen nach hinten (nicht zur Seite)
-      3. Ziehe deine Schulterblätter zusammen bzw. deine Schultern nach hinten
-      4. Spanne deinen Po an und versuche Ihn leicht nach hinten/oben zu ziehen
-      5. Lasse dich mit deiner Brust in Richtung Barren ab
-      6. Versuche dich soweit wie möglich abzulassen (maximal bis zum Barren)
+      1. Stütze dich auf dem Barren ab\n
+      2. Ellbogen zeigen nach hinten (nicht zur Seite)\n
+      3. Ziehe deine Schulterblätter zusammen bzw. deine Schultern nach hinten\n
+      4. Spanne deinen Po an und versuche Ihn leicht nach hinten/oben zu ziehen\n
+      5. Lasse dich mit deiner Brust in Richtung Barren ab\n
+      6. Versuche dich soweit wie möglich abzulassen (maximal bis zum Barren)\n
       7. Drücke dich kontrolliert nach oben"
 
   - image: "https://modusx.de/wp-content/uploads/2021/01/cable-fly-obere-brust.gif"
     text: "Lower Chest Cable Fly
 
-      1. Stelle zunächst den Kabzug so ein, dass die Griffe von ganz oben zu greifen sind.
-      2. Umfasse nun die Griffe auf beiden Seiten und positioniere dich in der Mitte des Kabelzugs. Mach mit einem Bein einen Ausfallschritt nach vorne.
-      3. Bring nun beide Arme so zusammen, dass sich die Hände ungefähr auf Bauchhöhe treffen.
+      1. Stelle zunächst den Kabzug so ein, dass die Griffe von ganz oben zu greifen sind.\n
+      2. Umfasse nun die Griffe auf beiden Seiten und positioniere dich in der Mitte des Kabelzugs. Mach mit einem Bein einen Ausfallschritt nach vorne.\n
+      3. Bring nun beide Arme so zusammen, dass sich die Hände ungefähr auf Bauchhöhe treffen.\n
       4. Führe die Griffe nun wieder kontrolliert an die Startposition zurück."
 
   utter_shoulder_exercise:
   - image: "https://homeworkouts.org/wp-content/uploads/anim-dumbbell-lateral-raise.gif"
     text: "Lateral Raises
 
-      1. Positioniere dich in einem stabilen schulterweiten Stand
-      2. Schulterblätter nach hinten ziehen
-      3. Arme hängen leicht angewinkelt seitlich am Körper runter
-      4. Arme seitlich (leicht angewinkelt) nach oben heben. Die Ellbogen sind immer in der höchsten Position, nicht die Hände.
-      5. In der obersten Position haben die Oberarme einen 90° Winkel zum Oberkörper. Nicht höher als 90°
+      1. Positioniere dich in einem stabilen schulterweiten Stand\n
+      2. Schulterblätter nach hinten ziehen\n
+      3. Arme hängen leicht angewinkelt seitlich am Körper runter\n
+      4. Arme seitlich (leicht angewinkelt) nach oben heben. Die Ellbogen sind immer in der höchsten Position, nicht die Hände.\n
+      5. In der obersten Position haben die Oberarme einen 90° Winkel zum Oberkörper. Nicht höher als 90°\n
       6. Bewege die Hanteln langsam & kontrolliert wieder in die Ausgangsposition zurück"
 
   - image: "https://www.inspireusafoundation.org/wp-content/uploads/2022/10/cable-one-arm-lateral-raise.gif"
     text: "Cable Lateral Raise
 
-      1. Der Kabelzug sollte auf der niedrigsten Stufe eingestellt werden.
-      2. Wähle das Gewicht so, dass du es mit einer Schulter heben kannst und stell dich Schulterbreit seitlich zum Kabelzug.
-      3. Um eine gute Haltung zu bewahren, strecke deine Brust nach vorne und ziehe deine Schulter nach hinten, deine Knie sollten leicht gebeugt sein. Zur unterstützung kannst du deine freie Hand an der Schiene des Kabelzugs platzieren.
-      4. Beugen Sie den Ellbogen leicht in einem Winkel von 10 bis 30 Grad und heben Sie den Arm seitlich an, bis er sich auf Höhe der Schulter befindet, wobei Sie beim Anheben ausatmen.
-      5. Vermeiden Sie es, den Arm beim Anheben des Bügels zu drehen, und konzentrieren Sie sich auf den Bereich, den Sie trainieren möchten - Ihre mittlere Schulter.
+      1. Der Kabelzug sollte auf der niedrigsten Stufe eingestellt werden.\n
+      2. Wähle das Gewicht so, dass du es mit einer Schulter heben kannst und stell dich Schulterbreit seitlich zum Kabelzug.\n
+      3. Um eine gute Haltung zu bewahren, strecke deine Brust nach vorne und ziehe deine Schulter nach hinten, deine Knie sollten leicht gebeugt sein. Zur unterstützung kannst du deine freie Hand an der Schiene des Kabelzugs platzieren.\n
+      4. Beugen Sie den Ellbogen leicht in einem Winkel von 10 bis 30 Grad und heben Sie den Arm seitlich an, bis er sich auf Höhe der Schulter befindet, wobei Sie beim Anheben ausatmen.\n
+      5. Vermeiden Sie es, den Arm beim Anheben des Bügels zu drehen, und konzentrieren Sie sich auf den Bereich, den Sie trainieren möchten - Ihre mittlere Schulter.\n
       6. Halten Sie die Position 1-5 Sekunden lang, und atmen Sie dann ein, während Sie das Gewicht langsam wieder absenken. Lassen Sie das Kabel vollständig zum Stillstand kommen, bevor Sie die nächste Wiederholung beginnen."
 
   - image: "https://modusx.de/wp-content/uploads/2021/04/military-press-weiter-griff.gif"
     text: "Military Press
     
       1. Füße schulterweit unter der Stange positionieren
-      2. Langhantelstange etwas breiter als schulterweit greifen (etwa eine Handbreite weiter). Die Unterarme müssen bei der späteren Drückbewegung senkrecht nach oben stehen
-      3. Nachem du die Langhantelstange fest umgriffen hast machst du folgendes: Ziehe deine Schultern nach hinten und deine Ellbogen direkt unter die Stange. Diese Bewegung sorgt dafür, dass sowohl deine Rotatoren und dein Schultergelenk in der optimalen Position ist.
-      4. Bauchmuskeln anspannen, Po anspannen und Hüfte leicht nach vorne schieben. Das macht es später einfacher die Stange am Gesicht vorbei zu drücken ohne stark ins Hohlkreuz zu gehen
+      2. Langhantelstange etwas breiter als schulterweit greifen (etwa eine Handbreite weiter). Die Unterarme müssen bei der späteren Drückbewegung senkrecht nach oben stehen\n
+      3. Nachem du die Langhantelstange fest umgriffen hast machst du folgendes: Ziehe deine Schultern nach hinten und deine Ellbogen direkt unter die Stange. Diese Bewegung sorgt dafür, dass sowohl deine Rotatoren und dein Schultergelenk in der optimalen Position ist.\n
+      4. Bauchmuskeln anspannen, Po anspannen und Hüfte leicht nach vorne schieben. Das macht es später einfacher die Stange am Gesicht vorbei zu drücken ohne stark ins Hohlkreuz zu gehen\n
       5. Stange aus der Ablage heben und einen Schritt zurück gehen"
 
   - image: "https://modusx.de/wp-content/uploads/2020/11/butterfly-reverse.gif"
     text: "Butterfly Reverse
 
-      1. Stelle das Gerät zunächst auf Deine Körpergröße ein, indem Du den Sitz in der Höhe so ausrichtest, dass Deine Unterarme während der Ausführung exakt parallel zum Boden verlaufen. Deine Hände müssen zudem in Höhe deiner Schultergelenke liegen.
-      2. Setze Dich mit dem Gesicht Richtung Polster auf die Butterfly Reverse-Maschine und drücke Deine Brust gegen das vertikal aufgerichtete Polster. Sorge anschließend für Stabilität, indem Du deine Beine leicht seitlich neben dem Gerät aufstellst. Achte auf einen 90-Grad-Winkel zwischen Ober- und Unterschenkel.
-      3. Greife nach den Griffstücken und fasse diese so, dass Deine Arme nicht ganz gestreckt sind, sondern sich zwischen Ober- und Unterarm ein leichter Winkel befindet.
-      4. Führe die Griffe nun so weit nach hinten, wie es Dein Schultergelenk zulässt und halte die Position im Anschluss für 1-2 Sekunden.
+      1. Stelle das Gerät zunächst auf Deine Körpergröße ein, indem Du den Sitz in der Höhe so ausrichtest, dass Deine Unterarme während der Ausführung exakt parallel zum Boden verlaufen. Deine Hände müssen zudem in Höhe deiner Schultergelenke liegen.\n
+      2. Setze Dich mit dem Gesicht Richtung Polster auf die Butterfly Reverse-Maschine und drücke Deine Brust gegen das vertikal aufgerichtete Polster. Sorge anschließend für Stabilität, indem Du deine Beine leicht seitlich neben dem Gerät aufstellst. Achte auf einen 90-Grad-Winkel zwischen Ober- und Unterschenkel.\n
+      3. Greife nach den Griffstücken und fasse diese so, dass Deine Arme nicht ganz gestreckt sind, sondern sich zwischen Ober- und Unterarm ein leichter Winkel befindet.\n
+      4. Führe die Griffe nun so weit nach hinten, wie es Dein Schultergelenk zulässt und halte die Position im Anschluss für 1-2 Sekunden.\n
       5. Dann lässt Du das Gewicht langsam wieder ab, bevor Du mit der nächsten Wiederholung beginnst."
       
   utter_entschuldigung:
@@ -428,7 +448,7 @@ responses:
 
 
   utter_ask_for_genre:
-  - text: "Was für ein Genre willst du?"
+  - text: "Was für ein Genre willst Du hören? 👀"
     buttons:
     - title: "hiphop"
       payload: "/hiphop_playlist"
@@ -444,68 +464,148 @@ responses:
       payload: "/überraschung_playlist"
       
   utter_gymPlaylist_techno:
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist Techno Musik die anders kickt 🤯
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/Yy4i6Dzyx3k" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist Techno Musik die anders kickt 🤯
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/Ncu0A9dtieU" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist Techno Musik die anders kickt 🤯
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/ssXzkCMdcDQ" } }
 
   utter_gymPlaylist_pop:
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Diese Pop Playlist sollte Dich richtig motivieren! Ab gehts zum Workout 💪
     attachment: { "type":"video", "payload":{"title": "pop1", "src": "https://www.youtube.com/embed/d8OL6m0ZblA" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Diese Pop Playlist sollte Dich richtig motivieren! Ab gehts zum Workout 💪
     attachment: { "type":"video", "payload":{"title": "pop2", "src": "https://www.youtube.com/embed/5u-tYqRQSsE" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Diese Pop Playlist sollte Dich richtig motivieren! Ab gehts zum Workout 💪
     attachment: { "type":"video", "payload":{"title": "pop3", "src": "https://www.youtube.com/embed/72JOJZLMrU0" } }
 
   utter_gymPlaylist_hiphop:
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hab da so ne wilde HipHop Playlist für Dich! Und jetzt auf geht's mit dem Workout 🤝
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/7BdAKfsjZ6U" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hab da so ne wilde HipHop Playlist für Dich! Und jetzt auf geht's mit dem Workout 🤝
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/RJPNjYVnJnk" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hab da so ne wilde HipHop Playlist für Dich! Und jetzt auf geht's mit dem Workout 🤝
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/kf0Af6A5wW8" } }
 
   utter_gymPlaylist_jazz:
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Eine erstkklassige Jazz Playlist für den extra Kick beim Training 🙌
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/NKDI-60H-5s" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Eine erstkklassige Jazz Playlist für den extra Kick beim Training 🙌
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/neV3EPgvZ3g" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Eine erstkklassige Jazz Playlist für den extra Kick beim Training 🙌
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/Ys_tRskDiDg" } }
 
   utter_gymPlaylist_kpop:
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Koreanische Musik vom Feinsten für Dich! Zieh durch beim Workout 💪
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/GuEJ6QzXS4A" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Koreanische Musik vom Feinsten für Dich! Zieh durch beim Workout 💪
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/WZPLefjiAZw" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Koreanische Musik vom Feinsten für Dich! Zieh durch beim Workout 💪
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/4T9DJNe7ZPU" } }
 
   utter_gymPlaylist_überraschung:
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/W05LPtVm5hY" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/0DeU8uKC3LQ" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/ZJebIJFRuIY" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/QJucFT8gATM" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/YNvCK7jkUEk" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/SN5awaBMkuY" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/v7_ED23ah-s" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/2XlYZPfPwzc" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/-ladG8O1t7A" } }
 
   utter_hype:
   - text: "YEAHHH BUDDDYY"
     attachment: { "type":"video", "payload":{ "src": "https://youtube.com/embed/tkBUpJtYFTw" } }
+
+  utter_get_workout_schedule_montag:
+  - text: "Hier ist dein perfekter Trainingsplan, um in die Woche zu STARTEN"
+    attachment: { "type":"video", "payload":{ "title": "Fun Full Body", "src": "https://www.youtube.com/embed/2-RGYM6ojJ4" } }
+  - text: "Hier ist dein perfekter Trainingsplan, um in die Woche zu STARTEN"
+    attachment: { "type":"video", "payload":{ "title": "Killer Sixpack", "src": "https://www.youtube.com/embed/vOiP3kfFlrE" } }
+  - text: "Hier ist dein perfekter Trainingsplan, um in die Woche zu STARTEN"
+    attachment: { "type":"video", "payload":{ "title": "Energy Boost", "src": "https://www.youtube.com/embed/fLQjj1DrJz8" } }
+  - text: "Hier ist dein perfekter Trainingsplan, um in die Woche zu STARTEN"
+    attachment: { "type":"video", "payload":{ "title": "Medium HIIT", "src": "https://www.youtube.com/embed/7537-yAhASA" } }
+  - text: "Hier ist dein perfekter Trainingsplan, um in die Woche zu STARTEN"
+    attachment: { "type":"video", "payload":{ "title": "Oldies Dance", "src": "https://www.youtube.com/embed/lQ3WCE2zQQU" } }
+  - text: "Hier ist dein perfekter Trainingsplan, um in die Woche zu STARTEN"
+    attachment: { "type":"video", "payload":{ "title": "Boxing Cardio", "src": "https://www.youtube.com/embed/1bjKpgrbm6o" } }
+
+utter_get_workout_schedule_dienstag:
+  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+    attachment: { "type":"video", "payload":{ "title": "Bombastic Booty", "src": "https://www.youtube.com/embed/AFxHeJP--j4" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+    attachment: { "type":"video", "payload":{ "title": "Booty", "src": "https://www.youtube.com/embed/ZsthLQrpY6g" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+    attachment: { "type":"video", "payload":{ "title": "Inner and Outer Thighs", "src": "https://www.youtube.com/embed/_sl7q03-0Mw" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+    attachment: { "type":"video", "payload":{ "title": "Booty Pump", "src": "https://www.youtube.com/embed/lRFxt8BHxT0" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+    attachment: { "type":"video", "payload":{ "title": "Legs and Fat Burn", "src": "https://www.youtube.com/embed/R1EKAgFRe" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+    attachment: { "type":"video", "payload":{ "title": "Watching Dance", "src": "https://www.youtube.com/embed/XNf6WHXtNCs" } }
+
+utter_get_workout_schedule_mittwoch:
+  - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+    attachment: { "type":"video", "payload":{ "title": "Lower Abs", "src": "https://www.youtube.com/embed/54x6yjnzLms" } }
+  - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+    attachment: { "type":"video", "payload":{ "title": "Old But Gold", "src": "https://www.youtube.com/embed/CtTqaVWYRTA" } }
+  - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+    attachment: { "type":"video", "payload":{ "title": "Best of HIIT", "src": "https://www.youtube.com/embed/k7nV8Gyn56o" } }
+  - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+    attachment: { "type":"video", "payload":{ "title": "HIIT Workout", "src": "https://www.youtube.com/embed/zr08J6wB53Y" } }
+  - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+    attachment: { "type":"video", "payload":{ "title": "Ab Workout", "src": "https://www.youtube.com/embed/ft6MgeTvfYs" } }
+  - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+    attachment: { "type":"video", "payload":{ "title": "Basic HIIT", "src": "https://www.youtube.com/embed/wGZYbAZrDxw" } }
+
+
+utter_get_workout_schedule_donnerstag:
+  - text: "Rest Day"
+    image: "https://media.tenor.com/RtY6of3HthsAAAAM/it-is-my-day-off-i-am-feeling.gif"
+
+utter_get_workout_schedule_freitag:
+  - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+    attachment: { "type":"video", "payload":{ "title": "Full Body", "src": "https://www.youtube.com/embed/DkLISiTHRjU" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+    attachment: { "type":"video", "payload":{ "title": "Ab Workout", "src": "https://www.youtube.com/embed/z2ggDhOqLsk" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+    attachment: { "type":"video", "payload":{ "title": "Boob Lift", "src": "https://www.youtube.com/embed/saX32Yy9vEI" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+    attachment: { "type":"video", "payload":{ "title": "Fun Full Body", "src": "https://www.youtube.com/embed/2-RGYM6ojJ4" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+    attachment: { "type":"video", "payload":{ "title": "Calorie Killer", "src": "https://www.youtube.com/embed/NmCXy7oMsOs" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+    attachment: { "type":"video", "payload":{ "title": "Stressful Day", "src": "https://www.youtube.com/embed/APbAoww8_gE" } }
+
+utter_get_workout_schedule_samstag:
+  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+    attachment: { "type":"video", "payload":{ "title": "Grow your Booty", "src": "https://www.youtube.com/embed/mcs6XLX8H_0" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+    attachment: { "type":"video", "payload":{ "title": "Old but Gold", "src": "https://www.youtube.com/embed/CtTqaVWYRTA" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+    attachment: { "type":"video", "payload":{ "title": "Inner Thigh", "src": "https://www.youtube.com/embed/h9uZVP_qLVo" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+    attachment: { "type":"video", "payload":{ "title": "Bubble Butt", "src": "https://www.youtube.com/embed/vtD5nGoNMu8" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+    attachment: { "type":"video", "payload":{ "title": "Happy Sweat", "src": "https://www.youtube.com/embed/06cwQlikBEA&t=60s" } }
+  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+    attachment: { "type":"video", "payload":{ "title": "Medium HIIT", "src": "https://www.youtube.com/embed/7537-yAhASA" } }
+
+utter_get_workout_schedule_sonntag:
+- text: "Rest Day"
+  image: "https://media.tenor.com/fWoV97ft9vwAAAAM/sleepy-at.gif"
+
 
 
 

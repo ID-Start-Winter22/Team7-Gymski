@@ -1,10 +1,32 @@
 version: "3.0"
 
 stories:
-- story: greet path
+- story: happy path
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_pain
 
 - story: recipe path
   steps:
@@ -172,3 +194,10 @@ stories:
   - action: utter_ask_for_genre
   - intent: überraschung_playlist
   - action: utter_gymPlaylist_überraschung
+
+- story: ask for workout schedule for specific day
+  steps: 
+  - intent: get_workout_schedule_for_day
+  - action: action_get_workout_schedule_for_day
+
+ 

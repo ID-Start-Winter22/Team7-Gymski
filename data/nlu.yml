@@ -25,7 +25,13 @@ nlu:
   examples: |
     - guten Tag
     - guten Abend
-
+  
+- intent: mood_unhappy
+  examples: |
+    - sad
+    - traurig
+    - schlecht
+    - :(
 
 - intent: goodbye
   examples: |
@@ -366,4 +372,39 @@ nlu:
   examples: |
     - überraschung
     - surprise me 
+
+- intent: bedanken
+  examples: |
+    - vielen Dank
+    - danke 
+    - merci
+    - thanks
+    - arigato
+
+- intent: get_workout_schedule_for_day
+  examples: |
+    - [montag](day)
+    - [montag](day) trainingsplan
+    - [montag](day) workout schedule
+    - [montag](day) workout
+    - [montag](day) Übungen
+    - [montag](day) Übungsplan
+    - [montag](day) workoutplan
+    - [montag](day) fitnessübung
+    - [montag](day) fitnessplan
+    - [montag](day) plan
+    - gib mir [montag](day)
+
+- intent: happyuser
+  examples: |
+    - gut
+    - happy
+    - amazing
+    - super
+    - prima
+    - glücklich
+    - zufrieden
+    - wunderbar
+    - großartig
+
     
