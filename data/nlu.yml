@@ -326,7 +326,7 @@ nlu:
     - hype me up
     - need hyped up
     - hype mich auf
-    - mach mir gute laune
+    - mach mir gute Laune
 
 - intent: gym_playlist
   examples: |
@@ -366,4 +366,11 @@ nlu:
   examples: |
     - überraschung
     - surprise me 
-    
+
+- intent: bedanken
+  examples: |
+    - vielen Dank
+    - danke 
+    - merci
+    - thanks
+    - arigato

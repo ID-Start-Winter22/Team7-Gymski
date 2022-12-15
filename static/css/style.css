@@ -192,15 +192,16 @@ blockquote {
   box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 #00000096;
   border-radius: 200px;
   width: 50%;
+  margin-left: 20%;
 }
 
 .profile_div {
   /* display: none; */
   position: fixed;
   padding: 10px;
-  width: 20%;
-  bottom: 50;
-  right: -4%;
+  width: 15%;
+  bottom: 70;
+  right: -1%;
   cursor: pointer;
  
 }
@@ -864,7 +865,8 @@ video:focus {
 .banner{
   width: 100%;
   height: 100vh;
-  background-image: radial-gradient(circle, rgba(91,91,91,1) 0%, rgba(0,0,0,1) 96%);
+  /* background-image: radial-gradient(circle, rgba(91,91,91,1) 0%, rgba(0,0,0,1) 96%); */
+  background-color: #2F2F2F;
   background-size: cover;
   background-position: center;
   z-index: -2;
@@ -923,10 +925,15 @@ button:hover{
   padding: 10px 90px;
   box-sizing: border-box;
   color: rgb(255, 255, 255);
-  background-color: #5383ED;
-  background: transparent;
+  background-color: #2F2F2F;
   z-index: 3;
   position: absolute;
+}
+
+.svgLogoHeader{
+  width: 60px;
+  float: left;
+  margin-top: 10px;
 }
 
 .navbar .logo{
@@ -934,6 +941,7 @@ button:hover{
    height: 80px;
    float: left;
    font-size: 24px;
+   margin-left: 12px;
    font-weight: bold;
    text-transform: uppercase;
    color: white;
@@ -984,15 +992,16 @@ button:hover{
   justify-content: space-between;
   align-items: center;
   height:400px;
+  padding-top: 10%;
 }
 
 .section-text{
   font-weight: 1000;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 40px;
-  margin-bottom: 40px;
-  padding-top: 20%;
-  padding-bottom: 20%;
+  margin-bottom: 50%;
+  padding-top: 40%;
+  padding-bottom: 40%;
   margin-left: 50%;
   color: black;
   float: right

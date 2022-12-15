@@ -41,6 +41,7 @@ intents:
   - hiphop_playlist
   - pop_playlist
   - überraschung_playlist
+  - bedanken
 
 actions:
   - action_calorie_calculator
@@ -96,6 +97,7 @@ responses:
   - text: "Hallo wie geht es Dir?"
   - text: "Servus, wie isses?"
   - text: "Hello there, wie geht's?"
+  - text: "Heyhey, alles fit bei Dir?"
 
   utter_cheer_up:
   - text: "Lass den Kopf nicht hängen. Schau mal:"
@@ -143,7 +145,7 @@ responses:
           Rezept von https://www.tasteandsoul.de/blog/rezepte/shakshuka/"
 
   utter_ask_for_challenge_difficulty:
-  - text: "Wie schwer soll die Challenge sein?"
+  - text: "Sehr cool! Wie schwer soll denn die Challenge sein?"
     buttons:
     - title: "Einfach"
       payload: "/easy_challenge"
@@ -153,20 +155,23 @@ responses:
       payload: "/hard_challenge"
 
   utter_schwer_challenge:
-  - text: "Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
-  - text: "Habicht Challenge: Einen neuen Fitness Skill lernen."
-  - text: "Hai Challenge: 3 mal in einer Woche joggen gehen."
-  - text: "T-Rex Challenge: Für einen Monat auf Tiefkühlprodukte verzichten."
+  - text: "🐊 Krokodil Challenge: Für 15 Tage auf raffinierten Zucker verzichten."
+  - text: "🦅 Adler Challenge: Einen neuen Fitness Skill lernen."
+  - text: "🦈 Hai Challenge: 3 mal in einer Woche joggen gehen."
+  - text: "🦖 T-Rex Challenge: Für einen Monat auf Tiefkühlprodukte verzichten."
 
   utter_medium_challenge:
-  - text: "Nashorn Challenge: Für einen Monat nur Olivenöl zum kochen verwenden."
-  - text: "Gorilla Challenge: Für 30 Tage beim Auswärtsessen auf FastFood Ketten verzichten."
-  - text: "Schlangen Challenge: Pro Tag 3 Dehnübungen machen für einen Monat."
+  - text: "🦏 Nashorn Challenge: Für einen Monat als Öl nur Olivenöl zum kochen verwenden."
+  - text: "🦍 Gorilla Challenge: Für 30 Tage beim Auswärtsessen auf FastFood Ketten verzichten."
+  - text: "🐍 Schlangen Challenge: Pro Tag 3 Dehnübungen machen für einen Monat."
+  - text: "🦘 Känguru Challenge: 5 Minuten pro Tag Seilspringen und das für eine Woche"
+  - text: "🐺 Wolf Challenge: Laufe 10.000 Schritte pro Tag und das eine Woche lang"
 
   utter_einfach_challenge:
-  - text: "Leopard Challenge: Für eine Woche jeden Tag 2 Minuten sprinten."
-  - text: "Drachen Challenge: Für einen Monat jeden Tag 5 Minuten meditieren."
-  - text: "Känguru Challenge: Für einen Monat jeden Tag 10 Burpees machen."
+  - text: "🐆 Leopard Challenge: Für eine Woche jeden Tag 2 Minuten sprinten."
+  - text: "🐉 Drachen Challenge: Für einen Monat jeden Tag 5 Minuten meditieren."
+  - text: "🐐 Ziegen Challenge: Für einen Monat jeden Tag 10 Burpees machen."
+  - text: "🐳 Walfisch Challenge: Mindestens 2,5 Liter Wasser pro Tag trinken."
 
 
   utter_tageszeit:
@@ -308,8 +313,10 @@ responses:
           Rezept von https://kochketo.de/keto-muesliriegel/"
 
   utter_help:
-  - text: "Ich kann dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
-          Hast du Lust auf eine Fitness Challenge. So gebe 'Challenge' ein"
+  - text: "🥗 Ich kann Dir verschiedene Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
+          ✨ Hast Du Lust auf eine Fitness Challenge? So gebe 'Challenge' ein\n
+          Berichte mir auch zurück wenn Du die Challenge fertig hast!\n
+          🎶 Ich kann dir auch coole Gym Playlists empfehlen. Einfach nur fragen!"
   
   utter_ask_user_age:
   - text: "Wie alt bist du denn?"
@@ -324,10 +331,10 @@ responses:
   - text: "Wie groß bist du in cm?"
 
   utter_ask_user_weight:
-  - text: "Was sagt die Wage?"
+  - text: "Was sagt die Waage?"
 
   utter_ask_user_goal:
-  - text: "Willst du abnehmen, halten oder zunehmen"
+  - text: "Willst du abnehmen, Gewicht halten oder zunehmen"
 
   utter_video:
   - text: "Hier kommst du zu unserem tollen Werbevideo"
@@ -428,7 +435,7 @@ responses:
 
 
   utter_ask_for_genre:
-  - text: "Was für ein Genre willst du?"
+  - text: "Was für ein Genre willst Du hören? 👀"
     buttons:
     - title: "hiphop"
       payload: "/hiphop_playlist"
@@ -444,70 +451,75 @@ responses:
       payload: "/überraschung_playlist"
       
   utter_gymPlaylist_techno:
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist Techno Musik die anders kickt 🤯
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/Yy4i6Dzyx3k" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist Techno Musik die anders kickt 🤯
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/Ncu0A9dtieU" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist Techno Musik die anders kickt 🤯
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/ssXzkCMdcDQ" } }
 
   utter_gymPlaylist_pop:
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Diese Pop Playlist sollte Dich richtig motivieren! Ab gehts zum Workout 💪
     attachment: { "type":"video", "payload":{"title": "pop1", "src": "https://www.youtube.com/embed/d8OL6m0ZblA" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Diese Pop Playlist sollte Dich richtig motivieren! Ab gehts zum Workout 💪
     attachment: { "type":"video", "payload":{"title": "pop2", "src": "https://www.youtube.com/embed/5u-tYqRQSsE" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Diese Pop Playlist sollte Dich richtig motivieren! Ab gehts zum Workout 💪
     attachment: { "type":"video", "payload":{"title": "pop3", "src": "https://www.youtube.com/embed/72JOJZLMrU0" } }
 
   utter_gymPlaylist_hiphop:
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hab da so ne wilde HipHop Playlist für Dich! Und jetzt auf geht's mit dem Workout 🤝
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/7BdAKfsjZ6U" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hab da so ne wilde HipHop Playlist für Dich! Und jetzt auf geht's mit dem Workout 🤝
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/RJPNjYVnJnk" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hab da so ne wilde HipHop Playlist für Dich! Und jetzt auf geht's mit dem Workout 🤝
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/kf0Af6A5wW8" } }
 
   utter_gymPlaylist_jazz:
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Eine erstkklassige Jazz Playlist für den extra Kick beim Training 🙌
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/NKDI-60H-5s" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Eine erstkklassige Jazz Playlist für den extra Kick beim Training 🙌
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/neV3EPgvZ3g" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Eine erstkklassige Jazz Playlist für den extra Kick beim Training 🙌
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/Ys_tRskDiDg" } }
 
   utter_gymPlaylist_kpop:
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Koreanische Musik vom Feinsten für Dich! Zieh durch beim Workout 💪
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/GuEJ6QzXS4A" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Koreanische Musik vom Feinsten für Dich! Zieh durch beim Workout 💪
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/WZPLefjiAZw" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Koreanische Musik vom Feinsten für Dich! Zieh durch beim Workout 💪
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/4T9DJNe7ZPU" } }
 
   utter_gymPlaylist_überraschung:
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/W05LPtVm5hY" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/0DeU8uKC3LQ" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/ZJebIJFRuIY" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/QJucFT8gATM" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/YNvCK7jkUEk" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/SN5awaBMkuY" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/v7_ED23ah-s" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/2XlYZPfPwzc" } }
-  - text: Hier ist nice Gym Mucke für dich
+  - text: Hier ist nice Gym Mucke für dich 🎶 Hau rein beim Workout 🫡
     attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/embed/-ladG8O1t7A" } }
 
   utter_hype:
   - text: "YEAHHH BUDDDYY"
     attachment: { "type":"video", "payload":{ "src": "https://youtube.com/embed/tkBUpJtYFTw" } }
 
-
+  utter_auf_danke_antworten:
+  - text: "Immer gerne Meister! Wenn wieder was ist sag Bescheid."
+  - text: "Kein Ding! Wenn wieder was ist sag Bescheid."
+  - text: "Zieh durch! Wenn wieder was ist sag Bescheid."
+  - text: "Gerne doch! Wenn wieder was ist sag Bescheid."
+  - text: "Bitte bitte! Wenn wieder was ist sag Bescheid."
 
 session_config:
   session_expiration_time: 60
