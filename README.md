@@ -31,5 +31,5 @@ Overall Gymski is a useful bot but he cannot actually go to the gym with you can
 | Nils Tesch       | tesch@hm.edu            |
 | Aliha Ragab      | ragab.aliha@hm.edu      |
 
-Youn can visit our [GitHub Wiki](https://github.com/ID-Start-Winter22/Team7-Gymski/wiki) for more insights and information! ❤️
+You can visit our [GitHub Wiki](https://github.com/ID-Start-Winter22/Team7-Gymski/wiki) for more insights and information! ❤️
 
