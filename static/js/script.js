@@ -50,6 +50,11 @@ window.addEventListener('load', () => {
     $(".widget").toggle();
   });
 
+  $("#tryOutButton").click(() => {
+    $(".profile_div").toggle();
+    $(".widget").toggle();
+  });
+
   // clear function to clear the chat contents of the widget.
   $("#clear").click(() => {
     $(".chats").fadeOut("normal", () => {

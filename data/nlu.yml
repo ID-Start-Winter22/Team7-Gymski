@@ -1,4 +1,4 @@
-version: "3.0"
+dversion: "3.0"
 
 nlu:
 - intent: greet

@@ -49,6 +49,14 @@ intents:
 actions:
   - action_calorie_calculator
   - action_get_workout_schedule_for_day
+  # - action_get_chest_exercise
+  # - action_get_shoulder_exercise
+  # - action_get_back_exercise
+  # - action_get_bicep_exercise
+  # - action_get_tricep_exercise
+  # - action_get_ab_exercise
+  # - action_get_leg_exercise
+
 entities:
   - user_weight
   - user_height
@@ -363,80 +371,7 @@ responses:
   utter_readyForMore: 
   - text: "Okay. Falls noch was ist sag Bescheid!"
 
-  utter_chest_exercise:
-  - image: "https://www.inspireusafoundation.org/wp-content/uploads/2022/05/barbell-pause-bench.gif"
-    text: "Barbell Bench Press
-          
-      1. Lege dich auf eine Flachbank. Die Schultern werden beim Bankdrücken zurückgezogen und du kommst gleichzeitig in ein leichtes Hohlkreuz. Die verlängerte Linie zwischen Schultern und Beginn der Lendenwirbelsäule sollte dabei auf der Bank aufliegen. Unter dem unteren Rückenstrecker sollte noch ein Arm durchgestreckt werden können. Der Kopf liegt auf der Bank flach auf, die Augen fixieren die Stange. Die Beine befinden sich dabei im 90° Winkel fest aufgestellt auf dem Boden.\n
-      2. Für die richtige Griffstellung beim Bankdrücken umfasse die Stange in etwa schulterweit. Die Handgelenke werden gerade gehalten und die Langhantelstange mit einem sehr festen Griff umschlossen.\n
-      3. Nun folgt die Einleitung der Bewegung. Atme dafür tief ein und spanne gleichzeitig den Rücken, Po und die fixierten Schulterblätter an. Durch das tiefe Einatmen stabilisierst du die gesamte Körpermitte und nimmst den Druck von deinen Bandscheiben und der Wirbelsäule.\n
-      4. Die Stange wird nun langsam und kontrolliert auf der Brust abgesetzt. Die Brust bleibt dabei permanent unter Spannung. Der kurze Zwischenstopp auf der Brust sollte nicht dazu genutzt werden, die Spannung zu verlieren. Als Fixpunkt für das Absetzen dient hier das untere Ende des Brustbeins (unter den Brustwarzen).\n
-      5. Für die positive Bewegung wird die Stange anschließend explosiv nach oben geführt. Wichtig ist, gleichzeitig die Schulterblätter zu fixieren und die gesamte Körpermitte fest und stabil zu halten. Die Kraft wird durch das Ausatmen aus dem Bauchraum und den stabilen Stand der Füße unterstützt."
-    
-  - image: "https://www.fitundattraktiv.de/wp-content/uploads/2018/02/bankdruecken_schraeg_mit_langhantel.gif"
-    text: "Incline Barbell Bench Press
-
-      1. Lege dich auf die Schrägbank (optimaler Winkel: 30 Grad) unter die in der Halterung liegende Langhantelstange und positioniere deine Füße fest am Boden. Dein Po berührt mit dem Steißbein das Rückenpolster, auf welchem zudem dein Rücken und dein Kopf abgelegt wird. Du umgreifst die Langhantelstange mehr als schulterbreit im Obergriff und achtest darauf, dass sich deine Handgelenke direkt unter der Stange befinden. Spanne deine Bauchmuskeln an und hebe die Stange aus der Halterung nach oben und ein paar cm nach vorne. Jetzt sollten deine senkrecht nach oben ausgestreckten Arme die Stange direkt über deinen Schlüsselbeinen halten. Achte darauf, dass deine Arme nicht ganz durchgestreckt sind, sondern dass sie leicht gebeugt bleiben. Dies schont deine Ellenbogengelenke.\n
-      2. Jetzt startest du die erste Bewegungsphase der Übung indem du die Langhantelstange langsam durch Herablassen der Ellenbogen nach unten bis kurz über die Schlüsselbeinfasern der Brustmuskulatur absenkst. Während dieser Phase atmest du ein.\n
-      3. Danach drückst du die Stange auf gleichem Weg wieder nach oben und atmest währenddessen aus. Vergiss nicht das Ellenbogengelenk am Ende der Drückbewegung leicht gebeugt zu lassen."
-
-  - image: "https://www.fitundattraktiv.de/wp-content/uploads/2017/12/brust_dips_am_geraet.gif"
-    text: "Chest Dips
-
-      1. Stütze dich auf dem Barren ab\n
-      2. Ellbogen zeigen nach hinten (nicht zur Seite)\n
-      3. Ziehe deine Schulterblätter zusammen bzw. deine Schultern nach hinten\n
-      4. Spanne deinen Po an und versuche Ihn leicht nach hinten/oben zu ziehen\n
-      5. Lasse dich mit deiner Brust in Richtung Barren ab\n
-      6. Versuche dich soweit wie möglich abzulassen (maximal bis zum Barren)\n
-      7. Drücke dich kontrolliert nach oben"
-
-  - image: "https://modusx.de/wp-content/uploads/2021/01/cable-fly-obere-brust.gif"
-    text: "Lower Chest Cable Fly
-
-      1. Stelle zunächst den Kabzug so ein, dass die Griffe von ganz oben zu greifen sind.\n
-      2. Umfasse nun die Griffe auf beiden Seiten und positioniere dich in der Mitte des Kabelzugs. Mach mit einem Bein einen Ausfallschritt nach vorne.\n
-      3. Bring nun beide Arme so zusammen, dass sich die Hände ungefähr auf Bauchhöhe treffen.\n
-      4. Führe die Griffe nun wieder kontrolliert an die Startposition zurück."
-
-  utter_shoulder_exercise:
-  - image: "https://homeworkouts.org/wp-content/uploads/anim-dumbbell-lateral-raise.gif"
-    text: "Lateral Raises
-
-      1. Positioniere dich in einem stabilen schulterweiten Stand\n
-      2. Schulterblätter nach hinten ziehen\n
-      3. Arme hängen leicht angewinkelt seitlich am Körper runter\n
-      4. Arme seitlich (leicht angewinkelt) nach oben heben. Die Ellbogen sind immer in der höchsten Position, nicht die Hände.\n
-      5. In der obersten Position haben die Oberarme einen 90° Winkel zum Oberkörper. Nicht höher als 90°\n
-      6. Bewege die Hanteln langsam & kontrolliert wieder in die Ausgangsposition zurück"
-
-  - image: "https://www.inspireusafoundation.org/wp-content/uploads/2022/10/cable-one-arm-lateral-raise.gif"
-    text: "Cable Lateral Raise
-
-      1. Der Kabelzug sollte auf der niedrigsten Stufe eingestellt werden.\n
-      2. Wähle das Gewicht so, dass du es mit einer Schulter heben kannst und stell dich Schulterbreit seitlich zum Kabelzug.\n
-      3. Um eine gute Haltung zu bewahren, strecke deine Brust nach vorne und ziehe deine Schulter nach hinten, deine Knie sollten leicht gebeugt sein. Zur unterstützung kannst du deine freie Hand an der Schiene des Kabelzugs platzieren.\n
-      4. Beugen Sie den Ellbogen leicht in einem Winkel von 10 bis 30 Grad und heben Sie den Arm seitlich an, bis er sich auf Höhe der Schulter befindet, wobei Sie beim Anheben ausatmen.\n
-      5. Vermeiden Sie es, den Arm beim Anheben des Bügels zu drehen, und konzentrieren Sie sich auf den Bereich, den Sie trainieren möchten - Ihre mittlere Schulter.\n
-      6. Halten Sie die Position 1-5 Sekunden lang, und atmen Sie dann ein, während Sie das Gewicht langsam wieder absenken. Lassen Sie das Kabel vollständig zum Stillstand kommen, bevor Sie die nächste Wiederholung beginnen."
-
-  - image: "https://modusx.de/wp-content/uploads/2021/04/military-press-weiter-griff.gif"
-    text: "Military Press
-    
-      1. Füße schulterweit unter der Stange positionieren
-      2. Langhantelstange etwas breiter als schulterweit greifen (etwa eine Handbreite weiter). Die Unterarme müssen bei der späteren Drückbewegung senkrecht nach oben stehen\n
-      3. Nachem du die Langhantelstange fest umgriffen hast machst du folgendes: Ziehe deine Schultern nach hinten und deine Ellbogen direkt unter die Stange. Diese Bewegung sorgt dafür, dass sowohl deine Rotatoren und dein Schultergelenk in der optimalen Position ist.\n
-      4. Bauchmuskeln anspannen, Po anspannen und Hüfte leicht nach vorne schieben. Das macht es später einfacher die Stange am Gesicht vorbei zu drücken ohne stark ins Hohlkreuz zu gehen\n
-      5. Stange aus der Ablage heben und einen Schritt zurück gehen"
-
-  - image: "https://modusx.de/wp-content/uploads/2020/11/butterfly-reverse.gif"
-    text: "Butterfly Reverse
-
-      1. Stelle das Gerät zunächst auf Deine Körpergröße ein, indem Du den Sitz in der Höhe so ausrichtest, dass Deine Unterarme während der Ausführung exakt parallel zum Boden verlaufen. Deine Hände müssen zudem in Höhe deiner Schultergelenke liegen.\n
-      2. Setze Dich mit dem Gesicht Richtung Polster auf die Butterfly Reverse-Maschine und drücke Deine Brust gegen das vertikal aufgerichtete Polster. Sorge anschließend für Stabilität, indem Du deine Beine leicht seitlich neben dem Gerät aufstellst. Achte auf einen 90-Grad-Winkel zwischen Ober- und Unterschenkel.\n
-      3. Greife nach den Griffstücken und fasse diese so, dass Deine Arme nicht ganz gestreckt sind, sondern sich zwischen Ober- und Unterarm ein leichter Winkel befindet.\n
-      4. Führe die Griffe nun so weit nach hinten, wie es Dein Schultergelenk zulässt und halte die Position im Anschluss für 1-2 Sekunden.\n
-      5. Dann lässt Du das Gewicht langsam wieder ab, bevor Du mit der nächsten Wiederholung beginnst."
+  
       
   utter_entschuldigung:
   - text: "Meine Wenigkeit entschuldigt sich von ganzem Herzen für die Unvollständigkeit meiner Funktionalität und bittet um Verzeihung und Verständnis. Mit Hochdruck wird an einer Verbesserung gearbeitet"
@@ -541,70 +476,470 @@ responses:
   - text: "Hier ist dein perfekter Trainingsplan, um in die Woche zu STARTEN"
     attachment: { "type":"video", "payload":{ "title": "Boxing Cardio", "src": "https://www.youtube.com/embed/1bjKpgrbm6o" } }
 
-utter_get_workout_schedule_dienstag:
-  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
-    attachment: { "type":"video", "payload":{ "title": "Bombastic Booty", "src": "https://www.youtube.com/embed/AFxHeJP--j4" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
-    attachment: { "type":"video", "payload":{ "title": "Booty", "src": "https://www.youtube.com/embed/ZsthLQrpY6g" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
-    attachment: { "type":"video", "payload":{ "title": "Inner and Outer Thighs", "src": "https://www.youtube.com/embed/_sl7q03-0Mw" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
-    attachment: { "type":"video", "payload":{ "title": "Booty Pump", "src": "https://www.youtube.com/embed/lRFxt8BHxT0" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
-    attachment: { "type":"video", "payload":{ "title": "Legs and Fat Burn", "src": "https://www.youtube.com/embed/R1EKAgFRe" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
-    attachment: { "type":"video", "payload":{ "title": "Watching Dance", "src": "https://www.youtube.com/embed/XNf6WHXtNCs" } }
+  utter_get_workout_schedule_dienstag:
+    - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+      attachment: { "type":"video", "payload":{ "title": "Bombastic Booty", "src": "https://www.youtube.com/embed/AFxHeJP--j4" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+      attachment: { "type":"video", "payload":{ "title": "Booty", "src": "https://www.youtube.com/embed/ZsthLQrpY6g" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+      attachment: { "type":"video", "payload":{ "title": "Inner and Outer Thighs", "src": "https://www.youtube.com/embed/_sl7q03-0Mw" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+      attachment: { "type":"video", "payload":{ "title": "Booty Pump", "src": "https://www.youtube.com/embed/lRFxt8BHxT0" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+      attachment: { "type":"video", "payload":{ "title": "Legs and Fat Burn", "src": "https://www.youtube.com/embed/R1EKAgFRe" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren"
+      attachment: { "type":"video", "payload":{ "title": "Watching Dance", "src": "https://www.youtube.com/embed/XNf6WHXtNCs" } }
 
-utter_get_workout_schedule_mittwoch:
-  - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
-    attachment: { "type":"video", "payload":{ "title": "Lower Abs", "src": "https://www.youtube.com/embed/54x6yjnzLms" } }
-  - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
-    attachment: { "type":"video", "payload":{ "title": "Old But Gold", "src": "https://www.youtube.com/embed/CtTqaVWYRTA" } }
-  - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
-    attachment: { "type":"video", "payload":{ "title": "Best of HIIT", "src": "https://www.youtube.com/embed/k7nV8Gyn56o" } }
-  - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
-    attachment: { "type":"video", "payload":{ "title": "HIIT Workout", "src": "https://www.youtube.com/embed/zr08J6wB53Y" } }
-  - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
-    attachment: { "type":"video", "payload":{ "title": "Ab Workout", "src": "https://www.youtube.com/embed/ft6MgeTvfYs" } }
-  - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
-    attachment: { "type":"video", "payload":{ "title": "Basic HIIT", "src": "https://www.youtube.com/embed/wGZYbAZrDxw" } }
+  utter_get_workout_schedule_mittwoch:
+    - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+      attachment: { "type":"video", "payload":{ "title": "Lower Abs", "src": "https://www.youtube.com/embed/54x6yjnzLms" } }
+    - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+      attachment: { "type":"video", "payload":{ "title": "Old But Gold", "src": "https://www.youtube.com/embed/CtTqaVWYRTA" } }
+    - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+      attachment: { "type":"video", "payload":{ "title": "Best of HIIT", "src": "https://www.youtube.com/embed/k7nV8Gyn56o" } }
+    - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+      attachment: { "type":"video", "payload":{ "title": "HIIT Workout", "src": "https://www.youtube.com/embed/zr08J6wB53Y" } }
+    - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+      attachment: { "type":"video", "payload":{ "title": "Ab Workout", "src": "https://www.youtube.com/embed/ft6MgeTvfYs" } }
+    - text: "Hier ist dein perfekter Tagesplan, um deine ABS zu trainieren und dich mit einem HIIT auzupaueren"
+      attachment: { "type":"video", "payload":{ "title": "Basic HIIT", "src": "https://www.youtube.com/embed/wGZYbAZrDxw" } }
 
 
-utter_get_workout_schedule_donnerstag:
-  - text: "Rest Day"
-    image: "https://media.tenor.com/RtY6of3HthsAAAAM/it-is-my-day-off-i-am-feeling.gif"
+  utter_get_workout_schedule_donnerstag:
+    - text: "Rest Day"
+      image: "https://media.tenor.com/RtY6of3HthsAAAAM/it-is-my-day-off-i-am-feeling.gif"
 
-utter_get_workout_schedule_freitag:
-  - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
-    attachment: { "type":"video", "payload":{ "title": "Full Body", "src": "https://www.youtube.com/embed/DkLISiTHRjU" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
-    attachment: { "type":"video", "payload":{ "title": "Ab Workout", "src": "https://www.youtube.com/embed/z2ggDhOqLsk" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
-    attachment: { "type":"video", "payload":{ "title": "Boob Lift", "src": "https://www.youtube.com/embed/saX32Yy9vEI" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
-    attachment: { "type":"video", "payload":{ "title": "Fun Full Body", "src": "https://www.youtube.com/embed/2-RGYM6ojJ4" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
-    attachment: { "type":"video", "payload":{ "title": "Calorie Killer", "src": "https://www.youtube.com/embed/NmCXy7oMsOs" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
-    attachment: { "type":"video", "payload":{ "title": "Stressful Day", "src": "https://www.youtube.com/embed/APbAoww8_gE" } }
+  utter_get_workout_schedule_freitag:
+    - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+      attachment: { "type":"video", "payload":{ "title": "Full Body", "src": "https://www.youtube.com/embed/DkLISiTHRjU" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+      attachment: { "type":"video", "payload":{ "title": "Ab Workout", "src": "https://www.youtube.com/embed/z2ggDhOqLsk" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+      attachment: { "type":"video", "payload":{ "title": "Boob Lift", "src": "https://www.youtube.com/embed/saX32Yy9vEI" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+      attachment: { "type":"video", "payload":{ "title": "Fun Full Body", "src": "https://www.youtube.com/embed/2-RGYM6ojJ4" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+      attachment: { "type":"video", "payload":{ "title": "Calorie Killer", "src": "https://www.youtube.com/embed/NmCXy7oMsOs" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein UPPER BODY zu tranieren und zusätzlich CARDIO zu betreiben"
+      attachment: { "type":"video", "payload":{ "title": "Stressful Day", "src": "https://www.youtube.com/embed/APbAoww8_gE" } }
 
-utter_get_workout_schedule_samstag:
-  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
-    attachment: { "type":"video", "payload":{ "title": "Grow your Booty", "src": "https://www.youtube.com/embed/mcs6XLX8H_0" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
-    attachment: { "type":"video", "payload":{ "title": "Old but Gold", "src": "https://www.youtube.com/embed/CtTqaVWYRTA" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
-    attachment: { "type":"video", "payload":{ "title": "Inner Thigh", "src": "https://www.youtube.com/embed/h9uZVP_qLVo" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
-    attachment: { "type":"video", "payload":{ "title": "Bubble Butt", "src": "https://www.youtube.com/embed/vtD5nGoNMu8" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
-    attachment: { "type":"video", "payload":{ "title": "Happy Sweat", "src": "https://www.youtube.com/embed/06cwQlikBEA&t=60s" } }
-  - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
-    attachment: { "type":"video", "payload":{ "title": "Medium HIIT", "src": "https://www.youtube.com/embed/7537-yAhASA" } }
+  utter_get_workout_schedule_samstag:
+    - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+      attachment: { "type":"video", "payload":{ "title": "Grow your Booty", "src": "https://www.youtube.com/embed/mcs6XLX8H_0" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+      attachment: { "type":"video", "payload":{ "title": "Old but Gold", "src": "https://www.youtube.com/embed/CtTqaVWYRTA" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+      attachment: { "type":"video", "payload":{ "title": "Inner Thigh", "src": "https://www.youtube.com/embed/h9uZVP_qLVo" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+      attachment: { "type":"video", "payload":{ "title": "Bubble Butt", "src": "https://www.youtube.com/embed/vtD5nGoNMu8" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+      attachment: { "type":"video", "payload":{ "title": "Happy Sweat", "src": "https://www.youtube.com/embed/06cwQlikBEA&t=60s" } }
+    - text: "Hier ist dein perfekter Tagesplan, um dein BOOTY zu optmieren und zusätzlich CARDIO zu betreiben"
+      attachment: { "type":"video", "payload":{ "title": "Medium HIIT", "src": "https://www.youtube.com/embed/7537-yAhASA" } }
 
-utter_get_workout_schedule_sonntag:
-- text: "Rest Day"
-  image: "https://media.tenor.com/fWoV97ft9vwAAAAM/sleepy-at.gif"
+  utter_get_workout_schedule_sonntag:
+    - text: "Rest Day"
+      image: "https://media.tenor.com/fWoV97ft9vwAAAAM/sleepy-at.gif"
+
+
+
+  utter_chest_exercise:
+    - image: "https://www.inspireusafoundation.org/wp-content/uploads/2022/05/barbell-pause-bench.gif"
+      text: "Barbell Bench Press\n
+        \n     
+        1. Lege dich auf eine Flachbank. Die Schultern werden beim Bankdrücken zurückgezogen und du kommst gleichzeitig in ein leichtes Hohlkreuz. Die verlängerte Linie zwischen Schultern und Beginn der Lendenwirbelsäule sollte dabei auf der Bank aufliegen. Unter dem unteren Rückenstrecker sollte noch ein Arm durchgestreckt werden können. Der Kopf liegt auf der Bank flach auf, die Augen fixieren die Stange. Die Beine befinden sich dabei im 90° Winkel fest aufgestellt auf dem Boden.\n
+        2. Für die richtige Griffstellung beim Bankdrücken umfasse die Stange in etwa schulterweit. Die Handgelenke werden gerade gehalten und die Langhantelstange mit einem sehr festen Griff umschlossen.\n
+        3. Nun folgt die Einleitung der Bewegung. Atme dafür tief ein und spanne gleichzeitig den Rücken, Po und die fixierten Schulterblätter an. Durch das tiefe Einatmen stabilisierst du die gesamte Körpermitte und nimmst den Druck von deinen Bandscheiben und der Wirbelsäule.\n
+        4. Die Stange wird nun langsam und kontrolliert auf der Brust abgesetzt. Die Brust bleibt dabei permanent unter Spannung. Der kurze Zwischenstopp auf der Brust sollte nicht dazu genutzt werden, die Spannung zu verlieren. Als Fixpunkt für das Absetzen dient hier das untere Ende des Brustbeins (unter den Brustwarzen).\n
+        5. Für die positive Bewegung wird die Stange anschließend explosiv nach oben geführt. Wichtig ist, gleichzeitig die Schulterblätter zu fixieren und die gesamte Körpermitte fest und stabil zu halten. Die Kraft wird durch das Ausatmen aus dem Bauchraum und den stabilen Stand der Füße unterstützt.\n"
+      
+    - image: "https://www.fitundattraktiv.de/wp-content/uploads/2018/02/bankdruecken_schraeg_mit_langhantel.gif"
+      text: "Incline Barbell Bench Press\n
+        \n
+        1. Lege dich auf die Schrägbank (optimaler Winkel: 30 Grad) unter die in der Halterung liegende Langhantelstange und positioniere deine Füße fest am Boden. Dein Po berührt mit dem Steißbein das Rückenpolster, auf welchem zudem dein Rücken und dein Kopf abgelegt wird. Du umgreifst die Langhantelstange mehr als schulterbreit im Obergriff und achtest darauf, dass sich deine Handgelenke direkt unter der Stange befinden. Spanne deine Bauchmuskeln an und hebe die Stange aus der Halterung nach oben und ein paar cm nach vorne. Jetzt sollten deine senkrecht nach oben ausgestreckten Arme die Stange direkt über deinen Schlüsselbeinen halten. Achte darauf, dass deine Arme nicht ganz durchgestreckt sind, sondern dass sie leicht gebeugt bleiben. Dies schont deine Ellenbogengelenke.\n
+        2. Jetzt startest du die erste Bewegungsphase der Übung indem du die Langhantelstange langsam durch Herablassen der Ellenbogen nach unten bis kurz über die Schlüsselbeinfasern der Brustmuskulatur absenkst. Während dieser Phase atmest du ein.\n
+        3. Danach drückst du die Stange auf gleichem Weg wieder nach oben und atmest währenddessen aus. Vergiss nicht das Ellenbogengelenk am Ende der Drückbewegung leicht gebeugt zu lassen.\n"
+
+    - image: "https://www.fitundattraktiv.de/wp-content/uploads/2017/12/brust_dips_am_geraet.gif"
+      text: "Chest Dips\n
+        \n
+        1. Stütze dich auf dem Barren ab\n
+        2. Ellbogen zeigen nach hinten (nicht zur Seite)\n
+        3. Ziehe deine Schulterblätter zusammen bzw. deine Schultern nach hinten\n
+        4. Spanne deinen Po an und versuche Ihn leicht nach hinten/oben zu ziehen\n
+        5. Lasse dich mit deiner Brust in Richtung Barren ab\n
+        6. Versuche dich soweit wie möglich abzulassen (maximal bis zum Barren)\n
+        7. Drücke dich kontrolliert nach oben.\n"
+
+    - image: "https://modusx.de/wp-content/uploads/2021/01/cable-fly-obere-brust.gif"
+      text: "Lower Chest Cable Fly\n
+        \n
+        1. Stelle zunächst den Kabzug so ein, dass die Griffe von ganz oben zu greifen sind.\n
+        2. Umfasse nun die Griffe auf beiden Seiten und positioniere dich in der Mitte des Kabelzugs. Mach mit einem Bein einen Ausfallschritt nach vorne.\n
+        3. Bring nun beide Arme so zusammen, dass sich die Hände ungefähr auf Bauchhöhe treffen.\n
+        4. Führe die Griffe nun wieder kontrolliert an die Startposition zurück.\n"
+
+  utter_shoulder_exercise:
+    - image: "https://homeworkouts.org/wp-content/uploads/anim-dumbbell-lateral-raise.gif"
+      text: "Lateral Raises\n
+        \n
+        1. Positioniere dich in einem stabilen schulterweiten Stand\n
+        2. Schulterblätter nach hinten ziehen\n
+        3. Arme hängen leicht angewinkelt seitlich am Körper runter\n
+        4. Arme seitlich (leicht angewinkelt) nach oben heben. Die Ellbogen sind immer in der höchsten Position, nicht die Hände.\n
+        5. In der obersten Position haben die Oberarme einen 90° Winkel zum Oberkörper. Nicht höher als 90°\n
+        6. Bewege die Hanteln langsam & kontrolliert wieder in die Ausgangsposition zurück.\n"
+
+    - image: "https://www.inspireusafoundation.org/wp-content/uploads/2022/10/cable-one-arm-lateral-raise.gif"
+      text: "Cable Lateral Raise\n
+        \n
+        1. Der Kabelzug sollte auf der niedrigsten Stufe eingestellt werden.\n
+        2. Wähle das Gewicht so, dass du es mit einer Schulter heben kannst und stell dich Schulterbreit seitlich zum Kabelzug.\n
+        3. Um eine gute Haltung zu bewahren, strecke deine Brust nach vorne und ziehe deine Schulter nach hinten, deine Knie sollten leicht gebeugt sein. Zur unterstützung kannst du deine freie Hand an der Schiene des Kabelzugs platzieren.\n
+        4. Beugen Sie den Ellbogen leicht in einem Winkel von 10 bis 30 Grad und heben Sie den Arm seitlich an, bis er sich auf Höhe der Schulter befindet, wobei Sie beim Anheben ausatmen.\n
+        5. Vermeiden Sie es, den Arm beim Anheben des Bügels zu drehen, und konzentrieren Sie sich auf den Bereich, den Sie trainieren möchten - Ihre mittlere Schulter.\n
+        6. Halten Sie die Position 1-5 Sekunden lang, und atmen Sie dann ein, während Sie das Gewicht langsam wieder absenken. Lassen Sie das Kabel vollständig zum Stillstand kommen, bevor Sie die nächste Wiederholung beginnen.\n"
+
+    - image: "https://modusx.de/wp-content/uploads/2021/04/military-press-weiter-griff.gif"
+      text: "Military Press\n
+        \n
+        1. Füße schulterweit unter der Stange positionieren\n
+        2. Langhantelstange etwas breiter als schulterweit greifen (etwa eine Handbreite weiter). Die Unterarme müssen bei der späteren Drückbewegung senkrecht nach oben stehen\n
+        3. Nachem du die Langhantelstange fest umgriffen hast machst du folgendes: Ziehe deine Schultern nach hinten und deine Ellbogen direkt unter die Stange. Diese Bewegung sorgt dafür, dass sowohl deine Rotatoren und dein Schultergelenk in der optimalen Position ist.\n
+        4. Bauchmuskeln anspannen, Po anspannen und Hüfte leicht nach vorne schieben. Das macht es später einfacher die Stange am Gesicht vorbei zu drücken ohne stark ins Hohlkreuz zu gehen\n
+        5. Stange aus der Ablage heben und einen Schritt zurück gehen.\n"
+
+    - image: "https://modusx.de/wp-content/uploads/2020/11/butterfly-reverse.gif"
+      text: "Butterfly Reverse\n
+        \n
+        1. Stelle das Gerät zunächst auf Deine Körpergröße ein, indem Du den Sitz in der Höhe so ausrichtest, dass Deine Unterarme während der Ausführung exakt parallel zum Boden verlaufen. Deine Hände müssen zudem in Höhe deiner Schultergelenke liegen.\n
+        2. Setze Dich mit dem Gesicht Richtung Polster auf die Butterfly Reverse-Maschine und drücke Deine Brust gegen das vertikal aufgerichtete Polster. Sorge anschließend für Stabilität, indem Du deine Beine leicht seitlich neben dem Gerät aufstellst. Achte auf einen 90-Grad-Winkel zwischen Ober- und Unterschenkel.\n
+        3. Greife nach den Griffstücken und fasse diese so, dass Deine Arme nicht ganz gestreckt sind, sondern sich zwischen Ober- und Unterarm ein leichter Winkel befindet.\n
+        4. Führe die Griffe nun so weit nach hinten, wie es Dein Schultergelenk zulässt und halte die Position im Anschluss für 1-2 Sekunden.\n
+        5. Dann lässt Du das Gewicht langsam wieder ab, bevor Du mit der nächsten Wiederholung beginnst.\n"
+
+
+  utter_back_exercise:
+    - image: ""
+      text: "Lat Pulldown\n
+      \n
+      1. Setzen Sie sich an eine Lat-Pulldown-Maschine und greifen Sie die Stange mit einem Obergriff, wobei Ihre Hände etwas weiter als schulterbreit auseinander stehen.\n
+      2. Ziehen Sie die Stange nach unten in Richtung Brust, halten Sie dabei die Ellbogen eng am Körper und die Schultern entspannt.\n
+      3. Sobald sich die Hantel auf Brusthöhe befindet, halten Sie einen Moment inne und führen die Hantel dann langsam in die Ausgangsposition zurück.\n"
+
+    - image: ""
+      text: "Barbell Rows\n
+      \n
+      1. Legen Sie eine Langhantel auf eine Ablage in einer für Ihre Körpergröße geeigneten Höhe. Sie sollten die Hantel mit leicht gebeugten Knien erreichen können.\n
+      2. Stellen Sie sich mit schulterbreitem Abstand vor die Hantel. Fassen Sie die Hantel mit einem Obergriff, die Hände etwas weiter als schulterbreit auseinander.\n
+      3. Heben Sie die Hantel mit aufrechter Brust und angespanntem Oberkörper aus der Ablage. Gehen Sie einen Schritt zurück, um die Ablage zu verlassen, und stellen Sie sich dann so hin, dass die Hantel vor Ihren Oberschenkeln hängt.\n
+      4. Beginnen Sie die Übung, indem Sie die Hantel nach oben zur oberen Brust ziehen und dabei die Ellbogen eng am Körper halten. Drücken Sie Ihre Schulterblätter zusammen, während Sie die Hantel anheben, und halten Sie Ihre Körpermitte angespannt.\n
+      5. Sobald die Hantel Ihre obere Brust erreicht hat, halten Sie einen Moment inne und senken die Hantel dann langsam wieder in die Ausgangsposition ab.\n"
+
+    - image: ""
+      text: "Lat Pullover\n
+      \n
+      1. Stellen Sie eine Bank und eine Lang- oder Kurzhantel in einer Ablage auf. Wenn Sie eine Langhantel verwenden, sollten Sie mit einem geringeren Gewicht beginnen, bis Sie die Übung beherrschen.\n
+      2. Setzen Sie sich auf die Bank und greifen Sie die Lang- oder Kurzhanteln mit einem Überhandgriff. Wenn Sie eine Langhantel verwenden, halten Sie sie mit den Händen etwas weiter als schulterbreit auseinander. Wenn Sie Kurzhanteln verwenden, halten Sie sie an den Enden, wobei die Handflächen einander zugewandt sind.\n
+      3. Führen Sie die Hantel oder die Kurzhanteln zur Brust, wobei Sie die Ellbogen gebeugt und dicht am Körper halten.\n
+      4. Legen Sie sich aus dieser Position so auf die Bank, dass Ihr Oberkörper auf der Bank aufliegt und Ihre Hüften auf der Bankkante ruhen.\n
+      5. Halten Sie die Arme gestreckt und senken Sie die Lang- oder Kurzhanteln langsam hinter Ihren Kopf, bis sie sich knapp über der Bank befinden.\n
+      6. Halten Sie einen Moment inne und bringen Sie dann das Gewicht langsam wieder in die Ausgangsposition zurück, indem Sie es wieder über Ihre Brust bringen.\n"
+
+    - image: ""
+      text: "Shoulder Shrug\n
+      \n
+      1. Stellen Sie sich mit den Füßen schulterbreit auseinander und halten Sie in jeder Hand eine Kurzhantel im Obergriff.\n
+      2. Lassen Sie die Arme seitlich hängen, wobei die Hanteln auf den Oberschenkeln ruhen.\n
+      3. Ohne die Position der Arme zu verändern, heben Sie die Schultern so weit wie möglich in Richtung Ohren an.\n
+      4. Halten Sie die Position einen Moment lang und senken Sie dann die Schultern langsam wieder in die Ausgangsposition zurück.\n"
+
+
+  utter_bicep_exercise:
+    - image: ""
+      text: "Bicep Curl\n
+      \n
+      1. Stellen Sie sich schulterbreit hin und halten Sie in jeder Hand eine Kurzhantel im Untergriff (Handflächen zeigen nach oben).\n
+      2. Lassen Sie die Arme seitlich herabhängen, wobei die Hanteln auf den Oberschenkeln ruhen.\n
+      3. Ohne die Oberarme zu bewegen, heben Sie die Hanteln in Richtung Ihrer Schultern, wobei die Ellbogen dicht am Körper bleiben.\n
+      4. Halten Sie am oberen Ende der Bewegung einen Moment inne und senken Sie die Hanteln dann langsam wieder in die Ausgangsposition ab.\n"
+
+    - image: ""
+      text: "Hammer Curl\n
+      \n
+      1. Stellen Sie sich schulterbreit hin und halten Sie in jeder Hand eine Kurzhantel mit neutralem Griff (Handflächen zeigen zueinander).\n
+      2. Lassen Sie die Arme seitlich herabhängen, wobei die Hanteln auf den Oberschenkeln ruhen.\n
+      3. Ohne die Oberarme zu bewegen, heben Sie die Hanteln in Richtung Ihrer Schultern, wobei die Ellbogen dicht am Körper bleiben.\n
+      4. Halten Sie am oberen Ende der Bewegung einen Moment inne und senken Sie die Hanteln dann langsam wieder in die Ausgangsposition ab.\n"
+
+    - image: ""
+      text: "Preacher Curl\n
+      \n
+      1. Stellen Sie eine Preacher-Curl-Bank auf oder verwenden Sie eine Flachbank mit einem Preacher-Curl-Aufsatz. Für diese Übung benötigen Sie außerdem eine Langhantel oder Kurzhanteln.\n
+      2. Setzen Sie sich auf die Bank und greifen Sie die Lang- oder Kurzhanteln mit dem Untergriff (Handflächen zeigen nach oben).\n
+      3. Legen Sie die Oberarme auf die gepolsterten Armlehnen der Bank, wobei die Ellbogen gebeugt sind und die Hände knapp über der Taille liegen.\n
+      4. Ohne die Oberarme zu bewegen, heben Sie die Hantel oder die Kurzhanteln zu den Schultern hoch, wobei Sie die Ellbogen gebeugt und dicht am Körper halten.\n
+      5. Halten Sie am oberen Ende der Bewegung einen Moment inne und senken Sie das Gewicht dann langsam wieder in die Ausgangsposition ab.\n"
+
+    - image: ""
+      text: "Supine Bicep Curl\n
+      \n
+      1. Legen Sie sich auf eine Flachbank, wobei Ihr Kopf in Richtung eines Endes zeigt. Für diese Übung benötigen Sie außerdem eine Kurzhantel.\n
+      2. Greifen Sie die Hantel mit dem Untergriff (Handflächen zeigen nach oben) und lassen Sie sie in Armlänge neben Ihrer Schulter hängen.\n
+      3. Halten Sie den Oberarm ruhig und heben Sie die Hantel nach oben in Richtung Decke, wobei Sie den Ellbogen gebeugt und dicht am Körper halten.\n
+      4. Halten Sie am oberen Ende der Bewegung einen Moment inne und senken Sie die Hantel dann langsam wieder in die Ausgangsposition ab.\n"
+
+    - image: ""
+      text: "Concentration Curl\n
+      \n
+      1. Setzen Sie sich auf eine Bank und stellen Sie die Füße flach auf den Boden. Für diese Übung benötigen Sie außerdem eine Kurzhantel.\n
+      2. Greifen Sie die Hantel mit dem Untergriff (Handflächen zeigen nach oben) und lassen Sie sie in Armlänge neben sich hängen.\n
+      3. Legen Sie die Rückseite Ihres Oberarms auf der Innenseite Ihres Oberschenkels ab, knapp über Ihrem Knie. Ihr Ellenbogen sollte angewinkelt sein und Ihre Hand sollte sich knapp über Ihrer Taille befinden.\n
+      4. Ohne den Oberarm zu bewegen, heben Sie die Hantel nach oben in Richtung Ihrer Schulter, wobei Sie den Ellbogen gebeugt und dicht am Körper halten.\n
+      5. Halten Sie am oberen Ende der Bewegung einen Moment inne und senken Sie die Hantel dann langsam wieder in die Ausgangsposition ab.\n"
+
+    - image: ""
+      text: "Chin Up\n
+      \n
+      1. Suchen Sie sich eine Klimmzugstange oder eine Stange mit neutralem Griff (Handflächen zeigen zueinander).\n
+      2. Stellen Sie sich vor die Stange und greifen Sie sie mit schulterbreitem Untergriff (die Handflächen zeigen vom Körper weg).\n
+      3. Treten Sie an die Stange heran und lassen Sie sich mit gestreckten Armen und vom Boden abgehobenen Füßen daran hängen.\n
+      4. Spannen Sie Ihre Körpermitte an und ziehen Sie Ihren Körper zur Stange hoch, wobei Sie die Ellbogen dicht am Körper halten.\n
+      5. Sobald sich Ihr Kinn über der Stange befindet, halten Sie einen Moment inne und senken Sie Ihren Körper dann langsam wieder in die Ausgangsposition ab.\n"
+
+    - image: ""
+      text: "Dumbbell Incline Inner Bicep Curl\n
+      \n
+      1. Stellen Sie eine Schrägbank in einem 45-Grad-Winkel auf und legen Sie sich mit dem Kopf nach oben darauf.\n
+      2. Halten Sie ein Paar Kurzhanteln an den Seiten, wobei die Handflächen nach innen (zueinander) zeigen.\n
+      3. Ziehen Sie die Hanteln nach oben zu den Schultern, halten Sie dabei die Ellbogen dicht am Körper und die Handflächen nach innen.\n
+      4. Sobald sich die Hanteln auf Schulterhöhe befinden, halten Sie einen Moment inne und senken sie dann langsam wieder in die Ausgangsposition ab.\n"
+
+
+  utter_tricep_exercise:
+    - image: ""
+      text: "Tricep Cable Kickbacks\n
+      \n
+      1. Richten Sie eine Kabelmaschine mit einem niedrigen Flaschenzug ein und befestigen Sie einen einzelnen Griff am Kabel. Für diese Übung benötigen Sie außerdem eine Bank oder eine Stufe.\n
+      2. Stellen Sie sich mit den Füßen schulterbreit vor das Kabelzuggerät und halten Sie den Griff in einer Hand.\n
+      3. Legen Sie die andere Hand und das Knie auf die Bank oder Stufe, wobei sich Ihr Oberkörper parallel zum Boden befindet.\n
+      4. Halten Sie Ihre Körpermitte angespannt und Ihren Rücken gerade, beugen Sie den Ellbogen und führen Sie den Oberarm zum Körper, wobei Sie den Ellbogen dicht an der Seite halten.\n
+      5. Strecken Sie aus dieser Position den Arm nach hinten und oben zur Decke und spüren Sie dabei die Spannung in Ihren Trizepsmuskeln.\n
+      6. Halten Sie am oberen Ende der Bewegung einen Moment inne und senken Sie den Arm dann langsam wieder in die Ausgangsposition zurück.\n"
+
+    - image: ""
+      text: "Tricep Dip\n
+      \n
+      1. Suchen Sie sich einen Satz paralleler Stangen, die die richtige Höhe für Ihren Körper haben.\n
+      2. Stellen Sie sich vor die Stangen und fassen Sie sie mit einem Überhandgriff (Handflächen zeigen vom Körper weg).\n
+      3. Treten Sie an die Stangen heran und heben Sie Ihren Körper an, so dass Ihre Arme vollständig gestreckt sind und Ihre Füße den Boden berühren.\n
+      4. Halten Sie Ihre Körpermitte angespannt und Ihren Rücken gerade und senken Sie Ihren Körper langsam zum Boden ab, indem Sie die Ellbogen beugen.\n
+      5. Sobald Ihre Ellbogen einen 90-Grad-Winkel erreicht haben, halten Sie einen Moment inne und drücken sich dann wieder in die Ausgangsposition zurück.\n"
+
+    - image: ""
+      text: "Seated Tricep Dip\n
+      \n
+      1. Suchen Sie sich in Ihrem Fitnessstudio eine sitzende Trizeps-Dip-Maschine.\n
+      2. Setzen Sie sich auf das Gerät, wobei Ihre Füße flach auf dem Boden stehen und Ihre Hände die Griffe umschließen.\n
+      3. Heben Sie Ihren Körper so weit an, dass Ihre Arme vollständig gestreckt sind und Ihre Füße den Boden berühren.\n
+      4. Halten Sie Ihre Körpermitte angespannt und Ihren Rücken gerade und senken Sie Ihren Körper langsam zum Boden ab, indem Sie die Ellbogen beugen.\n
+      5. Sobald Ihre Ellbogen in einem 90-Grad-Winkel gebeugt sind, halten Sie einen Moment inne und drücken Sie sich dann wieder in die Ausgangsposition hoch.\n"
+
+    - image: ""
+      text: "Cable Rope Tricep Pushdown\n
+      \n
+      1. Richten Sie eine Kabelmaschine mit einem hohen Flaschenzug ein und befestigen Sie einen Seilgriff am Kabel. Für diese Übung benötigen Sie außerdem eine Bank oder eine Stufe.\n
+      2. Stellen Sie sich mit den Füßen schulterbreit vor das Kabelgerät und nehmen Sie den Seilgriff in beide Hände.\n
+      3. Stellen Sie einen Fuß auf die Bank oder Stufe und beugen Sie sich in der Taille leicht nach vorn, wobei Sie den Rücken gerade halten.\n
+      4. Halten Sie die Ellbogen an den Seiten und drücken Sie den Seilgriff nach unten in Richtung Boden, wobei Sie die Spannung in Ihren Trizepsmuskeln spüren.\n
+      5. Halten Sie am unteren Ende der Bewegung einen Moment inne und heben Sie den Seilgriff dann langsam wieder in die Ausgangsposition.\n"
+
+    - image: ""
+      text: "Overhead Tricep Extension\n
+      \n
+      1. Wählen Sie ein Gewicht, das für Ihr Fitnessniveau geeignet ist. Sie können für diese Übung eine Kurzhantel oder eine Langhantel verwenden.\n
+      2. Stellen Sie sich mit den Füßen schulterbreit auseinander und halten Sie das Gewicht mit beiden Händen über dem Kopf.\n
+      3. Halten Sie die Ellbogen nahe an den Ohren und senken Sie das Gewicht langsam hinter den Kopf, während Sie die Spannung in Ihren Trizepsmuskeln spüren.\n
+      4. Sobald Ihre Arme in einem 90-Grad-Winkel gebeugt sind, halten Sie einen Moment inne und strecken Sie die Arme wieder in die Ausgangsposition.\n"
+
+    - image: ""
+      text: "Skull Crusher\n
+      \n
+      1. Legen Sie sich auf eine Flachbank, wobei die Füße flach auf dem Boden stehen. Halten Sie eine Langhantel im Obergriff (Handflächen zeigen nach unten) mit einem Gewicht, das Ihrem Fitnesslevel entspricht.\n
+      2. Heben Sie die Hantel mit gestreckten Armen über Ihre Brust.\n
+      3. Senken Sie die Hantel langsam nach unten in Richtung Stirn, beugen Sie dabei die Ellbogen und spüren Sie die Spannung in Ihren Trizepsmuskeln.\n
+      4. Sobald Ihre Arme in einem 90-Grad-Winkel gebeugt sind, halten Sie einen Moment inne und strecken Sie die Arme wieder in die Ausgangsposition.\n"
+
+
+  utter_ab_exercise:
+    - image: ""
+      text: "Crunches\n
+      \n
+      1. Legen Sie sich auf den Rücken auf eine flache Unterlage, winkeln Sie die Knie an und verschränken Sie die Hände hinter dem Kopf oder vor der Brust.\n
+      2. Heben Sie den Kopf, die Schultern und den oberen Rücken vom Boden ab und spannen Sie dabei die Bauchmuskeln an.\n
+      3. Halten Sie am oberen Ende der Bewegung einen Moment inne und senken Sie Ihren Körper dann langsam wieder in die Ausgangsposition ab.\n"
+
+    - image: ""
+      text: "Plank\n
+      \n
+      1. Beginnen Sie in Bauchlage auf Händen und Zehen, wobei die Hände schulterbreit und die Füße hüftbreit auseinander stehen.\n
+      2. Spannen Sie Ihre Bauchmuskeln an und halten Sie Ihren Körper von Kopf bis Fuß gerade.\n
+      3. Halten Sie diese Position so lange wie gewünscht und achten Sie während der gesamten Übung auf eine gute Haltung.\n"
+
+    - image: ""
+      text: "Sit Up\n
+      \n
+      1. Legen Sie sich auf den Rücken auf eine flache Unterlage, winkeln Sie die Knie an und verschränken Sie die Hände hinter dem Kopf oder vor der Brust.\n
+      2. Heben Sie Ihren Kopf, Ihre Schultern und Ihren oberen Rücken vom Boden ab und spannen Sie dabei Ihre Bauchmuskeln an.\n
+      3. Heben Sie Ihren Körper weiter an, bis Sie ganz oben sitzen, halten Sie dabei Ihre Körpermitte angespannt und Ihren Rücken gerade.\n
+      4. Halten Sie am oberen Ende der Bewegung einen Moment inne und senken Sie Ihren Körper dann langsam wieder in die Ausgangsposition ab.\n"
+
+    - image: ""
+      text: "Leg Raise\n
+      \n
+      1. Legen Sie sich auf eine flache Unterlage und stützen Sie sich mit den Händen an den Seiten oder unter dem Gesäß ab.\n
+      2. Heben Sie die Beine vom Boden ab und halten Sie sie gerade.\n
+      3. Senken Sie die Beine langsam wieder in Richtung Boden und stoppen Sie kurz bevor sie den Boden berühren.\n"
+
+    - image: ""
+      text: "Russian Twist\n
+      \n
+      1. Setzen Sie sich mit gebeugten Knien auf den Boden und stellen Sie die Füße flach auf den Boden.\n
+      2. Lehnen Sie sich leicht zurück, halten Sie Ihren Rumpf angespannt und Ihren Rücken gerade.\n
+      3. Halten Sie mit beiden Händen ein Gewicht oder einen Medizinball vor der Brust.\n
+      4. Drehen Sie Ihren Oberkörper erst nach links, dann nach rechts, wobei Sie sich in der Taille drehen und die Spannung in Ihren Bauchmuskeln spüren.\n"
+
+    - image: ""
+      text: "Mountain Climber\n
+      \n
+      1. Starten Sie in der Plank-Position mit schulterbreit auseinander stehenden Händen und hüftbreit auseinander stehenden Füßen.\n
+      2. Ziehen Sie ein Knie zur Brust hoch und halten Sie dabei Ihre Körpermitte angespannt und Ihren Körper gerade.\n
+      3. Während Sie Ihr Knie nach oben bringen, wechseln Sie die Beine und bringen das andere Knie zur Brust.\n
+      4. Fahren Sie mit dem Beinwechsel fort, halten Sie dabei ein schnelles Tempo ein und spüren Sie das Brennen in Ihren Bauchmuskeln und im Oberkörper.\n"
+
+    - image: ""
+      text: "Bicycle Crunch\n
+      \n
+      1. Legen Sie sich auf den Rücken und verschränken Sie die Hände hinter dem Kopf oder vor der Brust.\n
+      2. Ziehen Sie ein Knie zur Brust, während Sie Kopf, Schultern und oberen Rücken vom Boden abheben und Ihre Bauchmuskeln anspannen.\n
+      3. Während Sie Ihren Oberkörper vom Boden abheben, führen Sie den gegenüberliegenden Ellbogen zum gegenüberliegenden Knie, als ob Sie in die Pedale treten würden.\n
+      4. Senken Sie Ihren Körper wieder in die Ausgangsposition und wiederholen Sie die Übung mit dem anderen Bein und dem anderen Ellenbogen.\n
+      5. Fahren Sie damit fort, die Beine und Ellbogen abwechselnd zu bewegen, halten Sie dabei ein schnelles Tempo ein und spüren Sie das Brennen in den Bauchmuskeln und im Schrägstrich.\n"
+
+    - image: ""
+      text: "Side Plank\n
+      \n
+      1. Beginnen Sie in der Plank-Position auf einer Seite des Körpers, wobei die Füße übereinander gestapelt sind und die Hand oder der Ellbogen unter der Schulter liegt.\n
+      2. Heben Sie Ihre Hüften vom Boden ab und halten Sie Ihren Körper von Kopf bis Fuß gerade.\n
+      3. Halten Sie diese Position so lange wie gewünscht und achten Sie während der gesamten Übung auf eine gute Haltung.\n
+      4. Wenn Sie fertig sind, wechseln Sie die Seite und wiederholen Sie die Übung auf der anderen Seite Ihres Körpers.\n"
+
+    - image: ""
+      text: "Abdominal Rollout\n
+      \n
+      1. Gehen Sie in den Kniestand und halten Sie ein Rad oder einen Bauchmuskelroller vor sich.\n
+      2. Rollen Sie das Rad langsam vor sich her und spüren Sie dabei die Spannung in Ihren Bauchmuskeln.\n
+      3. Wenn Sie das Ende Ihres Bewegungsbereichs erreicht haben, halten Sie einen Moment inne und rollen Sie das Rad langsam wieder zu Ihrem Körper zurück.\n"
+
+
+  utter_leg_exercise:
+    - image: ""
+      text: "Squat\n
+      \n
+      1. Stellen Sie sich mit den Füßen schulterbreit auseinander und zeigen Sie mit den Zehen nach vorne.\n
+      2. Halten Sie ein Gewicht oder eine Langhantel quer über den oberen Rücken, oder lassen Sie die Hände an den Seiten, wenn Sie keine Gewichte verwenden.\n
+      3. Senken Sie Ihren Körper ab, als ob Sie sich auf einen Stuhl setzen würden, und halten Sie dabei den Brustkorb aufrecht und Ihren Rumpf angespannt.\n
+      4. Sobald Ihre Oberschenkel parallel zum Boden sind, halten Sie einen Moment inne, drücken Sie sich dann durch die Fersen und heben Sie Ihren Körper wieder in die Ausgangsposition.\n"
+
+    - image: ""
+      text: "Leg Press\n
+      \n
+      1. Stellen Sie den Sitz der Beinpressenmaschine so ein, dass Ihre Knie im 90-Grad-Winkel gebeugt sind, wenn Sie sich hinsetzen.\n
+      2. Setzen Sie sich auf die Maschine und stellen Sie Ihre Füße hüftbreit auseinander und nach vorne gerichtet auf die Fußplatte.\n
+      3. Fassen Sie die Griffe oder die Seiten des Sitzes an, um sich abzustützen.\n
+      4. Schieben Sie die Fußplatte langsam von sich weg, strecken Sie die Beine durch und spüren Sie die Spannung in den Muskeln Ihres Unterkörpers.\n
+      5. Halten Sie am oberen Ende der Bewegung einen Moment inne und senken Sie die Fußplatte dann langsam wieder zu Ihrem Körper hin ab.\n"
+
+    - image: ""
+      text: "Bulgarian Split Squat\n
+      \n
+      1. Stellen Sie sich etwa einen Meter vor eine Bank oder eine Stufe, wobei ein Fuß auf dem Boden steht und der andere Fuß auf der Bank hinter Ihnen ruht.\n
+      2. Senken Sie Ihren Körper ab, als ob Sie sich auf einen Stuhl setzen würden, halten Sie dabei Ihre Körpermitte angespannt und Ihren Brustkorb hoch.\n
+      3. Sobald Ihr hinteres Knie knapp über dem Boden schwebt, halten Sie einen Moment inne, drücken Sie sich dann durch die vordere Ferse und heben Sie Ihren Körper wieder in die Ausgangsposition.\n
+      4. Wiederholen Sie die Übung für die gewünschte Anzahl von Wiederholungen, wechseln Sie dann die Beine und wiederholen Sie die Übung auf der anderen Seite.\n"
+
+    - image: ""
+      text: "Romanian Deadlift\n
+      \n
+      1. Stellen Sie sich hüftbreit hin und halten Sie ein Gewicht oder eine Langhantel mit einem Obergriff vor Ihren Oberschenkeln.\n
+      2. Halten Sie Ihre Körpermitte angespannt und den Rücken gerade. Beugen Sie langsam die Hüfte und senken Sie das Gewicht in Richtung Knie ab, wobei Sie die Spannung in den Kniesehnen und im Gesäß spüren.\n
+      3. Wenn Sie das Ende des Bewegungsbereichs erreicht haben, halten Sie einen Moment inne und heben Sie Ihren Körper wieder in die Ausgangsposition.\n"
+
+    - image: ""
+      text: "Hamstring Curl\n
+      \n
+      1. Legen Sie sich auf den Bauch auf eine Hamstring-Curl-Maschine oder einen Stabilitätsball, wobei Ihre Knöchel unter den Pads oder Ihre Fersen auf dem Ball ruhen.\n
+      2. Heben Sie die Hüfte vom Boden ab und spannen Sie die Kniesehnen an, um die Pads oder den Ball zum Gesäß zu bringen.\n
+      3. Sobald die Fersen so nah wie möglich am Gesäß sind, halten Sie einen Moment inne und senken Sie die Beine dann langsam wieder in die Ausgangsposition.\n"
+
+    - image: ""
+      text: "Quadricep Extension\n
+      \n
+      1. Setzen Sie sich auf eine Beinstreckmaschine und stellen Sie Ihre Füße hüftbreit auseinander und nach vorne gerichtet unter die Polster.\n
+      2. Fassen Sie die Griffe oder die Seiten des Sitzes als Stütze an.\n
+      3. Strecken Sie Ihre Beine langsam aus und spüren Sie dabei die Spannung in Ihren Quadrizeps und Waden.\n
+      4. Sobald die Beine vollständig gestreckt sind, halten Sie einen Moment inne und senken Sie die Beine langsam wieder in die Ausgangsposition.\n"
+
+    - image: ""
+      text: "Abductor Machine\n
+      \n
+      1. Stellen Sie den Sitz des Geräts so ein, dass Ihre Beine beim Hinsetzen einen angenehmen Abstand zueinander haben.\n
+      2. Setzen Sie sich auf das Gerät und stellen Sie Ihre Füße hüftbreit auseinander und nach vorne gerichtet auf die Polster.\n
+      3. Fassen Sie die Griffe oder die Seiten des Sitzes an, um sich abzustützen.\n
+      4. Schieben Sie die Polster langsam zur Seite und spüren Sie dabei die Spannung in den Innenseiten Ihrer Oberschenkel und Hüften.\n
+      5. Sobald Ihre Beine vollständig gestreckt sind, halten Sie einen Moment inne und bringen Sie die Polster dann langsam wieder zu Ihrem Körper zurück.\n"
+
+    - image: ""
+      text: "Adductor Machine\n
+      \n
+      1. Stellen Sie den Sitz des Geräts so ein, dass Ihre Beine beim Hinsetzen einen angenehmen Abstand zueinander haben.\n
+      2. Setzen Sie sich auf das Gerät und stellen Sie Ihre Füße hüftbreit auseinander und nach vorne gerichtet auf die Polster.\n
+      3. Fassen Sie die Griffe oder die Seiten des Sitzes als Stütze an.\n
+      4. Bringen Sie die Polster langsam aufeinander zu und spüren Sie dabei die Spannung in den Innenseiten Ihrer Oberschenkel und Hüften.\n
+      5. Sobald Ihre Beine vollständig angespannt sind, halten Sie einen Moment inne und öffnen Sie sie dann langsam wieder in die Ausgangsposition.\n"
+
+    - image: ""
+      text: "Standing Calf Raise\n
+      \n
+      1. Stellen Sie sich mit den Füßen hüftbreit auseinander und lassen Sie die Fersen an der Kante einer Stufe oder eines Blocks herunterhängen.\n
+      2. Halten Sie sich an einem Geländer oder einer Wand fest und heben Sie Ihre Fersen langsam so hoch wie möglich, wobei Sie die Spannung in Ihren Waden spüren.\n
+      3. Sobald Sie den höchsten Punkt der Bewegung erreicht haben, halten Sie einen Moment inne und senken Sie die Fersen langsam wieder in die Ausgangsposition.\n"
+
+    - image: ""
+      text: "Seated Calf Raise\n
+      \n
+      1. Setzen Sie sich auf eine Wadenhebemaschine und stellen Sie Ihre Füße hüftbreit auseinander und nach vorne gerichtet unter die Polster.\n
+      2. Fassen Sie die Griffe oder die Seiten des Sitzes an, um sich abzustützen.\n
+      3. Heben Sie die Polster langsam so hoch wie möglich und spüren Sie dabei die Spannung in Ihren Waden.\n
+      4. Wenn Sie den höchsten Punkt der Bewegung erreicht haben, halten Sie einen Moment inne und senken Sie die Polster langsam wieder in die Ausgangsposition ab.\n"
+
+    - image: ""
+      text: "Dumbbell Lunge Walk\n
+      \n
+      1. Stellen Sie sich hüftbreit hin und halten Sie ein Paar Kurzhanteln an den Seiten.\n
+      2. Treten Sie mit einem Fuß nach vorn und senken Sie Ihren Körper ab, als ob Sie sich auf einen Stuhl setzen würden. Halten Sie dabei Ihre Körpermitte angespannt und Ihren Brustkorb hoch.\n
+      3. Sobald Ihr hinteres Knie knapp über dem Boden schwebt, halten Sie einen Moment inne, drücken Sie dann durch die vordere Ferse und heben Sie Ihren Körper wieder in die Ausgangsposition.\n
+      4. Machen Sie mit dem anderen Fuß einen Schritt nach vorn und wiederholen Sie den Ausfallschritt auf der anderen Seite.\n
+      5. Fahren Sie damit fort, die Seiten zu wechseln, während Sie vorwärts 'gehen', und achten Sie dabei auf eine gute Form während der gesamten Bewegung.\n"
+
+    - image: ""
+      text: "Hip Thrust\n
+      \n
+      1. Setzen Sie sich mit dem Rücken gegen eine Bank oder eine Stufe und gebeugten Knien auf den Boden.\n
+      2. Halten Sie ein Gewicht oder eine Langhantel quer über die Hüften.\n
+      3. Heben Sie Ihre Hüften vom Boden ab und spannen Sie dabei Ihre Gesäßmuskeln an.\n
+      4. Sobald Ihre Hüften vollständig gestreckt sind, halten Sie einen Moment inne und senken Sie Ihre Hüften dann langsam wieder in die Ausgangsposition.\n"
+
 
 
 

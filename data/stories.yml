@@ -199,5 +199,3 @@ stories:
   steps: 
   - intent: get_workout_schedule_for_day
   - action: action_get_workout_schedule_for_day
-
- 

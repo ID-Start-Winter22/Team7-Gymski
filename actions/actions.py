@@ -54,3 +54,15 @@ class ActionGetWorkoutScheduleForSpecificDay(Action):
             dispatcher.utter_message(text="Workout Freitag", attachment=attachment_monday)
         elif ():
             dispatcher.utter_message(" Beim Holen des Workoutplans ist ein Fehler aufgetreten.")
+
+
+# class ActionChestWorkout(Action):
+
+#     def name(self) -> Text:
+#         return "action_get_chest_exercise"
+
+#     def run(self, dispatcher, tracker,domain):
+#         message = tracker.latest_message.get("Hier ist eine Brustübung für dich:")
+#         keyword = "Brust", "Chest"
+#         if keyword in message:
+#             dispatcher.utter_template("utter_chest_exercise")
