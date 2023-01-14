@@ -198,7 +198,7 @@ responses:
 
 
   utter_tageszeit:
-  - text: "Frühstück, Mittagessen oder Abendessen oder Snack?"
+  - text: "Frühstück, Mittagessen, Abendessen oder Snack?"
     buttons:
     - title: "Frühstück"
       payload: "/get_fruehstueck"
@@ -336,8 +336,21 @@ responses:
           Rezept von https://kochketo.de/keto-muesliriegel/"
 
   utter_help:
-  - text: "Ich kann dir, wenn du hunger hast, Rezepte vorschlagen. Gebe hierfür 'Rezept' ein\n
-          Hast du Lust auf eine Fitness Challenge. So gebe 'Challenge' ein"
+    - text: "Du weißt nicht weiter? Ich kann dir mit folgenden Funktionen helfen:\n
+        \n
+        \n
+        🥗 Ich kann dir Rezeptvorschläge geben. (Gib 'Rezepte' ein.)\n
+        \n
+        🚀 Wenn du eine Challenge für deinen Alltag brauchst, dann kann ich dir eine stellen. (Gib 'Ich will mich pushen' ein.)\n
+            Hast du die Challenge absolviert und willst eine neue oder dir gefällt die derzeitige Challenge nicht, kannst du mich nach einer neuen Challenge fragen. (Gib dazu 'Challenge fertig' ein.)\n
+        \n
+        🎵 Willst du beim Training Musik hören? (Gib 'Musik bitte' ein.)\n
+        \n
+        🏋️‍♂️ Du brauchst eine Übung für eine bestimmte Muskelgruppe? (Gib z.B. 'Brust Übung' ein.)\n
+        \n
+        🙄 Wenn du mal keine Motivation zum trainieren hast, helf ich dir auch damit weiter. (Gib 'hyper hyper' ein.)\n
+        \n
+        🎬 Bist du schon trainieren gewesen und hast Langeweile, dann entspann dich mit einem Video. (Gib 'Ich will ein Video gucken' ein.)\n"
   
   utter_ask_user_age:
   - text: "Wie alt bist du denn?"
@@ -358,14 +371,14 @@ responses:
   - text: "Willst du abnehmen, halten oder zunehmen"
 
   utter_video:
-  - text: "Hier kommst du zu unserem tollen Werbevideo"
-    attachment: { "type":"video", "payload":{ "title": "MVG Werbung", "src": "https://www.youtube.com/embed/_STSNK69ViE" } }
+  - text: "Hier kannst du noch etwas lernen:"
+    attachment: { "type":"video", "payload":{ "title": "What makes muscles grow?", "src": "https://www.youtube.com/watch?v=2tM1LFFxeKg&t=2s" } }
 
   utter_challenge_completed:
   - image: "https://user-images.githubusercontent.com/96564527/203092048-4e1d5fad-c05e-4158-81d4-1e0d46a85a14.jpg"
-    text: "Dubbelldore ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
+    text: "Dubbelldore ist stolz auf dein erzielten Erfolg. Bereit für die nächste Challenge?"
   - image: "https://user-images.githubusercontent.com/96564527/203093745-6662d5a2-0602-4d84-8e50-77e6d35d065d.jpg"
-    text: "Qui Gon Gym ist stolz auf deinen erzielten Erfolg. Bereit für die nächste Challenge?"
+    text: "Qui Gon Gym ist stolz auf dein erzielten Erfolg. Bereit für die nächste Challenge?"
 
 
   utter_readyForMore: 

@@ -121,6 +121,10 @@ nlu:
     - gericht
     - essen
     - nahrung
+    - kannst du mir ein Rezept geben?
+    - ich habe Hunger
+    - Kannst du mir ein Gericht empfehlen?
+    - Ich möchte etwas kochen
 
 - intent: get_challenge
   examples: |
@@ -128,6 +132,7 @@ nlu:
     - ich will mich herausfordern
     - lass uns diesen Monat pushen
     - ich will mich pushen
+    - challenge
 
 - intent: easy_challenge
   examples: |
@@ -204,6 +209,7 @@ nlu:
     - hab die Challenge geschafft
     - Challenge geschafft
     - Challenge done
+    - Challenge fertig
 
 - intent: get_chest_exercise
   examples: |
@@ -212,7 +218,6 @@ nlu:
     - ich will meine brust trainieren
     - brust workout
     - brust übungen
-    - schulter übung
     - chest workout
     - wie kann ich meine brust trainieren
     - gib mir eine übung für meine brust
@@ -333,6 +338,8 @@ nlu:
     - need hyped up
     - hype mich auf
     - mach mir gute laune
+    - hyper hyper
+    - ich habe keine motivation
 
 - intent: gym_playlist
   examples: |
