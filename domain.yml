@@ -372,7 +372,7 @@ responses:
 
   utter_video:
   - text: "Hier kannst du noch etwas lernen:"
-    attachment: { "type":"video", "payload":{ "title": "What makes muscles grow?", "src": "https://www.youtube.com/watch?v=2tM1LFFxeKg&t=2s" } }
+    attachment: { "type":"video", "payload":{ "title": "What makes muscles grow?", "src": "https://www.youtube.com/embed/2tM1LFFxeKg" } }
 
   utter_challenge_completed:
   - image: "https://user-images.githubusercontent.com/96564527/203092048-4e1d5fad-c05e-4158-81d4-1e0d46a85a14.jpg"
