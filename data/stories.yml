@@ -148,6 +148,31 @@ stories:
   - intent: get_shoulder_exercise
   - action: utter_shoulder_exercise
 
+- story: ask for back exercise
+  steps:
+  - intent: get_back_exercise
+  - action: utter_back_exercise
+
+- story: ask for bicep exercise
+  steps:
+  - intent: get_bicep_exercise
+  - action: utter_bicep_exercise
+
+- story: ask for tricep exercise
+  steps:
+  - intent: get_tricep_exercise
+  - action: utter_tricep_exercise
+
+- story: ask for ab exercise
+  steps:
+  - intent: get_ab_exercise
+  - action: utter_ab_exercise
+
+- story: ask for leg exercise
+  steps:
+  - intent: get_leg_exercise
+  - action: utter_leg_exercise
+
 - story: hype path
   steps:
   - intent: hype me up
