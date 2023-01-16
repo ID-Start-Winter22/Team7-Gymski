@@ -1,5 +1,4 @@
-dversion: "3.0"
-
+version: "3.1"
 nlu:
 - intent: greet
   examples: |
@@ -20,19 +19,16 @@ nlu:
     - Servus
     - Hallo
     - hallo
-
 - intent: greet_formal
   examples: |
     - guten Tag
     - guten Abend
-  
 - intent: mood_unhappy
   examples: |
     - sad
     - traurig
     - schlecht
     - :(
-
 - intent: goodbye
   examples: |
     - cu
@@ -46,7 +42,6 @@ nlu:
     - bye bye
     - see you later
     - Tschüss
-
 - intent: affirm
   examples: |
     - yes
@@ -60,7 +55,6 @@ nlu:
     - yep
     - genau
     - korrekt
-
 - intent: deny
   examples: |
     - no
@@ -72,48 +66,11 @@ nlu:
     - not really
     - nein
     - ne
-
-- intent: get_user_weight
-  examples: |
-    - [40] (user_weight) kg
-    - [41] (user_weight) kg
-
-- intent: get_user_height
-  examples: |
-    - [140] (user_height)cm
-    - [180] (user_height)cm
-    
-
-- intent: get_user_gender
-  examples: |
-    - [männlich] (user_gender)
-    - [weiblich] (user_gender)
-    - male
-    - female
-
-- intent: get_user_activity
-  examples: |
-    - [wenig](user_activity)
-    - [viel] (user_activity)
-    - [moderat](user_activity)
-
-- intent: get_user_age
-  examples: |
-    - [20](user_age)
-    - [21](user_age) 
-
-- intent: get_user_goal
-  examples: |
-    - [abnehmen](user_goal)
-    - [halten](user_goal)
-    - [zunehmen](user_goal)
-
 - intent: bot_challenge_name
   examples: |
     - Wer bin ich?
     - Wie heisse ich?
     - Erinnerst du dich an meinen Namen?
-
 - intent: get_recipe
   examples: |
     - rezept
@@ -125,7 +82,6 @@ nlu:
     - ich habe Hunger
     - Kannst du mir ein Gericht empfehlen?
     - Ich möchte etwas kochen
-
 - intent: get_challenge
   examples: |
     - ich will einen challenge haben
@@ -133,7 +89,6 @@ nlu:
     - lass uns diesen Monat pushen
     - ich will mich pushen
     - challenge
-
 - intent: easy_challenge
   examples: |
     - leicht
@@ -141,42 +96,35 @@ nlu:
     - nichts anspruchvolles
     - simpel
     - simple
-
 - intent: medium_challenge
   examples: |
     - medium
     - mittel
     - geht so
-
 - intent: hard_challenge
   examples: |
     - schwer
     - hard
     - hart
-
 - intent: get_fruehstueck
   examples: |
     - frühstück
     - ich will frühstücken
     - breakfast
-
 - intent: get_mittagessen
   examples: |
     - mittagessen
     - ich will mittagessen
     - lunch
-
 - intent: get_abendessen
   examples: |
     - abendessen
     - ich will abendessen
     - dinner
-
 - intent: get_snack
   examples: |
     - snack
     - snacken
-
 - intent: get_help
   examples: |
     - ich brauche hilfe
@@ -185,15 +133,6 @@ nlu:
     - was kannst du machen?
     - help
     - tips
-
-- intent: kalorierechner
-  examples: |
-    - kalorie
-    - calorie
-    - rechner
-    - kalorierechner
-
-
 - intent: get_video
   examples: |
     - ich will ein video gucken
@@ -201,7 +140,6 @@ nlu:
     - youtube
     - monkey
     - ich will was gucken
-
 - intent: challenge_completed
   examples: |
     - ich bin fertig mit der Challenge
@@ -210,7 +148,6 @@ nlu:
     - Challenge geschafft
     - Challenge done
     - Challenge fertig
-
 - intent: get_chest_exercise
   examples: |
     - brust
@@ -221,7 +158,6 @@ nlu:
     - chest workout
     - wie kann ich meine brust trainieren
     - gib mir eine übung für meine brust
-
 - intent: get_shoulder_exercise
   examples: |
     - schulter
@@ -237,7 +173,6 @@ nlu:
     - wie kann ich meine schultern trainieren
     - gib mir eine übung für meine schulter
     - gib mir eine übung für meine schultern
-
 - intent: get_back_exercise
   examples: |
     - rücken
@@ -250,7 +185,6 @@ nlu:
     - back exercise
     - wie kann ich meinen rücken trainieren
     - gib mir eine übung für meinen rücken
-
 - intent: get_bicep_exercise
   examples: |
     - bizeps
@@ -270,7 +204,6 @@ nlu:
     - wie kann ich meinen bizep trainieren
     - gib mir eine übung für meinen bizeps
     - gib mir eine übung für meinen bizep
-
 - intent: get_tricep_exercise
   examples: |
     - trizeps
@@ -290,7 +223,6 @@ nlu:
     - wie kann ich meinen trizep trainieren
     - gib mir eine übung für meinen trizeps
     - gib mir eine übung für meinen trizep
-
 - intent: get_ab_exercise
   examples: |
     - bauchmuskel
@@ -310,7 +242,6 @@ nlu:
     - wie kann ich meine bauchmuskeln trainieren
     - gib mir eine übung für meinen bauch
     - gib mir eine übung für meine bauchmuskeln
-
 - intent: get_leg_exercise
   examples: |
     - beine
@@ -331,7 +262,6 @@ nlu:
     - wie kann ich meine beinmuskeln trainieren
     - gib mir eine übung für meine beine
     - gib mir eine übung für meine beinmuskeln
-  
 - intent: hype me up
   examples: |
     - hype me up
@@ -340,7 +270,6 @@ nlu:
     - mach mir gute laune
     - hyper hyper
     - ich habe keine motivation
-
 - intent: gym_playlist
   examples: |
     - ich will musik
@@ -348,46 +277,38 @@ nlu:
     - mucke
     - Gym playlist
     - workout sounds
-
 - intent: techno_playlist
   examples: |
     - techno
     - techno Musik bitte
-
 - intent: jazz_playlist
   examples: |
     - jazz
     - jazz Musik bitte
-
 - intent: k-pop_playlist
   examples: |
     - k-pop
     - koreanische Musik
-
 - intent: hiphop_playlist
   examples: |
     - hiphop
     - rap bitte
     - hiphop Musik
-
 - intent: pop_playlist
   examples: |
     - pop
     - pop Musik bitte
-
 - intent: überraschung_playlist
   examples: |
     - überraschung
-    - surprise me 
-
+    - surprise me
 - intent: bedanken
   examples: |
     - vielen Dank
-    - danke 
+    - danke
     - merci
     - thanks
     - arigato
-
 - intent: get_workout_schedule_for_day
   examples: |
     - [montag](day)
@@ -401,7 +322,6 @@ nlu:
     - [montag](day) fitnessplan
     - [montag](day) plan
     - gib mir [montag](day)
-
 - intent: happyuser
   examples: |
     - gut
@@ -413,5 +333,48 @@ nlu:
     - zufrieden
     - wunderbar
     - großartig
-
-    
+- intent: calculate_calories
+  examples: |
+    - Ich möchte meinen Grundumsatz berechnen
+    - Ich will meinen Kalorien Grundumsatz berechnen
+    - Kalorien berechnen
+    - Kaloriengrundumsatz
+    - Kalorien
+    - Grundumsatz
+    - Kannst du meinen Grundumsatz ausrechnen?
+    - Was ist mein Kaloriengrundumsatz?
+    - kalorie
+- intent: give_gender
+  examples: |
+    - [männlich]{"entity": "gender", "value": "Mann"}
+    - Ich bin ein [Mann](gender)
+    - Ich bin [männlich]{"entity": "gender", "value": "Mann"}
+    - [mannlich]{"entity": "gender", "value": "Mann"}
+    - [maennlich]{"entity": "gender", "value": "Mann"}
+    - Ich bin eine [Frau](gender)
+    - [weiblich]{"entity": "gender", "value": "Frau"}
+    - Ich bin [weiblich]{"entity": "gender", "value": "Frau"}
+    - [männlich]{"entity": "gender", "value": "Mann"}
+- intent: give_activity
+  examples: |
+    - [0](activity)
+    - [1-2](activity)
+    - [3-4](activity)
+    - [5-6](activity)
+    - [7>](activity)
+    - [69](activity)
+    - [180](activity)
+    - [20](activity)
+- intent: give_goal
+  examples: |
+    - [zunehmen](goal)
+    - [halten](goal)
+    - [abnehmen](goal)
+- synonym: Mann
+  examples: |
+    - männlich
+    - mannlich
+    - maennlich
+- synonym: Frau
+  examples: |
+    - weiblich

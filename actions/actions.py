@@ -7,11 +7,16 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
+import random
+from sys import displayhook
 from typing import Any, Text, Dict, List
 from pyparsing import nestedExpr
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
+
+import json
 
 
 # NOTE(Michael): We could use this action to store the name in
@@ -66,3 +71,71 @@ class ActionGetWorkoutScheduleForSpecificDay(Action):
 #         keyword = "Brust", "Chest"
 #         if keyword in message:
 #             dispatcher.utter_template("utter_chest_exercise")
+
+class ActionCalculateCalories(Action):
+    def name(self) -> Text:
+        return "action_calculate_calories"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        def user_info():
+            age = tracker.get_slot("age")
+            gender = tracker.get_slot("gender")
+            weight = tracker.get_slot("weight")
+            height = tracker.get_slot("height")
+            activity_level = tracker.get_slot("activity")
+            goals = tracker.get_slot("goal")
+            
+            bmr = 0
+
+            if gender == "Mann":
+                bmr = 10 * float(weight) + 6.25 * float(height) - 5 * float(age) + 5
+                
+                if activity_level == '0':
+                    bmr = bmr * 1.2 
+                elif activity_level == '1-2':
+                    bmr = 1.375 * bmr
+                elif activity_level == '3-4':
+                    bmr = 1.55 * bmr
+                elif activity_level == '5-6':
+                    bmr = 1.725 * bmr
+                elif activity_level == '7>':
+                    bmr = 1.9 * bmr
+                       
+            elif gender == "Frau":
+                bmr = 10 * float(weight) + 6.25 * float(height) - 5 * float(age) - 161
+
+                if activity_level == '0':
+                    bmr = bmr * 1.2 
+                elif activity_level == '1-2':
+                    bmr = 1.375 * bmr
+                elif activity_level == '3-4':
+                    bmr = 1.55 * bmr
+                elif activity_level == '5-6':
+                    bmr = 1.725 * bmr
+                elif activity_level == '7>':
+                    bmr = 1.9 * bmr
+
+            return(float(bmr))
+
+        def gain_or_lose(bmr):
+            goals = tracker.get_slot("goal")
+
+            if goals == 'abzunehmen':
+                calories = bmr - 500
+                text = f"Um {goals} musst du {calories} Kalorien essen!"
+                dispatcher.utter_message(text)
+
+            elif goals == 'halten':
+                calories = bmr
+                text = f"Um dein Gewicht zu halten musst du {calories} Kalorien essen!"
+                dispatcher.utter_message(text)
+
+            elif goals == 'zuzunehmen':
+                    calories = bmr + 500
+                    text = f"Um {goals} musst du {calories} Kalorien essen!"
+                    dispatcher.utter_message(text)
+
+
+        gain_or_lose(user_info())
+
+        return [SlotSet("gender", None), SlotSet("weight", None), SlotSet("height", None), SlotSet("age", None), SlotSet("goal", None),SlotSet("activity", None)]

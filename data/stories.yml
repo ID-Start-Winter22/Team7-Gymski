@@ -79,22 +79,22 @@ stories:
   - intent: get_help
   - action: utter_help
 
-- story: kalorierechner path
-  steps:
-  - intent: kalorierechner
-  - action: utter_ask_user_age
-  - intent: get_user_age
-  - action: utter_ask_user_gender
-  - intent: get_user_gender
-  - action: utter_ask_user_activity
-  - intent: get_user_activity
-  - action: utter_ask_user_height
-  - intent: get_user_height
-  - action: utter_ask_user_weight
-  - intent: get_user_weight
-  - action: utter_ask_user_goal
-  - intent: get_user_goal
-  - action: action_calorie_calculator
+# - story: kalorierechner path
+#   steps:
+#   - intent: kalorierechner
+#   - action: utter_ask_user_age
+#   - intent: get_user_age
+#   - action: utter_ask_user_gender
+#   - intent: get_user_gender
+#   - action: utter_ask_user_activity
+#   - intent: get_user_activity
+#   - action: utter_ask_user_height
+#   - intent: get_user_height
+#   - action: utter_ask_user_weight
+#   - intent: get_user_weight
+#   - action: utter_ask_user_goal
+#   - intent: get_user_goal
+#   - action: action_calorie_calculator
 
 
 - story: challenge done
@@ -224,3 +224,46 @@ stories:
   steps: 
   - intent: get_workout_schedule_for_day
   - action: action_get_workout_schedule_for_day
+
+- story: interactive_story_1
+  steps:
+  - intent: calculate_calories
+  - action: utter_calories
+  - action: calculate_calories_form
+  - active_loop: calculate_calories_form
+  - slot_was_set:
+    - requested_slot: gender
+  - slot_was_set:
+    - gender: Mann
+  - slot_was_set:
+    - requested_slot: weight
+  - slot_was_set:
+    - weight: '69'
+  - slot_was_set:
+    - requested_slot: height
+  - slot_was_set:
+    - height: '180'
+  - slot_was_set:
+    - requested_slot: age
+  - slot_was_set:
+    - age: '20'
+  - slot_was_set:
+    - requested_slot: goal
+  - slot_was_set:
+    - goal: zuzunehmen
+  - slot_was_set:
+    - requested_slot: activity
+  - slot_was_set:
+    - activity: :"3-4
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_calculate_calories
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - weight: null
+  - slot_was_set:
+    - height: null
+  - slot_was_set:
+    - age: null
