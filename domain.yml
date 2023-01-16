@@ -1081,7 +1081,7 @@ responses:
        3. Heben Sie Ihre Hüften vom Boden ab und spannen Sie dabei Ihre Gesäßmuskeln an.
        4. Sobald Ihre Hüften vollständig gestreckt sind, halten Sie einen Moment inne und senken Sie Ihre Hüften dann langsam wieder in die Ausgangsposition.
   utter_not_understood:
-  - text: Das habe ich nicht verstanden. Gebe Help ein um meine Funktionalitäten zu sehen
+  - text: Das habe ich leider nicht verstanden. Gib 'Help' ein, um meine Funktionen zu sehen.
   utter_calories:
   - text: Gerne! Um deinen Kaloriengrundumsatz auszurechnen, musst du mir zuerst ein paar Fragen beantworten
   utter_ask_gender:

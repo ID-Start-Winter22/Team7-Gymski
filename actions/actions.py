@@ -122,17 +122,17 @@ class ActionCalculateCalories(Action):
 
             if goals == 'abzunehmen':
                 calories = bmr - 500
-                text = f"Um {goals} musst du {calories} Kalorien essen!"
+                text = f"Um {goals} musst du {calories} Kalorien am Tag zu dir nehmen!"
                 dispatcher.utter_message(text)
 
             elif goals == 'halten':
                 calories = bmr
-                text = f"Um dein Gewicht zu halten musst du {calories} Kalorien essen!"
+                text = f"Um dein Gewicht zu halten musst du {calories} Kalorien am Tag zu dir nehmen!"
                 dispatcher.utter_message(text)
 
             elif goals == 'zuzunehmen':
                     calories = bmr + 500
-                    text = f"Um {goals} musst du {calories} Kalorien essen!"
+                    text = f"Um {goals} musst du {calories} Kalorien am Tag zu dir nehmen!"
                     dispatcher.utter_message(text)
 
 
