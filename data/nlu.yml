@@ -84,11 +84,12 @@ nlu:
     - Ich möchte etwas kochen
 - intent: get_challenge
   examples: |
-    - ich will einen challenge haben
+    - ich will eine challenge haben
     - ich will mich herausfordern
     - lass uns diesen Monat pushen
     - ich will mich pushen
     - challenge
+    - gib mir eine challenge
 - intent: easy_challenge
   examples: |
     - leicht
