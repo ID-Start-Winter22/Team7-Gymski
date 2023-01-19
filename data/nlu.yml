@@ -312,17 +312,17 @@ nlu:
     - arigato
 - intent: get_workout_schedule_for_day
   examples: |
-    - [montag](day)
-    - [montag](day) trainingsplan
-    - [montag](day) workout schedule
-    - [montag](day) workout
-    - [montag](day) Übungen
-    - [montag](day) Übungsplan
-    - [montag](day) workoutplan
-    - [montag](day) fitnessübung
-    - [montag](day) fitnessplan
-    - [montag](day) plan
-    - gib mir [montag](day)
+    - trainingsplan
+    - workout schedule
+    - workout
+    - Übungen
+    - Übungsplan
+    - workoutplan
+    - fitnessübung
+    - fitnessplan
+    - plan
+
+
 - intent: happyuser
   examples: |
     - gut
