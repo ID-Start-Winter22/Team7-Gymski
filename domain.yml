@@ -136,9 +136,13 @@ responses:
   - text: 'Lass den Kopf nicht hängen. Schau mal:'
     image: https://i.imgur.com/nGF1K8f.jpg
   utter_greet:
-  - text: Hallo wie geht es Dir?
-  - text: Servus, wie isses?
-  - text: Hello there, wie geht's?
+  - text: "Hallo, wie kann ich dir helfen?\n
+          Wenn du nicht weißt, bei was ich dir alles helfen kann, dann gib doch einfach mal 'help' ein."
+  - text: "Servus, wie kann ich dir behilflich sein?\n
+          Wenn du nicht weißt, bei was ich dir alles helfen kann, dann gib doch einfach mal 'help' ein."
+  - text: "Hello there, was kann ich für dich tun?\n
+          Wenn du nicht weißt, bei was ich dir alles helfen kann, dann gib doch einfach mal 'help' ein."
+
   utter_did_that_help:
   - text: Hilft das?
   utter_pain:
