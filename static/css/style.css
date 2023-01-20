@@ -1210,3 +1210,33 @@ footer{
   margin-top: 12%;
   margin-bottom: -10px;
 }
+
+@media screen and (max-width: 767px) {
+  section, footer {
+    display: none;
+  }
+  body {
+    background-color: black;
+  }
+  .profile_div {
+    right: 50vw;
+    bottom: 50vh;
+    transform: translate(20px, 50px);
+    -webkit-animation: 1s ease-in-out 0s normal forwards 1 fadein;
+    animation: 1s ease-in-out 0s normal forwards 1 fadein;
+  }
+
+    .imgProfile {
+      width: 96px;
+    }
+  }
+
+    @keyframes fadein{
+      0% { opacity:0; }
+      100% { opacity:1; }
+    }
+  
+    @-webkit-keyframes fadein{
+        0% { opacity:0; }
+        100% { opacity:1; }
+    }
