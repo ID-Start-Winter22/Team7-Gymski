@@ -6,7 +6,7 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
-
+from datetime import datetime
 import random
 from sys import displayhook
 from typing import Any, Text, Dict, List
@@ -47,18 +47,57 @@ class ActionUserName(Action):
         else:
             dispatcher.utter_message(' Du bist {}'.format(username))
 
+# class ActionGetWorkoutScheduleForSpecificDay(Action):
+
+#      def name(self) -> Text:
+#          return "action_get_workout_schedule_for_day"
+
+#      def run(self, dispatcher, tracker, domain):
+#         day = tracker.get_slot("day")
+#         if not day :
+#             attachment_monday = { "type":"video", "payload":{ "title": "Fun Full Body", "src": "https://www.youtube.com/embed/2-RGYM6ojJ4" } }
+#             dispatcher.utter_message(text="Workout Freitag", attachment=attachment_monday)
+#         elif ():
+#             dispatcher.utter_message(" Beim Holen des Workoutplans ist ein Fehler aufgetreten.")
+            
 class ActionGetWorkoutScheduleForSpecificDay(Action):
 
-     def name(self) -> Text:
-         return "action_get_workout_schedule_for_day"
+    def name(self) -> Text:
+          return "action_get_workout_schedule_for_day"
+      
+    def run(self, dispatcher, tracker, domain):
+        dt = datetime.now()
+        x = dt.weekday()
+        if x == 0:
+            text = f"Ich werde dir die Übungen für Montag geben!"
+            dispatcher.utter_message(text)
+            dispatcher.utter_message(response = "utter_get_workout_schedule_montag")
+        elif x == 1:
+            text = f"Ich werde dir die Übungen für Dienstag geben!"
+            dispatcher.utter_message(text)
+            dispatcher.utter_message(response = "utter_get_workout_schedule_dienstag")
+        elif x == 2:
+            text = f"Ich werde dir die Übungen für Mittwoch geben!"
+            dispatcher.utter_message(text)
+            dispatcher.utter_message(response = "utter_get_workout_schedule_mittwoch")
+        elif x == 3:
+            text = f"Ich werde dir die Übungen für Donnerstag geben!"
+            dispatcher.utter_message(text)
+            dispatcher.utter_message(response = "utter_get_workout_schedule_donnerstag")
+        elif x == 4:
+            text = f"Ich werde dir die Übungen für Freitag geben!"
+            dispatcher.utter_message(text)
+            dispatcher.utter_message(response = "utter_get_workout_schedule_freitag")
+        elif x == 5:
+            text = f"Ich werde dir die Übungen für Samstag geben!"
+            dispatcher.utter_message(text)
+            dispatcher.utter_message(response = "utter_get_workout_schedule_samstag")
+        elif x == 6:
+            text = f"Ich werde dir die Übungen für Sonntag geben!"
+            dispatcher.utter_message(text)
+            dispatcher.utter_message(response = "utter_get_workout_schedule_sonntag")
+        
 
-     def run(self, dispatcher, tracker, domain):
-        day = tracker.get_slot("day")
-        if not day :
-            attachment_monday = { "type":"video", "payload":{ "title": "Fun Full Body", "src": "https://www.youtube.com/embed/2-RGYM6ojJ4" } }
-            dispatcher.utter_message(text="Workout Freitag", attachment=attachment_monday)
-        elif ():
-            dispatcher.utter_message(" Beim Holen des Workoutplans ist ein Fehler aufgetreten.")
 
 
 # class ActionChestWorkout(Action):
