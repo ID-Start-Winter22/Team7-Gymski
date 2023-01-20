@@ -202,7 +202,8 @@ responses:
   - text: '🐐 Ziegen Challenge: Für einen Monat jeden Tag 10 Burpees machen.'
   - text: '🐳 Walfisch Challenge: Mindestens 2,5 Liter Wasser pro Tag trinken.'
   utter_auf_danke_antworten:
-  - text: Kein Ding
+  - text: "Kein Ding"
+ 
   utter_tageszeit:
   - text: Frühstück, Mittagessen, Abendessen oder Snack?
     buttons:
@@ -215,104 +216,834 @@ responses:
     - title: Snack
       payload: /get_snack
   utter_fruehstueck:
-  - image: https://user-images.githubusercontent.com/93930736/202023097-e321eead-de20-4ed1-92fa-f5d7ad030d13.png
-    text: |-
-      Rezept für Shakshuka
-      Zutaten (für zwei Portionen):
-      1 rote Zwiebel
-       1 Dose stückige Tomaten
-       1 Paprika (rot, gelb oder grün)
-       1/2 rote Chili
-       1 EL Olivenöl
-       1 TL Paprika edelsüß
-       Salz
-       Pfeffer
-       2 Eier
-       1/2 Bund glatte Petersilie
+  - image: "https://user-images.githubusercontent.com/93930736/202023097-e321eead-de20-4ed1-92fa-f5d7ad030d13.png"
+    text: "Rezept für Shakshuka\n
 
-      So einfach geht’s:
-       Die Zwiebel schälen, halbieren und in feine Stückchen schneiden. Paprika und Chili waschen, entkernen und ebenso in feine Stücke schneiden.
-      In einer Pfanne das Olivenöl erhitzen und Zwiebeln, Paprika und Chili anbraten. Die stückigen Tomaten hinzugeben und das Ganze mit Salz, Pfeffer und Paprikapulver würzen. Für einige Minuten garen.
-      In der Tomatensoße Platz für die zwei Eier frei machen und diese hinzugeben. Deckel drauf, und die Eier für 5 Minuten pochieren lassen.
-      Zuletzt die Petersilie waschen, fein hacken und über die Eier geben.
-      Rezept von https://www.tasteandsoul.de/blog/rezepte/shakshuka/
+          Zutaten (für zwei Portionen):\n
+
+          1 rote Zwiebel\n
+          1 Dose stückige Tomaten\n
+          1 Paprika (rot, gelb oder grün)\n
+          1/2 rote Chili\n
+          1 EL Olivenöl\n
+          1 TL Paprika edelsüß\n
+          Salz\n
+          Pfeffer\n
+          2 Eier\n
+          1/2 Bund glatte Petersilie\n
+
+          So einfach geht's:\n
+          Die Zwiebel schälen, halbieren und in feine Stückchen schneiden. Paprika und Chili waschen, entkernen und ebenso in feine Stücke schneiden.
+
+          In einer Pfanne das Olivenöl erhitzen und Zwiebeln, Paprika und Chili anbraten. Die stückigen Tomaten hinzugeben und das Ganze mit Salz, Pfeffer und Paprikapulver würzen. Für einige Minuten garen.
+
+          In der Tomatensoße Platz für die zwei Eier frei machen und diese hinzugeben. Deckel drauf, und die Eier für 5 Minuten pochieren lassen.
+
+          Zuletzt die Petersilie waschen, fein hacken und über die Eier geben.
+
+          Rezept von https://www.tasteandsoul.de/blog/rezepte/shakshuka/"
+
+  - image: "https://www.eatbetter.de/sites/eatbetter.de/files/styles/1500_1130/public/2020-09/Beeren%20Porridge%201.jpg?h=4521fff0&itok=bmjrsJ12"
+    text: "Beeren-Porridge\n
+
+          Zutaten (für vier Portionen):\n
+          300 g Beeren (z. B. Heidelbeeren, Brombeeren, Himbeeren)\n
+          1,40 L  Wasser,  Pflanzenmilch oder Milch (1,5 % Fett)\n
+          300 g Haferflocken\n
+          1 TL Zimt\n
+
+          So einfach geht's:\n
+          Die Beeren waschen, ggf. schneiden, auftauen lassen. 
+          
+          Das Wasser aufkochen, die Haferflocken einrühren und bei geringer Hitze etwa 5 bis 10 Minuten quellen lassen, dabei immer wieder umrühren.
+
+          Die Hälfte der Beeren in das Porridge rühren. Vom Herd nehmen und Zimt unterrühren. 
+          
+          Das Porridge anrichten und mit den restlichen Beeren dekorieren.
+
+          Saisonales Porridge:\n
+          Dieses Porridge lässt sich an jede Jahreszeit anpassen. Im Herbst und Winter passen z. B. gut Äpfel, Orangen oder gehackte Haselnüsse dazu."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211197961-5aefe604-249d-4a37-9c0c-53843f030e28.png"
+    text: "Smoothie-Bowl mit Banane, Mango & Beeren\n
+    
+          Zutaten für 2 Portionen:\n
+          1 Banane\n
+          200g Mango\n
+          150g gemischte Beeren\n
+          2 Datteln\n
+          100ml ungesüßte Mandelmilch\n
+          2 El Chia-Samen\n
+          2 El Mandeln\n
+          2 El Kokos-Chips\n
+          
+          So einfach geht's:\n
+          Die Banane und die Mango schälen. Ein paar Stücke von der Banane, der Mango und den gemischten Beeren für die Garnierung der Bowl beiseitelegen. 
+          Den Rest von diesen Früchten mit Datteln und Mandelmilch im Mixer pürieren. 
+          Chia-Samen hinzufügen und das Ganze 15 Minuten quellen lassen. 
+          Den Smoothie in Schalen anrichten und mit dem beiseitegelegten Obst, Mandeln und Kokos-Chips garnieren."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211198539-a3b7c699-4a33-49bb-95d9-8dc891129419.png"
+    text: "Herzhaftes Frühstück mit Spiegelei, Avocado und Tomaten\n
+    
+          Zutaten für 4 Portionen:\n
+          3 kleine Avocados (450g)\n
+          1 EL Limettensaft\n
+          250g Tomaten\n
+          200g Halloumi-Käse\n
+          20g Babyspinat (1 Handvoll)\n
+          20g Rucola (1 Handvoll)\n
+          2 Stiele Petersilie\n
+          4 EL Olivenöl\n
+          1 El Zitronensaft\n
+          Salz\n
+          Pfeffer\n
+          4 Eier\n
+          30g Kapern (2 EL; Glas)\n
+
+          So einfach geht's:\n
+          Avocados halbieren, den Kern entfernen und das Fruchtfleisch aus den Schalen heben.
+          Das Fruchtfleisch von einer Avocado mit Limettensaft und einer Prise Salz mit einer Gabel zerdrücken.
+          Tomaten waschen, den Stielansatz entfernen und die Tomaten in Spalten schneiden. 
+          Den Halloumi in Streifen schneiden. 
+          Spinat, Rucola und Petersilie waschen, trocken schütteln und in einer Schüssel mischen. 
+          Zwei Esslöffel Olivenöl und Zitronensaft hinzufügen und den Spinatsalat mit Salz und Pfeffer würzen.
+          Ein Esslöffel Öl in einer Pfanne erhitzen. 
+          Den Halloumi darin auf allen Seiten etwa sechs Minuten bei mittlerer Hitze anbraten. 
+          Tomaten hinzufügen und zwei bis drei Minuten mit garen. 
+          Gleichzeitig die Eier in dem restlichen Öl in einer Pfanne bei mittlerer Hitze in etwa vier Minuten zu Spiegeleiern braten.
+          Spiegeleier, Halloumi, Tomaten, je eine halbe Avocado und den Spinatsalat auf Tellern anrichten. Kapern darüber verteilen, die Avocadocreme daneben setzen und alles mit Pfeffer bestreuen."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211200937-b8f86ee5-18ad-4bdd-8519-016a4a33b091.png"
+    text: "Avocadobrot mit Tomate\n
+    
+          Zutaten für 4 Portionen:\n
+          2 Avocado\n
+          2 Strauchtomaten\n
+          20g frisches Basilikum\n
+          8 Scheiben Mehrkornbrot\n
+          Prise Salz\n
+          Prise Schwarzer Pfeffer\n
+
+          So einfach geht's:\n
+          Eine Avocado halbieren, den Kern entfernen und das Fruchtfleisch mithilfe eines Löffels aus der Schale lösen. 
+          Das Fruchtfleisch mit einer Gabel etwas zerdrücken.
+          Tomaten waschen und in Scheiben schneiden. 
+          Basilikum waschen, trocken schütteln und die Blätter von den Stielen zupfen.
+          Die zerdrückte Avocado gleichmäßig auf die Brotscheiben verteilen, salzen und pfeffern. 
+          Die Avocadobrote mit Tomaten und Basilikum garnieren und servieren."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211203863-f7e1fa27-e498-4af3-9f4e-ec7ebef9ec74.png"
+    text: "Beerenjoghurt\n
+    
+          Zutaten für 2 Portionen:\n
+          200g Naturjoghurt\n
+          300g Magerquark\n
+          60g Heidelbeeren\n
+          60g Himbeeren\n
+          2 EL Haferflocken\n
+          2 TL Leinsamen\n
+          20g Cashewnüsse\n
+
+          So einfach geht's:\n
+          Joghurt und Magerquark in einer Schüssel glattrühren.
+          Beeren waschen und dazu geben.
+          Nüsse grob hacken bei Bedarf. 
+          Dann mit Haferflocken und Leinsamen übers Müsli geben, alles verrühren, fertig zum Genießen. 
+          Für ein wenig natürliche Süße kannst du Ahornsirup oder Honig hinzufügen, falls du dich nicht kohlenhydratarm ernährst."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211204256-6f932af8-8adc-44c1-b1a6-7667a52070b2.png"
+    text: "Protein-Waffeln mit Magerquark\n
+    
+          Zutaten für 6 Waffeln:\n
+          250 g Magerquark\n
+          150 g Haferflocken\n
+          1 mittelgroße Banane\n
+          2 Eier\n
+          1 TL Backpulver\n
+          100 ml Hafermilch\n
+          1 Schuss Mineralwasser\n
+          1 Prise Zimt\n
+          2 Handvoll Beeren\n
+
+          So einfach geht's:\n
+          Haferflocken in einem Food Processor oder Mixer zu Mehl zerkleinern. 
+          Es geht auch ohne, der Teig wird dann aber möglicherweise etwas gröber.
+          Die (sehr reife!) Banane schälen und entweder mit einer Gabel zerdrücken oder mit einem Pürierstab pürieren. 
+          Wenn der Teig nicht süß genug ist, kann man Erythrit, Stevia oder ein anderes Süßungsmittel hinzufügen.
+          Alle Zutaten vermengen, bis ein glatter Teig entsteht. 
+          Falls nötig, etwas Hafermilch hinzufügen.
+          Den Teig im Waffeleisen knusprig ausbacken und mit Beeren servieren. 
+          Der Waffelteig schmeckt aber auch super mit Nussmus oder Apfelmark."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211169636-96d7fb43-5b4d-40a4-9fab-751c433ec0ce.png"
+    text: "French Toast-Pfannkuchen mit Schokolade\n
+    
+          Zutaten:\n
+          2 Scheiben Rundbrot\n
+          25g Schokoladen-Proteinpulver\n
+          20ml Wasser\n
+          100ml Eiweiß\n
+          5g Vanilleextrakt\n
+          Zimt\n
+          50g (gefrorene) Beerenmischung\n
+          10g 0 Kalorien Sirup\n
+
+          So einfach geht's:\n
+          Mischen Sie in einer Schüssel das Proteinpulver, 20 ml Wasser, 5 g Vanilleextrakt, 100 ml Eiweiß und Zimt, damit keine Klumpen entstehen. 
+          Schneiden Sie Ihr Rundbrot in zwei Hälften und tauchen Sie es in die Mischung, bis es eingeweicht ist. 
+          Geben Sie das Brot bei mittlerer Hitze in die Pfanne und braten Sie es auf jeder Seite 3 Minuten. 
+          Garnieren Sie das Gericht mit (gefrorenen) Beeren und 10 g Sirup (0 Kalorien) und servieren Sie es heiß."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211169937-5fcbb79b-1538-416b-8ff5-86780947408a.png"
+    text: "Creamy overnight oatmeal\n
+    
+          Zutaten:\n
+          40g Haferflockenmischung\n
+          100 g Skyr\n
+          25 g Schokoladen-Brownie-Proteinpulver\n
+          5g Vanilleextrakt\n
+          50ml Mandelmilch\
+          4g Chia-Samen\n
+          7g Cashewkerne\
+          4g Cranberrys\n
+
+          So einfach geht's:\n
+          Mischen Sie die ersten 5 Zutaten in einer Schüssel. 
+          Bedecken Sie die Schüssel mit Alufolie und stellen Sie sie über Nacht in den Kühlschrank. 
+          Am nächsten Morgen fügen Sie den Belag hinzu und genießen das Gericht."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211170104-27969d03-5be3-42cc-b3d4-0babd3cde4fb.png"
+    text: "Baked oats with chocolate and cinnamon\n
+    
+          Zutaten:\n
+          40g Haferflockenmischung\n
+          150 g Skyr\n
+          25 g dunkles Schokoladenproteinpulver\n
+          20ml Wasser\n
+          7g Erdnüsse\n
+          10g 0 Kalorien Siroup\n
+          10g Zartbitterschokolade\n
+          Zimt\n
+
+          So einfach geht's:\n
+          Mischen Sie 40g Haferflocken, 100g Skyr, das Proteinpulver, Zimt und 20 ml Wasser in einer Schüssel. 
+          Streuen Sie 10g Zartbitterschokolade darüber und erhitzen Sie alles für 2,5 Minuten in der Mikrowelle. 
+          In einer separaten Schüssel 50g Skyr, 10g Siroup (0 Kalorien) und Zimt vermischen, um den Zuckerguss herzustellen. 
+          Bedecken Sie die gebackenen Haferflocken mit 7g Erdnüssen und dem Zuckerguss und servieren Sie sie heiß."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211170266-3a8a5ed8-9fb5-4643-89be-d434abdc5059.png"
+    text: "Baked oats with apple and cinnamon\n
+    
+          Zutaten:\
+          40g Haferflockenmischung\n
+          100 g Skyr\n
+          25 g neutrales Eiweißpulver\n
+          50ml Mandelmilch\n
+          30g zuckerfreies Apfelpüree\n
+          Zimt\n
+          3g Backpulver\n
+          1/4 Apfel\n
+
+          So einfach geht's:\n
+          Mischen Sie die ersten 7 Zutaten in einer Schüssel und erhitzen Sie alles für 2,5 Minuten in der Mikrowelle. 
+          Fügen Sie ein Viertel eines Apfels und etwas Zimt hinzu, um dem Gericht zusätzlichen Geschmack zu verleihen. 
+          Servieren Sie das Gericht heiß."
+
   utter_mittagessen:
-  - image: https://user-images.githubusercontent.com/93930736/202024281-f2899429-a024-487f-9b98-7ff8d49e0b6e.png
-    text: |-
-      Nudeln mit Zucchini und Lachs
-      Zutaten für 2 Personen
-       250 g Vollkornnudeln
-       2 kleine Zucchini
-       1-2 Lachsfilet (ich nehme meist TK)
-       1 Knoblauchzehe
-       100-150 ml Kokosmilch
-       1 TL Gemüsebrühe
+  - image: "https://user-images.githubusercontent.com/93930736/202024281-f2899429-a024-487f-9b98-7ff8d49e0b6e.png"
+    text: "Nudeln mit Zucchini und Lachs\n
 
-      So einfach geht´s
-       Als erstes setzt du einen Topf mit Wasser auf und gibst die Nudeln hinein, sobald das Wasser kocht. Füge etwas Salz hinzu, es sei denn du kochst für ganz kleine Kinder.
-      In der Zwischenzeit wäschst du die Zucchini und schneidest sie in halbe oder viertel Scheiben. Je nach Saison und Herkunft deiner Zucchini kannst du die Schale mit verwenden.
-      Brutzele die Zucchini dann in einer Pfanne mit etwas Oliven- oder Kokosöl an. Ich gebe immer noch eine klein geschnittene Knoblauchzehe dazu.
-      Während die Nudeln vor sich hin kochen und die Zucchini brutzeln schneidest du den Lachs in kleine Würfel.
-      Schiebe die Zucchinischeiben an den Pfannenrand und gib die Lachswürfel hinein.
-      Jetzt brätst du die Lachswürfel bei mittlerer Hitze mit an und wendest sie behutsam.
-      Jetzt brauchst du nur noch die Kokosmilch und einen guten Teelöffel Gemüsebrühpulver oder-paste unterrühren.
-      Gieße die Nudeln ab und mische sie unter die Zucchini-Lachs-Mischung.
-      Rezept von https://www.familienkost.de/rezept_nudeln_mit_zucchini_und_lachs.html
+          Zutaten für 2 Personen:\n
+          250 g Vollkornnudeln\n
+          2 kleine Zucchini\n
+          1-2 Lachsfilet (ich nehme meist TK)\n
+          1 Knoblauchzehe\n
+          100-150 ml Kokosmilch\n
+          1 TL Gemüsebrühe\n
+
+          So einfach geht's:\n
+          Als erstes setzt du einen Topf mit Wasser auf und gibst die Nudeln hinein, sobald das Wasser kocht. Füge etwas Salz hinzu, es sei denn du kochst für ganz kleine Kinder.
+
+          In der Zwischenzeit wäschst du die Zucchini und schneidest sie in halbe oder viertel Scheiben. Je nach Saison und Herkunft deiner Zucchini kannst du die Schale mit verwenden.
+
+          Brutzele die Zucchini dann in einer Pfanne mit etwas Oliven- oder Kokosöl an. Ich gebe immer noch eine klein geschnittene Knoblauchzehe dazu.
+
+          Während die Nudeln vor sich hin kochen und die Zucchini brutzeln schneidest du den Lachs in kleine Würfel.
+
+          Schiebe die Zucchinischeiben an den Pfannenrand und gib die Lachswürfel hinein.
+
+          Jetzt brätst du die Lachswürfel bei mittlerer Hitze mit an und wendest sie behutsam.
+
+          Jetzt brauchst du nur noch die Kokosmilch und einen guten Teelöffel Gemüsebrühpulver oder-paste unterrühren.
+
+          Gieße die Nudeln ab und mische sie unter die Zucchini-Lachs-Mischung.
+
+          Rezept von https://www.familienkost.de/rezept_nudeln_mit_zucchini_und_lachs.html"
+
+
+  - image: "https://user-images.githubusercontent.com/116879060/209931527-c2b3a256-4f03-4fcc-b323-28d0fe9ddbb0.jpg"
+    text: "Salmon Vegetable Pan nach Gymski-Art\n
+
+          Zutaten für 4 Personen:\n 
+
+          1 Paprika\n
+          1 Zwiebel\n
+          2 Knoblauchzehen\n
+          150g Brokkoli\n
+          250g Reis\n
+          500g Lachs Filet\n
+          250g Fetakäse\n
+
+          So geht's:\n
+
+          Zunächst sollten Paprika in Scheiben gewaschen und in Scheiben geschnitten werden. Zwiebel und Knoblauchzehe schälen und zur Seite legen. Danach sollte der Fetakäse in Würfel geschnitten und zur Kühlung in den Kühlschrank gestellt werden. 
+
+          Zwiebeln sollten gewürfelt und gemeinsam mit gehackten Knoblauchzehen in einer Pfanne mit Olivenöl goldbraun gebraten werden. Währenddessen sollte der Reis gründlich abgespült und in einem Topf mit 2 Tassen Wasser aufgekocht werden, wobei es wichtig ist, ab und zu umzurühren. 
+
+          Der Lachs sollte in große Scheiben geschnitten und mit Salz, Pfeffer, Knoblauch und Kreuzkümmel gut gewürzt werden. Die Gewürze sollten gut in den Lachs einmassiert werden, bevor er zu den gebratenen Zwiebeln und Knoblauch in die Pfanne gegeben und leicht angebraten wird. 
+
+          Danach können das Gemüse hinzugefügt und gegart werden. Die Pfanne sollte mit einem gehäuften Teelöffel Salz, Pfeffer und Gemüsebrühe gewürzt werden. 
+
+          Sobald der Reis fertig ist, kann das Gericht angerichtet werden, indem der Reis als Häufchen auf den Teller gelegt und das Gemüse darauf verteilt wird. Um das Gericht zu verfeinern, kann es mit Fetakäse garniert werden."
+
+
+  - image: "https://user-images.githubusercontent.com/116879060/211165523-5a0df191-67e1-4b7a-88ef-e8fc5be92c91.png"
+    text: "Huhn Teriyaki\n
+        
+          Zutaten für 2 Personen:\n
+          10g Allzweckmehl\n
+          300g Hähnchen\n
+          1 Zwiebel\n
+          40g Weißkohl\n
+          Knoblauchpulver\n
+          1 Teelöffel Honig\n
+          1 Esslöffel salzarme Sojasoße\n
+        
+          So einfach geht's:\n
+          Sie beginnen damit, Zwiebeln und Kohl in kleine Stücke zu schneiden. 
+          Dann vermischen Sie die ersten 5 Zutaten in einer Pfanne und kochen sie bei mittlerer Hitze für 8 Minuten. 
+          Wenn das Hähnchenfleisch gar ist, fügen Sie Honig und Sojasoße hinzu und verrühren alles gut. 
+          Kochen Sie das Gericht dann noch eine Minute lang."
+
+
+  - image: "https://user-images.githubusercontent.com/116879060/211166605-2acceaea-86d6-47f8-beeb-dba5fb53f233.png"
+    text: "Linsen-Eiweiß-Nudeln\n
+          
+          Zutaten:\n
+          100g Rote Linsen Nudeln\n
+          50 g fettarmer Mozzarella-Käse\n
+          1/2 Tomate\n
+          20ml Olivenöl\n
+          Knoblauchpulver\n
+          Schwarzer Pfeffer\n
+
+          So einfach geht's:\n
+          Die Linsennudeln in kochendem Wasser 6 Minuten lang kochen. 
+          In der Zwischenzeit Mozzarella und Tomate in kleine Stücke schneiden. 
+          Nudeln, Tomate, Olivenöl und Mozzarella miteinander vermischen. 
+          Das Gericht, gut mit Knoblauchpulver und schwarzem Pfeffer würzen."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211167823-c8c223a1-76c2-43b5-b636-6739250b0614.png"
+    text: "Krabben-Reis-Schale\n
+
+          Zutaten:\n
+          120g Shrimps\n
+          120 g Reis\n
+          20g fettarmer Mozzarella\n
+          40g Kopfsalat\n
+          1/4 Tomate\n
+          Schwarzer Pfeffer\n
+          Knoblauchpulver\n
+          Paprikapulver\n
+          Salz\n
+
+          So einfach geht's:\n
+          Bereiten Sie den Reis im Reiskocher zu (dies dauert normalerweise zwischen 40 und 60 Minuten). 
+          Währenddessen schneiden Sie 120 g Shrimps in kleine Stücke und braten sie bei mittlerer Hitze für 7 Minuten. 
+          Würzen Sie sie mit Salz, Pfeffer, Knoblauchpulver und Paprikapulver. 
+          Streuen Sie 20 g fettarmen Mozzarella über die Shrimps und garen Sie alles für weitere 4 Minuten. 
+          Schneiden Sie 40 g Salat und ein Viertel der Tomate in dünne Scheiben. 
+          Verteilen Sie die Shrimps, den Käse und das Gemüse auf dem Reis. 
+          Bedenken Sie, dass ein Reiskocher die bequemste Methode ist, um Reis zuzubereiten, aber Sie können ihn auch in einer Pfanne kochen."
+            
+  - image: "https://user-images.githubusercontent.com/116879060/211168254-efaa8eaf-f342-401c-82bd-722aece940b9.png"
+    text: "Doppelte Eiweiß-Curry-Kartoffeln\n
+          
+          Zutaten:\n
+          2 Eier\n
+          200ml Eiweiß\n
+          1/4 Paprika\n
+          4 Champignons\n
+          200g Kartoffeln\n
+          Salz\n
+          Schwarzer Pfeffer\n
+          Knoblauchpulver\n
+          Curry-Pulver\n
+
+          So einfach geht's:\n
+          Schneiden Sie die Kartoffeln in die gewünschte Form und würzen Sie sie mit Knoblauch und Currypulver. 
+          Geben Sie sie in eine Pfanne und kochen Sie sie bei mittlerer Hitze für 10 Minuten, bis sie knusprig sind. 
+          Schneiden Sie 1/4 Paprika und 4 Champignons in Stücke, würzen Sie sie mit Knoblauchpulver, Salz und schwarzem Pfeffer und braten Sie sie bei mittlerer Hitze für 7 Minuten. 
+          Schlagen Sie 2 Eier in einer Pfanne auf und fügen Sie 200 ml Eiweiß hinzu. Würzen Sie das Ganze mit schwarzem Pfeffer und Salz und schließen Sie den Deckel. 
+          Kochen Sie alles bei mittlerer Hitze für 5 Minuten. Beachten Sie, dass es hilfreich ist, einen Fritten Schneider für die ideale Textur der Pommes frites zu kaufen. 
+          Achten Sie beim Aufschlagen der Eier darauf, das Eigelb nicht zu beschädigen. Verwenden Sie viel Olivenöl für optimale Pommes frites."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211168630-041ce740-eb0b-461d-9858-7d0cd924dfed.png"
+    text: "Nudeln Genovese Premium\n
+    
+          Zutaten:\n
+          80g Vollkornnudeln\n
+          40 g Feta-Käse\n
+          1/4 Zwiebel\n
+          40 g grüne Erbsen\n
+          Knoblauchpulver\n
+          Schwarzer Pfeffer\n
+          Pesto Genovese\n
+
+          So einfach geht's:\n
+          Kochen Sie 80 g Vollkornnudeln in kochendem Wasser. 
+          Schneiden Sie 1/4 Zwiebel in Scheiben und braten Sie sie zusammen mit 40 g grünen Erbsen in einer Pfanne bei mittlerer Hitze für 5 Minuten. 
+          Würzen Sie das Gemüse mit Knoblauchpulver und schwarzem Pfeffer. 
+          Vermischen Sie die Nudeln, das Pesto Genovese und das Gemüse in einer Schüssel. 
+          Streuen Sie 40 g Fetakäse und schwarzen Pfeffer über das Gericht."
+
+
   utter_abendessen:
-  - image: https://user-images.githubusercontent.com/93930736/202025388-5a411a89-6ce1-4a0f-9001-d89e9e02ea3e.png
-    text: |-
-      Reis mit Hähnchen und Gemüse
-      Zutaten für 2 Personen
-       250 g Hähnchenbrustfilet
-       ½ Zwiebel
-       1 Knoblauchzehen
-       1 ½ Frühlingszwiebeln
-       1rote Paprikaschoten
-       ½ Stange Staudensellerie
-       1 Chilischoten
-       1 ½ EL Olivenöl
-       125 g Natur-Langkornreis
-       250 ml Hühnerbrüh
-       ½ Lorbeerblatt
-       Salz
-       Pfeffer
-       2 Tomaten
-       2 Stiele Koriander
-       ¼ TL gemahlener Kreuzkümmel
+  - image: "https://user-images.githubusercontent.com/93930736/202025388-5a411a89-6ce1-4a0f-9001-d89e9e02ea3e.png"
+    text: "Reis mit Hähnchen und Gemüse\n
 
+          Zutaten für 2 Personen:\n
+          250 g Hähnchenbrustfilet\n
+          ½ Zwiebel\n
+          1 Knoblauchzehen\n
+          1 ½ Frühlingszwiebeln\n
+          1rote Paprikaschoten\n
+          ½ Stange Staudensellerie\n
+          1 Chilischoten\n
+          1 ½ EL Olivenöl\n
+          125 g Natur-Langkornreis\n
+          250 ml Hühnerbrüh\n
+          ½ Lorbeerblatt\n
+          Salz\n
+          Pfeffer\n
+          2 Tomaten\n
+          2 Stiele Koriander\n
+          ¼ TL gemahlener Kreuzkümmel\n
 
+          So einfach geht's:\n
+          Hähnchenfilets unter kaltem Wasser abspülen, trocken tupfen, in Streifen schneiden. Zwiebel und Knoblauch schälen, fein hacken. Frühlingszwiebeln waschen, putzen und in Ringe schneiden.\n
 
-      So einfach geht´s
-       Hähnchenfilets unter kaltem Wasser abspülen, trocken tupfen, in Streifen schneiden. Zwiebel und Knoblauch schälen, fein hacken. Frühlingszwiebeln waschen, putzen und in Ringe schneiden.
+          Paprikaschoten waschen, halbieren, putzen und in Streifen schneiden. Sellerie waschen, putzen und mit dem Selleriegrün
+          klein schneiden. Chilischote längs halbieren, entkernen, waschen und hacken.
 
-      Paprikaschoten waschen, halbieren, putzen und in Streifen schneiden. Sellerie waschen, putzen und mit dem Selleriegrün klein schneiden. Chilischote längs halbieren, entkernen, waschen und hacken.
-      Öl in einer Pfanne erhitzen. Zwiebel, Knoblauch, Frühlingszwiebeln bei mittlerer Hitze glasig dünsten. Hähnchen zugeben und 1–2 Minuten mitbraten. Paprika, Sellerie, Chili, Reis untermengen. Brühe zugießen, Lorbeerblatt zugeben, salzen und pfeffern. Zugedeckt unter gelegentlichem Rühren ca. 20 Minuten bei kleiner Hitze köcheln lassen.
-      Inzwischen Tomaten waschen. Für das Häuten Tomaten mit einem Küchenmesser kreuzförmig anritzen, mit kochendem Wasser einige Sekunden überbrühen, abschrecken und häuten. Tomaten vierteln und in Stücke schneiden. Koriander waschen, trocken schütteln, Blätter hacken. Wenn der Reis gar ist, Tomaten und Koriander untermischen. Mit Kreuzkümmel, Salz, Pfeffer abschmecken.
-      Reis mit Hähnchen und Gemüse auf vier Teller anrichten und sofort servieren.
-      Rezept von https://eatsmarter.de/rezepte/reis-mit-haehnchen-und-gemuese-1
+          Öl in einer Pfanne erhitzen. Zwiebel, Knoblauch, Frühlingszwiebeln bei mittlerer Hitze glasig dünsten. Hähnchen zugeben und 1–2 Minuten mitbraten. Paprika, Sellerie, Chili, Reis untermengen. Brühe zugießen, Lorbeerblatt zugeben, salzen und pfeffern. Zugedeckt unter gelegentlichem Rühren ca. 20 Minuten bei kleiner Hitze köcheln lassen.
+
+          Inzwischen Tomaten waschen. Für das Häuten Tomaten mit einem Küchenmesser kreuzförmig anritzen, mit kochendem Wasser einige Sekunden überbrühen, abschrecken und häuten. Tomaten vierteln und in Stücke schneiden. Koriander waschen, trocken schütteln, Blätter hacken. Wenn der Reis gar ist, Tomaten und Koriander untermischen. Mit Kreuzkümmel, Salz, Pfeffer abschmecken.
+
+          Reis mit Hähnchen und Gemüse auf vier Teller anrichten und sofort servieren.
+
+          Rezept von https://eatsmarter.de/rezepte/reis-mit-haehnchen-und-gemuese-1"
+
+  - image: "https://user-images.githubusercontent.com/116879060/211168785-f3f8df72-81a1-445c-99da-4d783c65a1a6.png"
+    text: "gebratener Reis mit Ei\n
+    
+          Zutaten:\n
+          100g Reis\n
+          1 Ei\n
+          1 Esslöffel Sojasoße\n
+          20 g grüne Erbsen\n
+          1/2 Zwiebel\n
+          Knoblauchpulver\n
+          Schwarzer Pfeffer\n
+          Salz\n
+
+          So einfach geht's:\n
+          Bereiten Sie den Reis im Reiskocher zu (dies dauert normalerweise zwischen 40 und 60 Minuten). 
+          In der Zwischenzeit braten Sie ein Ei in einer Pfanne zu einem Spiegelei und stellen es beiseite. 
+          Vermischen Sie den gekochten Reis in der Pfanne mit den Zwiebeln und Erbsen und würzen Sie alles gut mit Knoblauchpulver, schwarzem Pfeffer und Salz. 
+          Fügen Sie einen Esslöffel Sojasauce hinzu und rühren Sie alles gut um. 
+          Kochen Sie die Mischung bei mittlerer Hitze, bis der Reis knusprig ist, und platzieren Sie das Spiegelei oben auf dem Reis."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211169023-3df60bdc-911b-44cf-b10f-727db86f117b.png"
+    text: "Mozzarella-Ei-Crunch-Wraps\n
+
+          Zutaten:\n
+          1 großer Vollkorn-Wrap\n
+          2 Eier\n
+          70 g fettarmer Mozzarella\n
+          1/2 Tomate\n
+          Knoblauchpulver\n
+          Schwarzer Pfeffer\n
+          Salz\n
+
+          So einfach geht's:\n
+          Schneiden Sie 1/2 Tomate in Scheiben und braten Sie sie in einer Pfanne bei mittlerer Hitze. 
+          Schlagen Sie die Eier auf und geben Sie sie ebenfalls in die Pfanne. 
+          Würzen Sie alles mit Knoblauchpulver, schwarzem Pfeffer und Salz und rühren Sie um, bis das Eiweiß und das Eigelb gleichmäßig in der Pfanne verteilt sind (wie beim Machen eines Omlets). 
+          Legen Sie nach 4 Minuten den Wrap darauf und drehen Sie alles um, so dass der Wrap nun unten liegt und die Pfanne vollständig berührt. 
+          Verteilen Sie 70 g Mozzarella gleichmäßig auf dem Wrap und lassen Sie ihn nach 3 Minuten in der Mitte falten. 
+          Lassen Sie den Wrap in der Pfanne, bis er knusprig ist, und schneiden Sie ihn dann in 3 Stücke, um ihn zu genießen. 
+          Um den Wrap zu wenden, können Sie einen zusätzlichen Teller verwenden. 
+          Legen Sie den Teller umgedreht auf den Wrap und drehen Sie die Pfanne einfach um."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211168403-7bb9abd8-c70a-4e2b-998a-8e8e046299db.png"
+    text: "Gefülltes Huhn\n
+          
+          Zutaten:\n
+          200g Hähnchenbrust\n
+          20 g fettarmer Käse\n
+          1/4 rote Paprika\n
+          50g Feta-Käse\n
+          1/4 Zwiebel\n
+          Knoblauchpulver\n
+          Curry-Pulver\n
+          Schwarzer Pfeffer\n
+          Olivenöl\n
+
+          So einfach geht's:\n
+          Schneiden Sie 1/4 Paprika und 1/4 Zwiebel in dünne Stücke und vermischen Sie sie mit Feta-Käse in einer Schüssel. 
+          Nehmen Sie 200 g Hühnerbrust und schneiden Sie in der Mitte einen horizontalen Schlitz hinein. 
+          Füllen Sie das Hähnchen mit der Feta-Gemüse-Mischung. 
+          Würzen Sie das Hähnchen mit schwarzem Pfeffer und Currypulver und gießen Sie Olivenöl darüber. 
+          Streuen Sie 20 g fettarmen Käse darüber und schieben Sie das Ganze bei 220°C/430°F für 20 Minuten in den Ofen."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211171078-3872d79a-6250-4991-b7a5-c9e70aeca63a.png"
+    text: "Thunfischbrot\n
+    
+          Zutaten:\n
+          1 englischer Vollkornmuffin\n
+          30g fettarmer Käse\n
+          100 g Thunfisch in Dosen (Olivenöl)\n
+          50g Aubergine\n
+          (getrocknet) Petersilie\n
+          Schwarzer Pfeffer\n
+          Salz\n
+
+          So einfach geht's:\n
+          Zunächst werden die Aubergine in kleine Stücke geschnitten und für 3 Minuten bei mittlerer Hitze gekocht. 
+          Danach wird der Thunfisch aus der Dose zur Aubergine in die Pfanne gegeben und für weitere 3 Minuten gekocht. 
+          Anschließend wird der Käse über die Aubergine-Thunfisch-Mischung gestreut, der Deckel geschlossen und die Pfanne weitere 2 Minuten gekocht. 
+          Olivenöl wird in die Pfanne gegeben und die englischen Muffin-Scheiben werden angedrückt und für 1 Minute gekocht, bis das Brot knusprig wird. 
+          Es ist wichtig, die exakten Garzeiten zu beachten, um sicherzustellen, dass die Zutaten richtig gegart sind und die gewünschte Konsistenz erreichen."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211166831-a63e9ff4-6dd7-42d0-a756-e864c4786368.png"
+    text: "Gesunde Chicken Nuggets\n
+    
+          Zutaten:\n
+          300g Hähnchenbrust\n
+          70g Sojaflocken\n
+          1 Ei\n
+          Knoblauchpulver\n
+          Schwarzer Pfeffer\n
+          Salz\n
+
+          So einfach geht's:\n
+          Die Hähnchenbrust in Nugget-große Stücke zu schneiden und das Ei aufzuschlagen und auf einem separaten Teller zu verrühren. 
+          Dann zerbröseln Sie die Sojaflocken auf einem anderen Teller. 
+          Anschließend tauchen Sie jedes Hähnchenstück zuerst in die Eimischung und dann in die zerkleinerten Sojaflocken. 
+          Legen Sie die eingedeckten Stücke auf ein Blech mit Backpapier, würzen Sie sie mit Knoblauchpulver, schwarzem Pfeffer und etwas Salz und schieben Sie sie dann für 20 Minuten bei 180°C/350°F in den Ofen."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211165726-d7aaf464-c45e-4900-9704-765f4367d104.png"
+    text: "Süßkartoffel-Pommes\n 
+
+          Zutaten:\n
+          300g Süßkartoffeln\n
+          50 g Humus\n
+          50ml Olivenöl\n
+          Knoblauchpulver\n
+          Schwarzer Pfeffer\n
+          Salz\n
+
+          So einfach geht's:\n
+          Sie beginnen damit, die Süßkartoffeln in die gewünschte Form zu schneiden. 
+          Legen Sie die Süßkartoffelstreifen dann auf ein Blech mit Backpapier und würzen sie gut mit Knoblauchpulver und Pfeffer. 
+          Gießen Sie das Olivenöl gleichmäßig über die Pommes und schieben Sie das Blech bei 220°C/450°F in den Ofen. 
+          Sobald die Pommes knusprig sind, können Sie etwas Meersalz darüber streuen und sie mit Humus als gesundem Dip servieren."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211164575-9ada931b-68f5-41f3-a97a-5a5a7be29bc1.png"
+    text: "Cheesy Cauliflower Patties\n
+
+          Zutaten:\n
+          1/2 Blumenkohl\n
+          70 g geriebener Mozzarella-Käse\n 
+          1 Ei\n
+          Knoblauchpulver\n
+          Schwarzer Pfeffer\n 
+          Salz\n 
+
+          So einfach geht's:\n 
+          Sie beginnen damit, den Blumenkohl in sehr kleine Stücke zu schneiden und in einer Pfanne bei mittlerer Hitze zu kochen, bis er weich ist. 
+          Dann vermischen Sie den fertigen Blumenkohlreis mit dem Ei und dem Mozzarella, würzen alles mit Knoblauchpulver, schwarzem Pfeffer und Salz und formen daraus 4 Patties. 
+          Kochen Sie die Patties anschließend bei mittlerer Hitze, bis sie knusprig sind."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211165247-e1096f3d-670a-49ae-9c43-68aeb9733a40.png"
+    text: "Thunfisch-Burger\n
+
+          Zutaten:\n
+          180 g Thunfisch in Dosen (mit Olivenöl)\n
+          20 g fettarmer Mozzarella-Käse\n
+          30g Allzweckmehl\n
+          Vollkorn Bruger Brot\n
+          1/4 Tomate\n
+          Salat\n
+
+          So einfach geht's:\n 
+          Zu beginn Thunfisch und Vollkornmehl in einer Schüssel zu vermengen und Patties zu formen. 
+          Braten Sie die Patties anschließend für 5 Minuten in einer Pfanne bei mittlerer Hitze an. 
+          Streuen Sie dann den Mozzarella-Käse über die Patties, schließen Sie den Deckel und braten Sie die Patties weitere 2 Minuten. 
+          Toasten Sie zudem das Burgerbrot knusprig. Stapeln Sie den Salat, die Tomaten und die Patties schließlich auf das Burgerbrot und servieren Sie das Gericht."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211167588-9401680c-a4c9-4ba6-8df1-b624e473ecc9.png"
+    text: "Knuspriger Fisch und Linsensalat\n
+          
+          Zutaten:\n
+          150g Alasakan-Kalbsflilet\n
+          50g Kopfsalat\n
+          1/2 Tomate\n
+          50g Gelbe/Rote Linsen\n
+          Getrocknete Petersilie\n
+          Dressing nach Wahl\n
+          Knoblauchpulver\n
+          Schwarzer Pfeffer\n
+          Salz\n
+          
+          So einfach geht's:\n
+          Kochen Sie die Linsen in kochendem Wasser für etwa 7 Minuten. 
+          Währenddessen würzen Sie den Fisch gut und braten ihn in einer Pfanne bei mittlerer Hitze knusprig. 
+          Waschen Sie das Gemüse, schneiden Sie den Salat und die Tomaten und vermischen Sie alles zu einem Salat. 
+          Streuen Sie getrocknete Petersilie darüber und fügen Sie ein Dressing nach Wahl hinzu. 
+          Es ist wichtig, mehr leckeren und hochwertigen Fisch zu essen, da dies die beste Entscheidung ist, die Sie in Bezug auf Ihre Ernährung treffen können. 
+          Die Vorteile sind zahlreich!"
+
+  - image: "https://user-images.githubusercontent.com/116879060/211168048-8c564c11-f4f9-4dbe-8c2b-719ee3200b02.png"
+    text: "Göttliche Hotpockets\n
+
+          Zutaten:\n
+          4 Scheiben fettarmer Schinken\n
+          35 g fettarmer Käse\n
+          8 Scheiben Vollkornbrot\n
+          25ml Eiweiß\n
+          Schwarzer Pfeffer\n
+          Knoblauchpulver\n
+          Salz\n
+
+         So einfach geht's:\n
+         Entfernen Sie die Kruste von 4 Scheiben Brot und legen Sie sie vor sich hin. 
+         Belegen Sie sie mit Schinken und Käse. 
+         Bedenken Sie, dass zu viel Füllung das Brot brechen lassen kann, also seien Sie vorsichtig. 
+         Legen Sie eine Scheibe auf jedes Stück und bestreichen Sie die Ränder mit Eiweiß (Sie können auch mehr Eiweiß verwenden, um die Stücke besser zu versiegeln). 
+         Drücken Sie die Ränder mit den Händen fest und verschließen Sie die Hotpockets. 
+         Achtung, dass das Brot nicht zerbricht. 
+         Backen Sie die Stücke bei 220°C/450°F für 15 Minuten im Ofen oder bis sie knusprig aussehen."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211170745-a90699f1-43c6-4abf-bc00-f9418ebc870f.png"
+    text: "Double baked potatoes\n
+    
+          Zutaten:\n
+          3 mittlere Kartoffeln\n
+          30 g fettarmer geriebener Mozzarella\n
+          Käse\n
+          3 Teelöffel saure Sahne\n
+          1 Teelöffel kalorienarme Mayonnaise\n
+          Grüne Zwiebel\n
+          Knoblauchpulver\n
+          Schwarzer Pfeffer\n
+          Salz\n
+
+          So einfach geht's:\n
+          Um diese gefüllten Kartoffeln zuzubereiten, sollten die Kartoffeln zunächst mit einer Gabel eingestochen und im Ofen bei 220°C/450°F für 50 Minuten gebacken werden. 
+          Nach dem Backen sollten die Kartoffeln abkühlen gelassen werden, wobei der obere Teil abgeschnitten und das Innere mit einem Löffel ausgehöhlt wird. 
+          Anschließend wird die ausgehöhlte Kartoffel mit Mozzarella, Sour Cream, Mayonnaise, Knoblauchpulver, schwarzem Pfeffer und Salz gefüllt und die gefüllten Kartoffeln wieder in den Ofen bei 220°C/450°F gegeben, bis die Oberfläche knusprig wird. 
+          Zum Schluss werden die Kartoffeln mit grünen Zwiebeln garniert und können genossen werden."
+
   utter_snack:
-  - image: https://user-images.githubusercontent.com/93930736/202041182-a37f18b1-42a0-4603-aad8-4e8adcc021cc.png
-    text: |-
-      Low Carb Keto Müsliriegel
-       Zutaten für 8 Riegel
-       50g gehobelte Mandeln
-       50g gehackte Haselnüsse
-       25g braunes Erythrit
-       20g geschälte Hanfsamen
-       15g Sonnenblumenkerne
-       15g Kürbiskerne
-       15g Kokoschips
-       1 Eiklar
-       ½ TL Vanille Extrakt
+  - image: "https://user-images.githubusercontent.com/93930736/202041182-a37f18b1-42a0-4603-aad8-4e8adcc021cc.png"
+    text: "Low Carb Keto Müsliriegel\n
 
-      So einfach geht´s
-       Backofen auf 200°C (Ober- und Unterhitze) vorheizen.
-      Das Eiweiß steif schlagen.
-      Die restlichen Zutaten für die Müsliriegel unter das geschlagene Eiweiß heben.
-      Anschließend die Mischung in eine Riegelform kneten.
-      Die Müsliriegel für ca. 12-15 Minuten im vorgeheizten Backofen backen.
-      Zum Schluss die Riegel komplett abkühlen lassen.
-      Rezept von https://kochketo.de/keto-muesliriegel/
+          Zutaten für 8 Riegel:\n
+          50g gehobelte Mandeln\n
+          50g gehackte Haselnüsse\n
+          25g braunes Erythrit\n
+          20g geschälte Hanfsamen\n
+          15g Sonnenblumenkerne\n
+          15g Kürbiskerne\n
+          15g Kokoschips\n
+          1 Eiklar\n
+          ½ TL Vanille Extrakt\n
+
+          So einfach geht's:\n
+          Backofen auf 200°C (Ober- und Unterhitze) vorheizen.
+
+          Das Eiweiß steif schlagen.
+
+          Die restlichen Zutaten für die Müsliriegel unter das geschlagene Eiweiß heben.
+
+          Anschließend die Mischung in eine Riegelform kneten.
+
+          Die Müsliriegel für ca. 12-15 Minuten im vorgeheizten Backofen backen.
+
+          Zum Schluss die Riegel komplett abkühlen lassen.
+
+          Rezept von https://kochketo.de/keto-muesliriegel/"
+
+  - image: "https://user-images.githubusercontent.com/116879060/211201394-52e8f95d-212a-439e-a7bf-5f9ab2f08aff.png"
+    text: "Himbeer-Nuss-Riegel\n
+    
+          Zutaten für 12 Riegel:\n
+          Für die Nuss-Schicht\n
+          140 g Mandeln\n
+          140 g Cashewkerne\n
+          40 g Kokosraspeln\n
+          2 Esslöffel Backkakao\n
+          180 g Datteln (entsteint)\n
+          2 Esslöffel Erdnussbutter\n
+          2 Esslöffel Mandelmilch\n
+
+          Für die Himbeer-Schicht\n
+          250 g gefrorene Himbeeren\n
+          2 Esslöffel Reissirup oder Honig\n
+          2 Esslöffel geschmolzenes Kokosöl\n
+          60 g Kokosraspeln\n
+          280 g Chia Samen\n
+          2 Esslöffel Erdnussbutter\n
+          70 g Cashewkerne\n
+          1 Vanilleschote\n
+          2 Esslöffel Mandelmilch\n
+
+          So einfach geht's:\n
+          Ein Backblech mit Backpapier auslegen. 
+          Himbeeren zum leichten Antauen aus dem Gefrierfach nehmen. 
+          Ein paar Nüsse und Kokosraspeln für die Garnierung beiseitelegen.
+          Alle Zutaten für die Nuss-Schicht, bis auf die Mandelmilch, in einem Food Processor fein und krümelig mixen. 
+          Nach Bedarf Mandelmilch zugeben. 
+          Die Mischung sollte nicht trocken, sondern klebrig sein. 
+          Die Nussmischung gleichmäßig auf das Backblech ausstreichen und im Gefrierfach kaltstellen.
+          Alle Zutaten für die zweite Schicht, bis auf die Himbeeren, im Food Processor mixen. 
+          Die Himbeeren nach und nach zugeben und weiter mixen, bis eine homogene Masse entsteht. 
+          Die Himbeermischung auf die angefrorene Nuss-Schicht geben und gleichmäßig verstreichen. Die restlichen Nüsse und Kokosraspeln als Topping auf die Himbeerschicht streuen.
+          Alles für 30 Minuten im Gefrierfach kaltstellen. 
+          Die gekühlte Platte in gleichgroße Riegel schneiden und servieren."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211202120-a2444efc-b0aa-4afc-b2c5-12fd8c9e05db.png"
+    text: "Energyballs mit Kokos\n
+    
+          Zutaten für 20 Bällchen:\n
+          100 g Mandeln\n
+          2 EL ungezuckerter Kakaopulver\n
+          10st. getrocknete Datteln\n
+          2 EL Honig\n
+          2 EL Kokosraspeln\n
+
+          So einfach geht's:\n
+          Mandeln, Kakaopulver, Datteln und Honig pürieren und mit nassen Händen aus der Masse 20 kleine Kugeln formen. 
+          Kokosraspel in einem tiefen Teller verteilen, Energyballs darin wälzen und servieren."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211202461-07c94f24-4f5e-48a7-ae16-1654cbf2b8b6.png"
+    text: "Apfelchips\n
+    
+          Zutaten für 2 Portionen:\n
+          1 Apfel\n
+          80g Vanillejoghurt (Fettarm)\n
+          1 TL Zimt\n
+          
+          So einfach geht's:\n
+          Backofen auf 120° C (Gas: Stufe 1/2, Umluft: 100° C) vorheizen. Apfel waschen, entkernen und in dünne Scheiben hobeln. 
+          Äpfel nebeneinander auf einem mit Backpapier ausgelegten Backblech verteilen, mit 1/2 TL Zimt bestreuen und im Backofen auf mittlerer Schiene 45–50 Minuten backen. 
+          Restlichen Zimt mit Joghurt verrühren und zu den Apfelchips servieren."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211202811-f0c84ead-bd3a-4b90-ade2-7086e75c6cc2.png"
+    text: "Obstsalat mit Orangendressing (ToGo)\n
+    
+          Zutaten:\n
+          2 Orangen\n
+          1 Kiwi\n
+          100g Weintrauben\n
+          100g Erdbeeren\n
+          1 TL gehackte Minze\n
+          200g Magermilchjoghurt Natur (0,5% Fett)\n
+
+          So einfach geht's:\n
+          Eine Orange nach Belieben filetieren oder in Stücke schneiden. 
+          Kiwi und Erdbeeren in mundgerechte Stücke schneiden, Weintrauben halbieren. 
+          Obstsalat mit Minze in ein Glas schichten.
+          Zweite Orange auspressen und Joghurt mit 4 EL Orangensaft verfeinern. 
+          Orangendressing in einer kleinen Flasche separat transportieren. 
+          Restlichen Orangensaft nach Belieben über den Obstsalat gießen."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211169443-18018606-d7ea-4db6-8229-baa606de5792.png"
+    text: "Zimt-Haferbällchen ohne Backen\n
+          
+          Zutaten:\n
+          40 g Haferflockenmischung\n
+          25 g Schokoladenproteinpulver\n
+          1/2 Teelöffel Zimt\n
+          1 Esslöffel Chia-Samen\n
+          1 Esslöffel Erdnussbutter\n
+          4 g Vanilleextrakt\n
+          10 g 0-Kalorien-Siroup\n
+          10 g Zartbitterschokoladenstückchen\n
+          15ml Mandelmilch\n
+
+          So einfach geht's:\n
+          In einer Schüssel alle Zutaten vermischen. 
+          Falls die Mischung zu trocken ist, etwas mehr Mandelmilch hinzufügen, um sie fluffiger zu machen. 
+          Die Mischung zu Kugeln formen und für 30 Minuten in den Kühlschrank stellen, damit sie fest werden. 
+          Nach Ablauf der Kühlzeit können die Bällchen gegessen werden oder als Zutat für eine größere Mahlzeit verwendet werden."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211164930-0af35c6c-a5a7-4b22-883d-524dcbaa96fa.png"
+    text: "Knusprige Knoblauch-French-Toast-Sticks\n
+
+          Zutaten:\n
+          1 englischer Muffin/Brot nach Wahl\n
+          1 Ei\n
+          Dip nach Wahl\n 
+          Knoblauchpulver\n 
+          Schwarzer Pfeffer\n  
+          Salz\n 
+
+          So einfach geht's:\n
+          Sie beginnen damit, Ihr Brot in Streifen zu schneiden und das Ei aufzuschlagen. 
+          Tauchen Sie die Brotstreifen anschließend in die Eimischung, sodass sie vollständig damit bedeckt sind. 
+          Braten Sie die Streifen bei mittlerer Hitze in der Pfanne an, bis sie knusprig werden. 
+          Sie können die Sticks nach Belieben mit Knoblauchpulver, schwarzem Pfeffer und Salz würzen."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211170392-b4da7d72-3de6-4666-b23c-ff3be056660d.png"
+    text: "Granloa Schoko-Protein-Riegel\n
+    
+          Zutaten:\n
+          80g Granloa\n
+          25g (dunkles) Schokoladen-Protein-Pulver\n
+          10g 0 Kalorien Ahorn-Sirup\n
+          150g Vanille Skyr\n
+          10g Zartbitterschokolade\n
+
+          So einfach geht's:\n
+          Mischen Sie alle Zutaten (außer Zartbitterschokolade) in eine Schüssel und vermeiden Sie Klumpenbildung. 
+          Verteilen Sie die Mischung auf einem Backblech und streuen Sie die Zartbitterschokolade in kleinen Stücken darüber. 
+          Stellen Sie das Backblech für 20 Minuten in den Gefrierschrank, bevor Sie es in tafelgroße Portionen schneiden. 
+          Beachten Sie, dass Sie jede Art von Skyr, Joghurt oder griechischem Joghurt verwenden können und für den Crunch jedes Müsli. 
+          Ahornsirup kann durch Honig oder normalen Sirup ersetzt werden, beachten Sie jedoch, dass die Kalorienzahl steigt."
+
+  - image: "https://user-images.githubusercontent.com/116879060/211170540-f03c00f6-2042-4128-8139-f8510662a97a.png"
+    text: "No Bake Erdnussbutter Schokoriegel\n
+
+          Zutaten:\n
+          100g Erdnussbutter\n
+          10g Kokosöl\n
+          50g Zartbitterschokolade\n 
+          30g Eiweißpulver nach Wahl\n 
+          20g 0 Kalorien Sirup\n
+
+          So einfach geht's:\n
+          Zum Herstellen dieses Snacks werden zunächst Erdnussbutter, Eiweißpulver und 0 Kalorien Sirup in einer Schüssel verrührt, um Klumpenbildung zu vermeiden. 
+          Anschließend wird 50g Zartbitterschokolade und 10g Kokosöl in der Mikrowelle für 2 Minuten erhitzt und verrührt. 
+          Die Erdnussbuttermischung wird gleichmäßig auf einem mit Backpapier ausgelegten Blech verteilt (eine Dicke von ca. 0,7-1,0 cm sollte angestrebt werden). 
+          Danach wird die geschmolzene Schokolade vorsichtig darüber gegossen und gleichmäßig verteilt. 
+          Abschließend wird das Blech für 1h in den Kühlschrank gestellt, bis die Schokolade wieder hart ist.
+          Es sollte beachtet werden, dass dieser Snack sehr kalorienreich ist, aber die enthaltenen Fette sind gesund, sodass keine Sorge besteht. 
+          Es empfiehlt sich, Erdnussbutter aus 100% Erdnüssen zu verwenden, um den Snack perfekt gesund zu machen."
+
   utter_help:
   - text: |
       Du weißt nicht weiter? Ich kann dir mit folgenden Funktionen helfen:
